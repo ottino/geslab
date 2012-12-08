@@ -1,0 +1,1571 @@
+2012-11-20 23:18:09 Error: [MissingActionException] Action medicosController::index() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-20 23:18:49 Error: [MissingActionException] Action medicosController::index() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(medicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-20 23:19:34 Error: [MissingActionException] Action medicosController::index() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(medicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-20 23:19:35 Error: [MissingActionException] Action medicosController::index() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(medicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-20 23:19:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\medicosController.php, line 9]
+2012-11-20 23:19:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-20 23:20:12 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\MedicosController.php, line 9]
+2012-11-20 23:20:12 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 01:13:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\medicosController.php, line 9]
+2012-11-21 01:13:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 01:24:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\medicosController.php, line 17]
+2012-11-21 01:24:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 17, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 17, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 01:24:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\medicosController.php, line 17]
+2012-11-21 01:24:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 17, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 17, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 01:25:17 Error: [MissingHelperException] Helper class FormsHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Forms', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-11-21 01:44:57 Error: Fatal Error (4): syntax error, unexpected 'endforeach' (T_ENDFOREACH) in [C:\xampp\htdocs\geslab\app\View\Medicos\index.ctp, line 13]
+2012-11-21 01:44:57 Error: [FatalErrorException] syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 02:32:18 Error: [MissingActionException] Action MedicosController::view() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-21 03:21:34 Error: [MissingActionException] Action MedicosController::view() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-22 22:28:01 Error: [MissingActionException] Action MedicosController::agregar() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-22 23:15:37 Error: [MissingActionException] Action MedicosController::1() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-25 15:31:12 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 15:31:47 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 15:31:50 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 15:32:31 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 15:32:33 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 15:33:45 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:05:20 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:15:56 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:23:56 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:23:58 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:24:34 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:24:36 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:24:47 Error: [MissingControllerException] Controller class SanatorioController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-25 21:24:55 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 21:24:55 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 21:28:41 Error: [MissingTableException] Table sanatorios for model Sanatorio was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('sanatorios')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php(15): Model->find('all')
+#3 [internal function]: SanatoriosController->add()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SanatoriosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-11-25 21:29:09 Error: [MissingTableException] Table sanatorios for model Sanatorio was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('sanatorios')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php(10): Model->find('all')
+#3 [internal function]: SanatoriosController->index()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SanatoriosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-11-25 21:31:07 Error: [MissingTableException] Table sanatorios for model Sanatorio was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('sanatorios')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php(10): Model->find('all')
+#3 [internal function]: SanatoriosController->index()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SanatoriosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-11-25 21:31:09 Error: [MissingTableException] Table sanatorios for model Sanatorio was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('sanatorios')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php(10): Model->find('all')
+#3 [internal function]: SanatoriosController->index()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SanatoriosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-11-25 22:46:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 15]
+2012-11-25 22:46:14 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:47:47 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 10]
+2012-11-25 22:47:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:48:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 10]
+2012-11-25 22:48:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:49:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 10]
+2012-11-25 22:49:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:52:24 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 10]
+2012-11-25 22:52:24 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:52:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 10]
+2012-11-25 22:52:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:47 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:47 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:49 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:49 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:49 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:49 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:49 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:49 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:50 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:50 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:50 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:50 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:50 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:50 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:51 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:51 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:53:51 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 8]
+2012-11-25 22:53:51 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:22 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:22 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:23 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:23 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:23 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:23 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:55:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 9]
+2012-11-25 22:55:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-25 22:56:39 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\SanatoriosController.php, line 14]
+2012-11-25 22:56:39 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-26 01:16:48 Error: Fatal Error (1): Call to a member function image() on a non-object in [C:\xampp\htdocs\geslab\app\View\Sanatorios\index.ctp, line 34]
+2012-11-26 01:16:48 Error: [FatalErrorException] Call to a member function image() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 34, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 34, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-26 01:17:35 Error: [MissingHelperException] Helper class ImageHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Image', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-11-26 01:19:12 Error: [MissingHelperException] Helper class ImageHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Image', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-11-26 01:30:37 Error: [MissingActionException] Action SanatoriosController::edit() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SanatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-26 13:17:28 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-26 16:56:50 Error: Fatal Error (4): syntax error, unexpected '.' in [C:\xampp\htdocs\geslab\app\View\Sanatorios\index.ctp, line 22]
+2012-11-26 16:56:50 Error: [FatalErrorException] syntax error, unexpected '.'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 22, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 22, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-27 23:49:46 Error: [MissingControllerException] Controller class ObrasocialController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-27 23:50:10 Error: [MissingTableException] Table obrasocial s for model Obrasocial was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('obrasocial s')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\ObrasocialesController.php(8): Model->find('all')
+#3 [internal function]: ObrasocialesController->index()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ObrasocialesController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ObrasocialesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-11-28 00:21:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'localidad_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Obrasocial), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ObrasocialesController.php(28): Model->save(Array)
+#5 [internal function]: ObrasocialesController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ObrasocialesController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ObrasocialesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-11-28 00:39:38 Error: [MissingControllerException] Controller class PacienteController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-30 23:59:09 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-01 13:19:41 Error: [MissingActionException] Action ProtocolosController::add() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 14:01:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Paciente.cuit' in 'field list'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Pacient...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Pacient...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Pacient...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Paciente), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(16): Model->find('all', Array)
+#6 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-01 15:16:38 Error: Fatal Error (1): Call to a member function input() on a non-object in [C:\xampp\htdocs\geslab\app\View\Protocolos\add.ctp, line 12]
+2012-12-01 15:16:38 Error: [FatalErrorException] Call to a member function input() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-01 20:04:50 Error: [MissingActionException] Action ProtocolosController::jquery-1.8.3.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:04:50 Error: [MissingActionException] Action ProtocolosController::jquery-ui.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:04:50 Error: [MissingActionException] Action ProtocolosController::jquery-ui.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:04:50 Error: [MissingActionException] Action ProtocolosController::search.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:05:41 Error: [MissingActionException] Action ProtocolosController::jquery-ui.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:05:41 Error: [MissingActionException] Action ProtocolosController::jquery-1.8.3.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:05:41 Error: [MissingActionException] Action ProtocolosController::search.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:05:41 Error: [MissingActionException] Action ProtocolosController::jquery-ui.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:08:19 Error: [MissingActionException] Action ProtocolosController::jquery-ui.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:08:19 Error: [MissingActionException] Action ProtocolosController::jquery-1.8.3.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:08:19 Error: [MissingActionException] Action ProtocolosController::search.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-01 20:08:19 Error: [MissingActionException] Action ProtocolosController::jquery-ui.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-04 03:09:42 Error: Fatal Error (64): Cannot use [] for reading in [C:\xampp\htdocs\geslab\app\View\Protocolos\add.ctp, line 10]
+2012-12-04 03:09:43 Error: [FatalErrorException] Cannot use [] for reading
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-04 03:21:39 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\xampp\htdocs\geslab\app\View\Protocolos\add.ctp, line 53]
+2012-12-04 03:21:39 Error: [FatalErrorException] syntax error, unexpected end of file
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 53, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 53, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:06:07 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:06:07 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:07:21 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:07:21 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:07:21 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:09:59 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:09:59 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:09:59 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:10:35 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:47 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:47 Error: [MissingActionException] Action ProtocolosController::jquery-1.8.3.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:47 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:48 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:58 Error: [MissingActionException] Action ProtocolosController::jquery-1.8.3.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:58 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:11:58 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:12:00 Error: [MissingActionException] Action ProtocolosController::jquery-ui-1.9.2.custom.min.css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:15 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:15 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:16 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:16 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:16 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:16 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:16 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:16 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:16 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:16 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:16 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:18 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:18 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:18 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:35 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:35 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:36 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:36 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:36 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:36 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:36 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:36 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:36 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:36 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:36 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:21:37 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:21:37 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:21:37 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:03 Error: Fatal Error (1): Call to undefined method View::link() in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:22:03 Error: [FatalErrorException] Call to undefined method View::link()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:04 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:04 Error: Fatal Error (1): Call to undefined method View::link() in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:22:04 Error: [FatalErrorException] Call to undefined method View::link()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:04 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:04 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:04 Error: Fatal Error (1): Call to undefined method View::link() in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:22:04 Error: [FatalErrorException] Call to undefined method View::link()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:04 Error: Fatal Error (1): Call to undefined method View::link() in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:22:04 Error: [FatalErrorException] Call to undefined method View::link()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:06 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:06 Error: Fatal Error (1): Call to undefined method View::link() in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 33]
+2012-12-05 03:22:06 Error: [FatalErrorException] Call to undefined method View::link()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 03:22:44 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:44 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:44 Error: [MissingActionException] Action ProtocolosController::js() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:22:45 Error: [MissingActionException] Action ProtocolosController::css() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 03:38:48 Error: [MissingModelException] Contrato
+#0 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate('Contrato', Array, Array)
+#1 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(34): Controller->paginate('Contrato', Array)
+#2 [internal function]: ProtocolosController->search()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-05 03:38:56 Error: [MissingModelException] Contrato
+#0 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate('Contrato', Array, Array)
+#1 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(34): Controller->paginate('Contrato', Array)
+#2 [internal function]: ProtocolosController->search('m')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-05 03:39:49 Error: [MissingModelException] Contrato
+#0 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate('Contrato', Array, Array)
+#1 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(34): Controller->paginate('Contrato', Array)
+#2 [internal function]: ProtocolosController->search('m')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-05 03:39:53 Error: [MissingModelException] Contrato
+#0 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate('Contrato', Array, Array)
+#1 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(34): Controller->paginate('Contrato', Array)
+#2 [internal function]: ProtocolosController->search()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-05 03:41:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(33): Model->find('all', Array)
+#6 [internal function]: ProtocolosController->search()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-05 03:57:16 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 33]
+2012-12-05 03:57:16 Error: [FatalErrorException] syntax error, unexpected ',', expecting ')'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 04:04:35 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\ajax.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName('ajax')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render('ajax', NULL)
+#2 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(34): Controller->render('ajax')
+#3 [internal function]: ProtocolosController->search()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-12-05 04:07:13 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:15 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:16 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:16 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:19 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:37 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:38 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:38 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:39 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:40 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:40 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:40 Error: [MissingActionException] Action ProtocolosController::Protocolo() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:54 Error: [MissingActionException] Action ProtocolosController::Protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:56 Error: [MissingActionException] Action ProtocolosController::Protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:57 Error: [MissingActionException] Action ProtocolosController::Protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 04:07:58 Error: [MissingActionException] Action ProtocolosController::Protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:12:27 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:12:32 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:12:35 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:18:15 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:18:17 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:20:15 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:20:17 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:20:23 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:23:48 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:25:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(21): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-05 23:52:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(22): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-05 23:52:14 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 64]
+2012-12-05 23:52:14 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 23:52:44 Error: [MissingActionException] Action ProtocolosController::home() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-05 23:52:44 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 64]
+2012-12-05 23:52:44 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 23:54:08 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-05 23:54:08 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 64]
+2012-12-05 23:54:08 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 23:54:44 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-05 23:54:44 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\xampp\htdocs\geslab\app\View\Layouts\default.ctp, line 64]
+2012-12-05 23:54:44 Error: [FatalErrorException] Call to a member function link() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-05 23:59:07 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-05 23:59:23 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-05 23:59:31 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-06 00:24:16 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-06 00:24:35 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:24:39 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:24:40 Error: [MissingActionException] Action PacientesController::search() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PacientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:25:05 Error: [MissingActionException] Action PacientesController::search() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PacientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:25:09 Error: [MissingActionException] Action PacientesController::home() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PacientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:25:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(22): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-06 00:25:31 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:41:58 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-06 00:52:02 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:52:03 Error: [MissingActionException] Action PacientesController::search() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PacientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:53:24 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:53:26 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:53:27 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:53:28 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 00:55:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(22): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-06 00:56:06 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 00:56:09 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:02:34 Error: [MissingHelperException] Helper class AjaxHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Ajax', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-06 01:03:00 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(862): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(469): View->loadHelpers()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-12-06 01:05:48 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:49 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:50 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:51 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:56 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:56 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:57 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:57 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:57 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:05:58 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:11:34 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:11:38 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:12 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:16 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:18 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:24 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:25 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:28 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 01:18:33 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 02:59:19 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 02:59:47 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:00:20 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:00:23 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:00:25 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:02:51 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName('search')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render('search', 'ajax')
+#2 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(36): Controller->render('search', 'ajax')
+#3 [internal function]: ProtocolosController->search('a')
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-12-06 03:05:24 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:27 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:28 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:29 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:33 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:34 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:34 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:05:34 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:32:51 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:32:58 Error: [MissingActionException] Action ProtocolosController::search.php() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 03:36:27 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:36:43 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:37:01 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:39:22 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:39:26 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:39:38 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:39:56 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:40:10 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:40:23 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:40:37 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:40:50 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:41:06 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:43:16 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:43:21 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:44:27 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 03:44:31 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\search.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-06 04:05:36 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 04:05:45 Error: [MissingActionException] Action ProtocolosController::protocolos() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 04:06:56 Error: [MissingActionException] Action ProtocolosController::<() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-06 04:07:39 Error: [MissingActionException] Action ProtocolosController::geslab() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

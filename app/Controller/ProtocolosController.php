@@ -5,7 +5,6 @@ class ProtocolosController extends AppController {
     public $helpers = array('Html', 'Form');     
     public $uses = array('Citologia','Medico','Organoscitologia','Paciente');
     var $components = array('RequestHandler');
-//$this->Html->url(array('controller'=>'algo'));
 
     public function  __construct($request = null, $response = null) {
         parent::__construct($request, $response);
@@ -25,22 +24,25 @@ class ProtocolosController extends AppController {
     }
     public function add() {
 
-        //$this->set('data',$this->Organoscitologia->find('all'));
         $this->set('pacientes',$this->pacientes);
         $this->set('medicos',$this->medicos);
     }
-    
+ 
+/*    
     public function search(){
          $respuesta = array ();
          $this->autoRender=false;
-         $pacientes=$this->Paciente->find('all',array('conditions'=>array('Paciente.razon_social LIKE'=>'%'.$_GET['term'].'%')));
-                $i=0;
-                foreach($pacientes as $p){
-                    $respuesta[$i]['value']=$p['Paciente']['dni'] . ' - ' . $p['Paciente']['razon_social'];
-                $i++;
-                }
-            echo json_encode($respuesta);
+         $pacientes=$this->Paciente->find('all',
+                                          array('conditions'=>array('Paciente.razon_social LIKE'=>'%'.$_GET['term'].'%'))
+                                         );
+         $i=0;
+         foreach($pacientes as $p){
+             $respuesta[$i]['value']=$p['Paciente']['dni'] . ' - ' . $p['Paciente']['razon_social'];
+         $i++;
+         }
+        return json_encode($respuesta);
     }	    
+ */
     
 }
 ?>

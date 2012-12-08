@@ -80,6 +80,20 @@ class PacientesController extends AppController {
         }
     }     
 
+   public function search(){
+        $respuesta = array ();
+        $this->autoRender=false;
+        $pacientes=$this->Paciente->find('all',
+                                         array('conditions'=>array('Paciente.razon_social LIKE'=>'%'.$_GET['term'].'%'))
+                                        );
+        $i=0;
+        foreach($pacientes as $p){
+            $respuesta[$i]['value']=$p['Paciente']['dni'];
+        $i++;
+        }
+       return json_encode($respuesta);
+   }	    
+   
      
 }
 ?>

@@ -73,13 +73,25 @@ class MedicosController extends AppController {
            
      }
    
-   public function delete($id = null ){
+    public function delete($id = null ){
         if ($this->Medico->delete($id, true)) {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
             $this->redirect(array('action' => 'index'));
         }
     }     
 
-     
+    public function search(){
+        $respuesta = array ();
+        $this->autoRender=false;
+        $pacientes=$this->Medico->find('all',
+                                         array('conditions'=>array('Medico.razon_social LIKE'=>'%'.$_GET['term'].'%'))
+                                        );
+        $i=0;
+        foreach($pacientes as $p){
+            $respuesta[$i]['value']=$p['Medico']['matricula'];
+        $i++;
+        }
+       return json_encode($respuesta);
+    }    
 }
 ?>
