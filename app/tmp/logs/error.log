@@ -1569,3 +1569,62 @@
 #1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2012-12-10 03:52:09 Error: [MissingTableException] Table estudiocitologias for model Estudiocitologia was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('estudiocitologi...')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#3 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-11 04:48:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(35): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-11 04:48:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Citologia.organoscitologia_id' in 'on clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Citolog...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Citolog...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Citolog...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Citologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(35): Model->find('all')
+#6 [internal function]: ProtocolosController->index()
+#7 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-12-11 04:59:19 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(46): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-11 05:03:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'obrasocial_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(46): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

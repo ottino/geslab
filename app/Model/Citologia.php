@@ -5,7 +5,7 @@ class Citologia extends AppModel {
     public $name = 'Citologia';
     public $primaryKey = 'id';
 
-      public $belongsTo = array(
+    public $belongsTo = array(
         'Paciente' => array(
             'className'  => 'Paciente',
             'foreignKey' => 'paciente_id',
@@ -20,9 +20,16 @@ class Citologia extends AppModel {
         ),  
         'Organoscitologia' => array(
             'className'  => 'Organoscitologia',
-            'foreignKey' => 'organoscitologia_id',
+            'foreignKey' => 'organocitologia_id',
         )
-    );      
+    );
+    
+    public $hasMany = array(
+        'CitologiaEstudio' => array(
+            'className' => 'CitologiaEstudio',
+            'foreignKey' => 'citologia_id',
+        )
+    );
 }
 
 ?>

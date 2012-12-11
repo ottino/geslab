@@ -22,8 +22,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
           <link type="text/css" rel="stylesheet" href="/geslab/css/jquery-ui-1.9.2.custom.min.css" />		  
+	  
           <script type="text/javascript" src="/geslab/js/jquery-1.8.3.js"> </script>
 	  <script type="text/javascript" src="/geslab/js/jquery-ui-1.9.2.custom.min.js"> </script>
+	  
+          <script type="text/javascript" src="/geslab/js/jquery.asmselect.js"> </script>
+          <link type="text/css" rel="stylesheet" href="/geslab/css/jquery.asmselect.css" />		  
+          
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:

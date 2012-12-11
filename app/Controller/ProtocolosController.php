@@ -3,7 +3,17 @@
 class ProtocolosController extends AppController {
      
     public $helpers = array('Html', 'Form');     
-    public $uses = array('Citologia','Medico','Organoscitologia','Paciente');
+    
+    public $uses = array( 
+                         'Citologia',
+                         'Medico',
+                         'Organoscitologia',
+                         'Paciente',
+                         'Sanatorio',
+                         'Obrasocial',
+                         'Estudioscitologia'
+                        );
+    
     var $components = array('RequestHandler');
 
     public function  __construct($request = null, $response = null) {
@@ -11,9 +21,12 @@ class ProtocolosController extends AppController {
         
         # Obtengo los datos de todos los modelos para dar de alta protocolos
         $this->citologias        = $this->Citologia->find('list');     
+        $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.descripcion'));     
+        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion'));     
         $this->medicos           = $this->Medico->find('list',array('fields' => 'Medico.razon_social'));     
-        $this->organoscitologias = $this->Organoscitologia->find('list');     
+        $this->organoscitologias = $this->Organoscitologia->find('list', array('fields' => 'Organoscitologia.descripcion'));     
         $this->pacientes         = $this->Paciente->find('list',array('fields' => 'Paciente.dni'));       
+        $this->estudios          = $this->Estudioscitologia->find('list',array('fields' => 'Estudioscitologia.descripcion'));       
 
     }  
     
@@ -24,25 +37,28 @@ class ProtocolosController extends AppController {
     }
     public function add() {
 
-        $this->set('pacientes',$this->pacientes);
-        $this->set('medicos',$this->medicos);
+        $this->set('sanatorios'        , $this->sanatorios);
+        $this->set('organoscitologias' , $this->organoscitologias);
+        $this->set('obrasociales'      , $this->obrasociales);
+        $this->set('estudios'          , $this->estudios);
+        
+         if(!empty($this->data)){            
+            if ($this->Citologia->save($this->data)) {
+                   
+                $this->Session->setFlash( MSJ_REG_AG_OK );    
+                
+                // Con esto vuelve al Index, 
+                // pasando por la funcion index del controlador
+                $this->redirect(array('action' => 'index'));
+                
+            } else {
+                     $this->Session->setFlash( MSJ_REG_AG_ERR );
+                   }
+            
+           }
+       
     }
  
-/*    
-    public function search(){
-         $respuesta = array ();
-         $this->autoRender=false;
-         $pacientes=$this->Paciente->find('all',
-                                          array('conditions'=>array('Paciente.razon_social LIKE'=>'%'.$_GET['term'].'%'))
-                                         );
-         $i=0;
-         foreach($pacientes as $p){
-             $respuesta[$i]['value']=$p['Paciente']['dni'] . ' - ' . $p['Paciente']['razon_social'];
-         $i++;
-         }
-        return json_encode($respuesta);
-    }	    
- */
-    
+
 }
 ?>

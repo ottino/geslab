@@ -146,6 +146,10 @@ div.col{
         float:left;
 }
 
+.w30{
+    width: 30%;
+}
+
 .w40{
     width: 40%;
 }
@@ -153,6 +157,10 @@ div.col{
 
 .w50{
     width: 50%;
+}
+
+.w60{
+    width: 60%;
 }
 
 div.actions {
@@ -853,4 +861,12 @@ pre {
 	margin-bottom: 0;
 	padding: 0;
 	vertical-align: text-top;
+}
+
+/** maxi **/
+
+.scrollbar_1 {
+        width:400px;
+        height:130px;
+        overflow:auto;
 }
