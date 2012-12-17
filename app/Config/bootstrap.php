@@ -204,6 +204,28 @@ Inflector::rules('plural', array(
 
 # Botones
 define('EDITAR_BTN', 'Editar');
+define('BTN_VIEW', 'Ver');
+define('BTN_DEL', 'Eliminar');
+define('BTN_EDIT', 'Editar');
+define('BTN_PREVIEW', 'Vista previa');
+define('BTN_FIND', 'Buscar');
+define('BTN_INS', 'Insertar');
+define('BTN_ADD', 'Nuevo');
+define('BTN_LIST', 'Listar');
+define('BTN_LIST_INSC', 'Lista Insc.');
+define('BTN_INSC', 'Inscribir');
+define('BTN_PAYS', 'Pagos');
+define('BTN_ADH', 'Adherente');
+define('BTN_BAJA', 'Baja');
+define('BTN_PRINT', 'Imprimir');
+define('BTN_ANULAR', 'Anular');
+define('BTN_APROBAR', 'Aprobar');
+
+define('BTN_SEL_ALL', 'Todos');
+define('BTN_SEL_NONE', 'Ninguno');
+
+define('BTN_INI', 'Inicio');
+define('BTN_EXIT', 'Salir');
 
 # Mensajes
 define('MSJ_REG_AG_OK'   , 'Registro agregado');
@@ -211,3 +233,54 @@ define('MSJ_REG_AG_ERR'  , 'Error en la carga');
 define('MSJ_REG_EDT_OK'  , 'Registro modificado');
 define('MSJ_REG_EDT_ERR' , 'Error en la modificacion');
 define('MSJ_REG_DEL_OK'  , 'Registro eliminado');
+
+define('MSG_AUTH_USR_PASS', 'Usuario y claves incorrectos');
+
+#Título del sistema
+define('CONST_TITULO', 'GesLab');
+
+#Mensajes para la Validacion del Modelo
+define('MSG_DATO_OBLIG', 'Este dato es obligatorio');
+define('MSG_SEG_PASS', 'Debe contener al menos 8 carecteres, una letra mayúscula, 
+    una letra minúscula y un número o caracter especial');
+define('MSG_DATO_UNICO', 'El dato ingresado ya existe');
+define('MSG_FECHA_VALIDA', 'Ingrese una fecha válida');
+define('MSG_DATO_LISTA', 'Elija un dato de la lista');
+define('MSG_DATO_ALPHA', 'Solo puede contener letras y numeros');
+define('MSG_DATO_NUMER', 'El dato debe ser númerico');
+
+define('MSG_ADD', 'Registro guardado con éxito');        
+define('MSG_DEL', 'Se ha eliminado el registro');
+define('MSG_ERR', 'Compruebe los errores');
+define('MSG_SEL_REG', 'Seleccione un registro');
+define('MSG_SEL_DEL', 'Registros eliminados: ');
+define('MSG_EDT', 'Registro editado con éxito');
+
+define('MSG_ERR_SAVE', 'Error al guardar los datos');
+
+define('MSG_GEN_CUOTAS', 'Cuotas generadas con éxito');
+
+define('MSG_SEG_NO_ACCESS', 'No puede acceder a esta sección');
+define('MSG_PREG_ELIM_DATO', 'Esta seguro que desea eliminar este dato?');
+
+define('MSG_SIN_RES', 'No se encontraron datos');
+
+
+/**
+ * Formato de fecha y hora
+ */        
+        
+define('CONST_FORMAT_FECHA_HORA', 'Y-m-d H:i:s');
+define('CONST_FORMAT_FECHA', 'Y-m-d');
+define('CONST_FORMAT_HORA', 'H:i:s');
+
+define('CONST_FORMAT_FECHA_HORA_VISTA', 'd/m/Y H:i:s');
+define('CONST_FORMAT_FECHA_VISTA', 'd/m/Y');   
+define('CONST_FORMAT_HORA_VISTA', 'H:i:s');   
+
+
+/**
+ * Niveles de Menu
+ */
+define('CONST_NIVEL_PRIMERO', 1);
+define('CONST_NIVEL_SEGUNDO', 2);

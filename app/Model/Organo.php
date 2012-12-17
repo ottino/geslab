@@ -1,9 +1,11 @@
 <?php
 
-class Organoscitologia extends AppModel {
+class Organo extends AppModel {
     
-    public $name = 'Organoscitologia';
+    public $name = 'Organo';
     public $primaryKey = 'id';
+    public $useTable = 'Organos';
+    public $displayField = 'descripcion';
  
 }
 

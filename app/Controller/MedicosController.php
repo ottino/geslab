@@ -88,7 +88,7 @@ class MedicosController extends AppController {
                                         );
         $i=0;
         foreach($pacientes as $p){
-            $respuesta[$i]['value']=$p['Medico']['matricula'];
+            $respuesta[$i]['value']=$p['Medico']['id'] . ' - ' . $p['Medico']['razon_social'] . ' (' . $p['Medico']['matricula'] . ')';
         $i++;
         }
        return json_encode($respuesta);

@@ -11,6 +11,12 @@ class CitologiaEstudio extends AppModel{
             'foreignKey' => 'citologia_id',
         )
     );
-    
+ 
+     public $hasMany = array(
+        'Estudioscitologia' => array(
+            'className' => 'Estudioscitologia',
+            'foreignKey' => 'id',
+        )
+    );   
 }
 ?>

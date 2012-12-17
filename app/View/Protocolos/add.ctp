@@ -1,21 +1,46 @@
 <script type="text/javascript">
  $(function() {
-   $('#CitologiaPacienteId').autocomplete({
-         source   : "http://localhost/geslab/pacientes/search/",
+   $('#ProtocoloPacienteId').autocomplete({
+         source   : '<?php echo $this->Html->url(array('controller'=>'Pacientes', 'action'=>'search'));?>',
          minLength: 2
        });
-   $('#CitologiaMedicoId').autocomplete({
-         source   : "http://localhost/geslab/medicos/search/",
+   $('#ProtocoloMedicoId').autocomplete({
+         source   : '<?php echo $this->Html->url(array('controller'=>'Medicos', 'action'=>'search'));?>',
          minLength: 2
        }); 
        
-    $("#EstudioscitologiaDescripcion").asmSelect({
+    $("#EstudioEstudio").asmSelect({
             addItemTarget: 'bottom',
             animate: true,
             highlight: false,
             sortable: true
     });     
 
+  /*     
+   if ($("#CitologiaTipoProtocolo").attr("select")){
+    $("#muestra_citologia").css("display", "block");
+     }else{
+        $("#muestra_citologia").css("display", "none");
+     }; 
+ */
+ $('#ProtocoloTipoProtocolo').change(function(){
+
+    //Almaceno el valor seleccionado en una variable
+    var valorSeleccionado = $(this).val();
+    
+    if(valorSeleccionado == 1)
+    {    
+        $('#muestra_citologia').css("display", "none"); 
+        $('#muestra_biopsia').css("display", "block"); 
+    }
+    else if(valorSeleccionado == 0)
+    {
+      $('#muestra_citologia').css("display", "block"); 
+      $('#muestra_biopsia').css("display", "none"); 
+    } 
+    return false;
+   }); 
+ 
  });
 </script>
  
@@ -32,7 +57,7 @@
                                    array(
                                       'label' => 'Paciente',
                                       'empty' => 'Eliga una opción',
-                                      'type'  => 'text'
+                                      'type'  => 'text',                                      
                                        )
                                   );      
 
@@ -55,15 +80,6 @@
                                          )
                                     );               
  
-                             echo $this->Form->input(
-                                    'organocitologia_id',
-                                     array(
-                                        'options' => $organoscitologias,
-                                        'label' => 'Organo Citologia',
-                                        'empty' => 'Eliga una opción',
-                                         
-                                         )
-                                    );    
                              
                             echo $this->Form->input(
                                     'sanatorio_id',
@@ -81,18 +97,30 @@
                                           )
                                     );
                              
-                            echo $this->Form->input('Estudioscitologia.descripcion', 
-                                                    array( 
-                                                           'label'    => 'Estudios',
-                                                           'multiple' => 'multiple',
-                                                           'options'  => $estudios,
-                                                           'empty' => 'Seleccione los estudios' 
-                                                    ));
+                             echo $this->Form->input(
+                                'tipo_protocolo',
+                                 array(
+                                    'options' => array ('Citologia' , 'Biopsia'),
+                                    'label' => 'Protocolo',
+                                    'empty' => 'Eliga una opción')
+                                );   
+                             
                           ?>
               </div> 
-              <div class="col w40">
+              <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php
-                          echo $this->Form->input(
+                            echo $this->Form->input(
+                                 'organo_citologia_id',
+                                  array(
+                                     'options' => $organoscitologia,
+                                     'label' => 'Organo',
+                                     'empty' => 'Eliga una opción',
+                                     'name'  => 'data[Protocolo][organo_citologia_id]',
+                                     'id'    => 'ProtocoloOrganoCitologiaId',                                
+                                      )
+                                 );    
+
+                         echo $this->Form->input(
                                      'material',
                                       array( 'type' => 'textarea' )                                   
                                    );
@@ -101,10 +129,60 @@
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
                                    );
-                          echo "<br>";
-                          echo $this->Form->end('Agregar protocolo'); 
-                          ?> 
+
+                          echo $this->Form->input('Estudio', 
+                                array( 
+                                       'label'    => 'Estudios',
+                                       'multiple' => 'multiple',
+                                       'options'  => $estudios,
+                                       'empty' => 'Seleccione los estudios' 
+                                ));
                           
+                          ?> 
+               </div>  
+               <div class="col w40" style="display:none" id="muestra_biopsia">
+                          <?php
+                            echo $this->Form->input(
+                                 'organo_biopsia_id',
+                                  array(
+                                     'options' => $organosbiopsia,
+                                     'label' => 'Organo',
+                                     'empty' => 'Eliga una opción',
+                                     'name'  => 'data[Protocolo][organo_biopsia_id]',
+                                     'id'    => 'ProtocoloOrganoBiopsiaId',
+                                      )
+                                 );    
+                          echo "<table>";
+                          echo "<tr>";
+                          echo "<td>";
+                          echo $this->Form->input(
+                                     'macroscopia',
+                                      array( 'type' => 'textarea' )                                   
+                                   );
+                          echo "</td>"; 
+                          echo "<td algin='richt'>"; 
+                          echo $this->Form->input(
+                                     'microscopia',
+                                      array( 'type' => 'textarea' )                                   
+                                   );
+                          echo "</td>"; 
+                          echo "</tr>"; 
+                          echo "</table>";
+                          
+                          echo $this->Form->input(
+                                     'diagnostico',
+                                      array( 'type' => 'textarea' )                                   
+                                   );                          
+                          
+                         
+                          
+                          ?> 
+                         
               </div>    
+                <?php
+                echo $this->Form->end('Agregar protocolo');
+                ?>
             </fieldset>  
-     </div> 
+     </div>
+    
+ 

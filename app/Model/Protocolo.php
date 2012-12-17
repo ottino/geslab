@@ -1,8 +1,8 @@
 <?php
 
-class Citologia extends AppModel {
+class Protocolo extends AppModel {
     
-    public $name = 'Citologia';
+    public $name = 'Protocolo';
     public $primaryKey = 'id';
 
     public $belongsTo = array(
@@ -18,16 +18,23 @@ class Citologia extends AppModel {
             'className'  => 'Sanatorio',
             'foreignKey' => 'sanatorio_id',
         ),  
-        'Organoscitologia' => array(
-            'className'  => 'Organoscitologia',
-            'foreignKey' => 'organocitologia_id',
+        'Organo' => array(
+            'className'  => 'Organo',
+            'foreignKey' => 'organo_id',
+        ),
+        'Obrasocial' => array(
+            'className'  => 'Obrasocial',
+            'foreignKey' => 'obrasocial_id',
         )
     );
-    
-    public $hasMany = array(
-        'CitologiaEstudio' => array(
-            'className' => 'CitologiaEstudio',
+
+    public $hasAndBelongsToMany = array(
+        'Estudio' => array(
+            'className' => 'Estudio',
+            'joinTable' => 'citologias_estudios',
             'foreignKey' => 'citologia_id',
+            'associationForeignKey' => 'estudio_id',
+            'order' => array('Estudio.descripcion' => 'ASC')
         )
     );
 }

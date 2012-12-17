@@ -1,8 +1,8 @@
 <?php
 
-class Estudioscitologia extends AppModel {
+class Estudio extends AppModel {
     
-    public $name = 'Estudioscitologia';
+    public $name = 'Estudio';
     public $primaryKey = 'id';
 
     

@@ -1628,3 +1628,473 @@
 #8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2012-12-12 03:28:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Estudioscitologia.citologia_id' in 'field list'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Estudio...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Estudio...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Estudio...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Estudioscitologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#6 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-12 03:28:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Estudioscitologia.citologia_id' in 'field list'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Estudio...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Estudio...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Estudio...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Estudioscitologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#6 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-12 03:30:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Estudioscitologia.citologia_id' in 'field list'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Estudio...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Estudio...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Estudio...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Estudioscitologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#6 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-12 03:30:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Estudioscitologia.citologia_id' in 'field list'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Estudio...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Estudio...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Estudio...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Estudioscitologia), Array)
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#6 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-12 03:45:16 Error: [MissingTableException] Table estudios for model Estudio was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('estudios')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(29): Model->find('list', Array)
+#3 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-12-13 01:40:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:40:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:41:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:42:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:43:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:43:48 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-13 01:50:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'paciente_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Citologia), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(47): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 00:39:38 Error: [MissingTableException] Table organes for model Organo was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('organes')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Protocolo), Array)
+#3 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(35): Model->find('all')
+#4 [internal function]: ProtocolosController->index()
+#5 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-12-14 00:41:06 Error: [MissingTableException] Table organes for model Organo was not found in datasource default.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('organes')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Protocolo), Array)
+#3 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(35): Model->find('all')
+#4 [internal function]: ProtocolosController->index()
+#5 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-12-14 01:37:11 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Usuarios\entrar.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 01:40:20 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Usuarios\entrar.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 01:40:23 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Usuarios\entrar.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 01:42:44 Error: [MissingComponentException] Component class LogComponent could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Controller\ComponentCollection.php(52): ComponentCollection->load('Log', Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(634): ComponentCollection->init(Object(UsuariosController))
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(182): Controller->constructClasses()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 03:23:16 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 67]
+2012-12-14 03:23:16 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 67, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 67, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-14 04:03:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_biopsia_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(67): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:06:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_biopsia_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(67): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:11:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_biopsia_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:11:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_biopsia_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:13:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:14:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:16:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:18:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'organo_id' cannot be null
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(70): Model->save(Array)
+#5 [internal function]: ProtocolosController->add()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-12-14 04:26:07 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\xampp\htdocs\geslab\app\View\Protocolos\index.ctp, line 57]
+2012-12-14 04:26:07 Error: [FatalErrorException] syntax error, unexpected end of file
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-14 04:29:52 Error: Fatal Error (4): syntax error, unexpected ''Obrasocial'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\geslab\app\Model\Protocolo.php, line 25]
+2012-12-14 04:29:52 Error: [FatalErrorException] syntax error, unexpected ''Obrasocial'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-14 04:31:39 Error: [MissingActionException] Action ProtocolosController::delete() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-12-14 05:03:49 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\delete.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:03:50 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\delete.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:03:50 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\delete.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:03:50 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\delete.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:04:12 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\delete.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:11:36 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:11:49 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:12:02 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:12:37 Error: [MissingControllerException] Controller class IndexController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-14 05:12:51 Error: [MissingControllerException] Controller class IndexController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-14 05:13:06 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:13:44 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:15:59 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:16:36 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:18:36 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:19:55 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 05:19:58 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 06:17:40 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\a_d_d.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 13:05:29 Error: [MissingControllerException] Controller class OrganoController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-14 13:05:58 Error: [MissingControllerException] Controller class OrganoController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-14 13:07:01 Error: [MissingControllerException] Controller class OrganoController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-14 13:08:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\geslab\app\Controller\OrganosController.php, line 15]
+2012-12-14 13:08:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-14 13:17:06 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 21:43:18 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Inicio\index.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-14 22:02:13 Error: [MissingActionException] Action MedicosController::modificar() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(MedicosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -16,28 +16,35 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = CONST_TITULO;
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-          <link type="text/css" rel="stylesheet" href="/geslab/css/jquery-ui-1.9.2.custom.min.css" />		  
-	  
-          <script type="text/javascript" src="/geslab/js/jquery-1.8.3.js"> </script>
-	  <script type="text/javascript" src="/geslab/js/jquery-ui-1.9.2.custom.min.js"> </script>
-	  
-          <script type="text/javascript" src="/geslab/js/jquery.asmselect.js"> </script>
-          <link type="text/css" rel="stylesheet" href="/geslab/css/jquery.asmselect.css" />		  
-          
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
-	<?php 
+	<?php
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+
+                echo $this->Html->css('kendoui/kendo.common.min');
+                echo $this->Html->css('kendoui/kendo.default.min');
+                
+                echo $this->Html->css('jquery-ui-1.9.2.custom.min');
+                echo $this->Html->css('jquery.asmselect.css');
+                
+                
+                echo $this->Html->script('jquery-1.8.3');
+                echo $this->Html->script('jquery-ui-1.9.2.custom.min');
+                echo $this->Html->script('jquery.asmselect.js');
+                
+                //echo $this->Html->script('kendoui/jquery.min');
+                echo $this->Html->script('kendoui/kendo.web.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -47,8 +54,21 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+                    <div class="title">
+			<h1>
+                        <?php echo $this->Html->link($cakeDescription, '/'); ?>                            
+                        </h1>
+                    </div>
+                    <div class="menu-logout">
+                        <?php echo $this->element('menu_logout'); ?>
+                    </div>
+                    <div class="clear"></div>
 		</div>
+            
+                <div id="menu">                                        
+                    <?php echo $this->element('menu'); ?>
+                </div>
+            
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
@@ -56,15 +76,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
+			Copyright 2012
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
-        
 </body>
 </html>

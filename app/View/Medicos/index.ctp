@@ -12,7 +12,7 @@
             <th>eMail</th>  
             <th>Matricula</th>
             <th>Editar</th>
-            <th>Eliminar</th>                 
+            <th>Eliminar</th>              
     </tr>
     <?php        
     foreach ($data as $d):
@@ -24,7 +24,7 @@
                 echo "<td>" . $d['Medico']['celular']. "</td>";
                 echo "<td>" . $d['Medico']['email']. "</td>";
                 echo "<td>" . $d['Medico']['matricula']. "</td>";
-
+                
                 echo "<td>";
                 
                 $id = $d['Medico']['id'];
