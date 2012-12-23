@@ -28,6 +28,12 @@
                             'label' => 'Localidad',
                             'empty' => 'Eliga una opción')
                         );
+    
+                echo $this->Form->input('email',
+                        array (
+                                'label' => 'eMail'
+                              )
+                        );                  
             ?>
             <?php echo $this->Form->end('Guardar'); ?>
             </fieldset>

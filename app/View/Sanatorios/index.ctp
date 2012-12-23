@@ -9,6 +9,7 @@
             <th>Telefono Principal</th>            
             <th>Telefono Secundario</th>
             <th>Localidad</th>
+            <th>eMail</th>
             <th>Editar</th>
             <th>Eliminar</th>            
     </tr>
@@ -20,6 +21,7 @@
                 echo "<td>" . $d['Sanatorio']['telefono1'] . "</td>";
                 echo "<td>" . $d['Sanatorio']['telefono2'] . "</td>";
                 echo "<td>" . $d['Localidad']['descripcion']. "</td>";
+                echo "<td>" . $d['Sanatorio']['email']. "</td>";
 
                 echo "<td>";
                 

@@ -133,6 +133,13 @@ div.view {
 	/*padding:10px 2%;*/
         padding-top: 10px;
 }
+
+div.view_email {
+	width:40%;
+	/*border-left:1px solid #666;*/
+	/*padding:10px 2%;*/
+        padding-top: 10px;
+}
 div.form-content{	
         width: 100%;
 }
@@ -141,6 +148,7 @@ div.columns{
         float:left;        
         width: 23%;
 }
+
 
 div.col{
         float:left;
@@ -161,6 +169,10 @@ div.col{
 
 .w60{
     width: 60%;
+}
+
+.w90{
+    width: 90%;
 }
 
 div.actions {

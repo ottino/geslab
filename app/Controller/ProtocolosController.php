@@ -1,4 +1,5 @@
 <?php
+App::import('Vendor', 'EnviaMail', array('file'=>'EnviaMail'.DS.'class.phpmailer.php')  );
 
 class ProtocolosController extends AppController {
      
@@ -42,6 +43,7 @@ class ProtocolosController extends AppController {
         $this->set('data',$this->Protocolo->find('all'));
         
     }
+    
     public function add() {
 
         $this->set('sanatorios'        , $this->sanatorios);
@@ -129,11 +131,68 @@ class ProtocolosController extends AppController {
            
      }
      
-   public function delete($id = null ){
+    public function delete($id = null ){
         if ($this->Protocolo->delete($id, true)) {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
             $this->redirect(array('action' => 'index'));
         }
-    }   
+    }
+    
+    public function envia_mail ($id = null) {
+
+        $this->set('sanatorios'        , $this->sanatorios);
+        $this->set('organos'           , $this->organos);
+        $this->set('organoscitologia'  , $this->organoscitologia);
+        $this->set('organosbiopsia'    , $this->organosbiopsia);
+        $this->set('obrasociales'      , $this->obrasociales);
+        $this->set('estudios'          , $this->estudios);
+       
+       if ($this->request->is('get')) {
+             if ($id <> null )
+             {
+                 // envio los datos a envia_mail.ctp
+                 $this->Protocolo->id = $id;           
+                 $this->request->data = $this->Protocolo->read();
+                 $this->set('Protocolo',$this->request->data);
+
+             } else {
+                     // error cuando no se puede abrir envia_mail.ctp
+                     $this->Session->setFlash( MSJ_REG_EDT_ERR );
+                     $this->redirect(array('action' => 'index'));
+             } 
+         } else {
+                 // cuando toco enviar vuelvo acá
+                 $this->Protocolo->id = $id;           
+                 $this->request->data = $this->Protocolo->read();
+                 $this->set('Protocolo',$this->request->data);
+                 //pr($this->data);  
+                 $mail = new PHPMailer();
+                 $mail->IsSMTP(); // telling the class to use SMTP
+
+                 $body   = "Cuerpo del correo";
+                 $mail->SetFrom('maxi.ottino@gmail.com', 'de?');
+
+                 $mail->Subject    = "Asunto";
+                 $mail->MsgHTML($body);
+
+                 $address = "maxi.ottino@gmail.com";
+     /*           $mail->AddAddress($address, "Enviar correo a?");
+      * 
+
+                 if(!$mail->Send()) {
+                      return "Mailer Error: " . $mail->ErrorInfo;
+                 } else {
+                      return "Message sent!";
+                 }
+      * 
+      */
+
+         }
+                
+           
+           
+         
+         
+     }
 }
 ?>

@@ -1,7 +1,7 @@
 
 <div class="form">
 <fieldset>
-    <legend>Medicos</legend>
+    <legend>Protocolos</legend>
     
     <table cellpadding="0" cellspacing="0">
     <tr>
@@ -61,7 +61,7 @@
                 echo $this->Html->image('s_success.png',
                          array(
                                 "alt" => "Enviar",
-                                'url' => array('action' => '', $id)
+                                'url' => array('action' => 'envia_mail', $id)
                               )
                         );
                 echo "</td>";

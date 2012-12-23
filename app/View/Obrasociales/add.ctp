@@ -1,9 +1,10 @@
 <div class="form">
     <?php echo $this->Form->create(); ?>
     <div class="form-content">
-        <div class="columns">
-            <fieldset>
-            <legend>Nueva Obra Social</legend>
+
+          <fieldset>
+           <legend>Nueva Obra Social</legend>
+            <div class="col w40">
             <?php
                
                 echo $this->Form->input('cuit',
@@ -49,9 +50,22 @@
                             'empty' => 'Eliga una opción')
                         );
             ?>
+            </div>  
+            <div class="col w40">
+              <table>
+                <tr>
+                 <th>Codigo</th>
+                 <th>Precio</th> 
+                </tr>
+                <tr>
+                  <td> . </td>  
+                  <td> . </td>  
+                </tr>    
+              </table>    
+            </div>
             <?php echo $this->Form->end('Guardar'); ?>
             </fieldset>
-        </div>  
+
     </div>
 
 </div>
