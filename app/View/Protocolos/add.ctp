@@ -16,13 +16,6 @@
             sortable: true
     });     
 
-  /*     
-   if ($("#CitologiaTipoProtocolo").attr("select")){
-    $("#muestra_citologia").css("display", "block");
-     }else{
-        $("#muestra_citologia").css("display", "none");
-     }; 
- */
  $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
@@ -39,9 +32,80 @@
       $('#muestra_biopsia').css("display", "none"); 
     } 
     return false;
-   }); 
- 
+}); 
+
+ $('#LimpiarMicroscopia').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloMicroscopia").val("");
+     $("#LimpiarMicroscopia").removeAttr("checked");
+   }
+   
  });
+ 
+ $('#LimpiarMacroscopia').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloMacroscopia").val("");
+     $("#LimpiarMacroscopia").removeAttr("checked");
+   }
+   
+ });
+ 
+ $('#ProtocoloOrganoBiopsiaId').change(function(){
+   
+   $("#ProtocoloMacroscopia").val(function(){
+                    $.ajax({
+                    url:'http://localhost/geslab/protocolos/search_organo/' + 
+                                       $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
+                    success: function(data) {
+                        $('#ProtocoloMacroscopia').val(data);
+                        
+                    }
+                    });
+                }); 
+                
+   $("#ProtocoloMicroscopia").val(function(){
+                    $.ajax({
+                    url:'http://localhost/geslab/protocolos/search_organo/'  + 
+                                        $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
+                    success: function(data) {
+                        $('#ProtocoloMicroscopia').val(data);
+                        
+                    }
+                    });
+                }); 
+   
+ });
+ 
+        $("#asmSelect0").change(function() {
+           
+            var multipleValues = $("#EstudioEstudio").val() || [];
+            multipleValues = multipleValues.join("-");
+            multipleValues = multipleValues.split("-");
+            multipleValues = multipleValues[multipleValues.length-1]; 
+            datos_cargados = $('#ProtocoloDiagnostico').val();
+            $("#ProtocoloDiagnostico").val(
+            function(){
+                    $.ajax({
+                    url:'http://localhost/geslab/protocolos/search_estudio/'  + multipleValues      ,                                                                 
+                    success: function(data) {
+                        $('#ProtocoloDiagnostico').val( datos_cargados + '\n' + data);                        
+                    }
+                    })
+                   }  
+              );
+                  
+    
+        });
+
+                            
+ });
+ 
 </script>
  
 <div class="form">
@@ -69,7 +133,15 @@
                                       'type'  => 'text' 
                                        )
                                   );               
-     
+
+                             echo $this->Form->input(
+                                    'NUC',
+                                     array(
+                                           'type'  => 'text', 
+                                           'label' => 'Codigo NUC'
+                                          )
+                                    );
+                             
                              echo $this->Form->input(
                                     'obrasocial_id',
                                      array(
@@ -88,12 +160,28 @@
                                         'label' => 'Sanatorio',
                                         'empty' => 'Eliga una opción')
                                     );
- 
+
                              echo $this->Form->input(
                                     'orden',
                                      array(
                                            'type'  => 'checkbox',
                                            'label' => 'Presenta Orden'
+                                          )
+                                    );
+
+                             echo $this->Form->input(
+                                    'internacion',
+                                     array(
+                                           'type'  => 'checkbox',
+                                           'label' => 'Internacion'
+                                          )
+                                    );
+
+                             echo $this->Form->input(
+                                    'ambulatorio',
+                                     array(
+                                           'type'  => 'checkbox',
+                                           'label' => 'Ambulatorio'
                                           )
                                     );
                              
@@ -151,7 +239,17 @@
                                      'name'  => 'data[Protocolo][organo_biopsia_id]',
                                      'id'    => 'ProtocoloOrganoBiopsiaId',
                                       )
-                                 );    
+                                 );
+                           ?> 
+                          <br>  
+
+                          <input type="checkbox" value="1" name="LimpiarMicroscopia" id="LimpiarMicroscopia"/>
+                          <label>Limpiar Microscopia</label>
+                          <br>
+                          <input type="checkbox" value="1" name="LimpiarMacroscopia" id="LimpiarMacroscopia"/>
+                          <label>Limpiar Macroscopia</label>
+                          
+                          <?php
                           echo "<table>";
                           echo "<tr>";
                           echo "<td>";

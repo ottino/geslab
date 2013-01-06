@@ -1,11 +1,24 @@
+    <script type="text/javascript">
+	window.onload = function (){
+		var myPDF = new PDFObject({
+		  // cambiar ruta donde van a estar los pdf
+                  url: "../../../tmp/Comprobantes." + <?php echo $Protocolo['Protocolo']['id'] ?> + ".pdf" ,		 
+		  width: "750px",
+		  height: "300px",
+                  
+                   pdfOpenParams: { view: 'FitH', toolbar: '1' }
+                 
+		}).embed("muestra_pdf");
+	};
+    </script>
+    
     <?php echo $this->Form->create(); ?>
 
     <div class="form-content">
         
             <fieldset>
             <legend>Informacion detallada del Mail</legend>            
-            <div class="view_email">
-                
+            <div class="view_email">         
              <br>
             <?php
                echo '<li>'; 
@@ -29,6 +42,8 @@
                echo '<i>'.$Protocolo['Protocolo']['id'].'</i>';
                echo '</li>';              
                echo '<br>';
+               echo '<br>';
+               echo '<br>';
                
                echo '<fieldset>';
                echo '<legend>Diagnostico</legend>';
@@ -41,8 +56,8 @@
               // die();
             ?>
             </div>
-           
-            </fieldset>
+            <div id="muestra_pdf" class="pdf_view"  >
+            </div>    
         
      </div>
       

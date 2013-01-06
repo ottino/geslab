@@ -101,6 +101,22 @@
                                            'label' => 'Presenta Orden'
                                           )
                                     );
+
+                             echo $this->Form->input(
+                                    'internacion',
+                                     array(
+                                           'type'  => 'checkbox',
+                                           'label' => 'Internacion'
+                                          )
+                                    );
+
+                             echo $this->Form->input(
+                                    'ambulatorio',
+                                     array(
+                                           'type'  => 'checkbox',
+                                           'label' => 'Ambulatorio'
+                                          )
+                                    );
                              
                              echo $this->Form->input(
                                 'tipo_protocolo',

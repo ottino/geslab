@@ -134,12 +134,7 @@ div.view {
         padding-top: 10px;
 }
 
-div.view_email {
-	width:40%;
-	/*border-left:1px solid #666;*/
-	/*padding:10px 2%;*/
-        padding-top: 10px;
-}
+
 div.form-content{	
         width: 100%;
 }
@@ -881,4 +876,20 @@ pre {
         width:400px;
         height:130px;
         overflow:auto;
+}
+
+.pdf_view {
+    float:left;
+    border:1px solid #333333;
+    width:750px;
+    height:300px; 
+    border-color: #EE4040;
+} 
+
+div.view_email {
+	width:30%; 
+        height:100%;
+        padding-top: 10px;
+        float:left;
+        
 }

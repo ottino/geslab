@@ -1,5 +1,6 @@
 <?php
 App::import('Vendor', 'EnviaMail', array('file'=>'EnviaMail'.DS.'class.phpmailer.php')  );
+App::import('Vendor', 'fpdf', array('file'=>'fpdf'.DS.'fpdf.php')  );
 
 class ProtocolosController extends AppController {
      
@@ -164,35 +165,168 @@ class ProtocolosController extends AppController {
                  // cuando toco enviar vuelvo acá
                  $this->Protocolo->id = $id;           
                  $this->request->data = $this->Protocolo->read();
+
                  $this->set('Protocolo',$this->request->data);
-                 //pr($this->data);  
+
                  $mail = new PHPMailer();
                  $mail->IsSMTP(); // telling the class to use SMTP
 
-                 $body   = "Cuerpo del correo";
-                 $mail->SetFrom('maxi.ottino@gmail.com', 'de?');
+                 $body   = "Adjuto diagnostico.
+                            Cualquier consulta responder al correo.
+                            
+                            Atte.-
+                            Silvia Viale";
+                 $mail->SetFrom('maxi.ottino@gmail.com', 'Silvia Viale');
 
-                 $mail->Subject    = "Asunto";
+                 $mail->Subject    = "Diagnostico";
                  $mail->MsgHTML($body);
 
                  $address = "maxi.ottino@gmail.com";
-     /*           $mail->AddAddress($address, "Enviar correo a?");
-      * 
+                 $mail->AddAttachment("../../../tmp/Comprobantes.".$id.".pdf"); // attachment
+                 
+                $mail->AddAddress($address, "Enviar correo a?");
+       
 
                  if(!$mail->Send()) {
-                      return "Mailer Error: " . $mail->ErrorInfo;
+                      return "Error: " . $mail->ErrorInfo;
                  } else {
-                      return "Message sent!";
+                      return "Mensaje Enviado";
                  }
-      * 
-      */
 
          }
-                
-           
-           
-         
-         
+        
      }
+
+    public function genera_comprobante ($id = null) {
+
+       $this->Protocolo->id = $id;           
+       $protocolo = $this->Protocolo->read();
+       //pr($protocolo);
+       //die();
+  
+        /* Datos para el comprobante */
+       
+        $Comp_ProtocoloNro = $protocolo['Protocolo']['id'];
+        $Comp_Paciente     = $protocolo['Paciente']['razon_social'];
+        $Comp_Medico       = $protocolo['Medico']['razon_social'];
+        $Comp_Organo       = $protocolo['Organo']['descripcion'];
+        $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
+        $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
+       
+        $pdf = new FPDF();
+        
+        $pdf->FPDF('P','cm','A4');
+        
+        
+        $pdf->AddPage();
+        $pdf->AliasNbPages();
+        $pdf->SetAutoPageBreak(true,0.2);
+        $pdf->SetMargins(0,0,0);
+        $pdf->SetTopMargin(11);
+       
+        /* Logo del comprobante */
+        $pdf->SetFont('Arial','B',20);
+        $pdf->SetY(1);
+        $pdf->SetX(1);
+        $pdf->Image(IMAGES . 'logo_geslab.jpg',0.1, 0.1 , 5 , 1);
+        
+        /* Primer linea */
+        $pdf->Line(0, 3 , 21, 3);
+        
+        /* Datos generales sobre el protocolo */
+ 
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.20,3.5);
+        $pdf->Cell(3.5,0.22,'Protocolo Nro:    ' . $Comp_ProtocoloNro );
+
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(16,3.5);
+        $pdf->Cell(3.5,0.22,'Fecha:    ' . '31/12/2012');
+
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.20,5.0);
+        $pdf->Cell(3.5,0.22,'Paciente:    ' . $Comp_Paciente );
+
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(16,5.0);
+        $pdf->Cell(3.5,0.22,'Edad:    ' . '27' );
+
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.20,6.5);
+        $pdf->Cell(3.5,0.22,'Medico:    ' . $Comp_Medico );
+        
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.20,8.0);
+        $pdf->Cell(3.5,0.22,'Organo:    ' . $Comp_Organo );
+        
+        /* Segunda linea */
+        $pdf->Line(0, 9 , 21, 9);
+       
+        /* Datos de Macroscopia */
+        $pdf->SetFont('Arial','B',11);
+        $pdf->SetXY(0.20,9.5);
+        $pdf->Cell(3.5,0.22,'Macroscopia:');   
+        
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.90,10.25);
+        $pdf->Cell(3.5,0.22,$Comp_Macroscopia );        
+
+        /* Datos de Diagnostico */
+        $pdf->SetFont('Arial','B',11);
+        $pdf->SetXY(0.20,14);
+        $pdf->Cell(3.5,0.22,'Diagnostico:');   
+        
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(0.90,14.75);
+        $pdf->Cell(3.5,0.22,substr($Comp_Diagnostico,0,100) );        
+        $pdf->SetXY(0.90,15.25);
+        $pdf->Cell(3.5,0.22,substr($Comp_Diagnostico,100,100) );   
+        
+        //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
+        $pdf->SetFont('Arial','B',10);
+        $pdf->SetXY(16,18);
+        $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
+        
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetXY(16.35,18.30);
+        $pdf->Cell(3.5,0.22,'Medica Patologa');         
+        
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetXY(16.80,18.60);
+        $pdf->Cell(3.5,0.22,'M.P 6939');         
+        
+        $data = $pdf->Output(null, 'S');
+        $this->set('id', $Comp_ProtocoloNro);
+        $this->set('pdf_comprobantes', $data);
+        $this->render('genera_comprobante', 'ajax');
+    }    
+
+    public function search_organo($id,$tipo){
+        
+        //= 'macroscopia';
+        $respuesta = array ();
+        $this->autoRender=false;
+        
+        $microscopia=$this->Organo->find('all',
+                                         array('conditions'=>array('Organo.id =' =>$id ))
+                                        );      
+       
+        return $microscopia['0']['Organo'][$tipo];
+    }    
+
+     public function search_estudio($id){
+        
+        //= 'macroscopia';
+        $respuesta = array ();
+        $this->autoRender=false;
+        
+        $estudio=$this->Estudio->find('all',
+                                         array('conditions'=>array('Estudio.id =' => $id ))
+                                        );      
+       
+        return $estudio['0']['Estudio']['descripcion'];
+    }    
+    
+    
 }
 ?>

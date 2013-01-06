@@ -84,7 +84,12 @@ class PacientesController extends AppController {
         $respuesta = array ();
         $this->autoRender=false;
         $pacientes=$this->Paciente->find('all',
-                                         array('conditions'=>array('Paciente.razon_social LIKE'=>'%'.$_GET['term'].'%'))
+                                         array(
+                                               'conditions'=>array(
+                                                                    'Paciente.dni LIKE'=>'%'.$_GET['term'].'%' 
+                                                                    
+                                                                  )
+                                             )
                                         );
         $i=0;
         foreach($pacientes as $p){

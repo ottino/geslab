@@ -39,11 +39,13 @@ $cakeDescription = CONST_TITULO;
                 echo $this->Html->css('jquery.asmselect.css');
                 
                 
+                
                 echo $this->Html->script('jquery-1.8.3');
                 echo $this->Html->script('jquery-ui-1.9.2.custom.min');
                 echo $this->Html->script('jquery.asmselect.js');
+                echo $this->Html->script('pdfobject.js');
+
                 
-                //echo $this->Html->script('kendoui/jquery.min');
                 echo $this->Html->script('kendoui/kendo.web.min');
 
 		echo $this->fetch('meta');
