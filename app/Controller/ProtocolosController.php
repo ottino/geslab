@@ -15,7 +15,12 @@ class ProtocolosController extends AppController {
                          'Obrasocial',
                          'Estudio'
                         );
-   
+    
+    public $tipo_protocolo = array(
+        'Citologia' => 'Citologia',
+        'Biopsia'   => 'Biopsia'
+    );  
+    
     var $components = array('RequestHandler');
 
     public function  __construct($request = null, $response = null) {
@@ -34,7 +39,7 @@ class ProtocolosController extends AppController {
                                         );
         
         $this->organos           = $this->Organo->find('list');       
-        $this->pacientes         = $this->Paciente->find('list');       
+        $this->pacientes         = $this->Paciente->find('list',array('fields' => 'Paciente.razon_social'));       
         $this->estudios          = $this->Estudio->find('list',array('fields' => 'Estudio.descripcion'));       
 
     }  
@@ -63,17 +68,19 @@ class ProtocolosController extends AppController {
            
            $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
-                    
+           $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
+           
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id'] = 
-                                          $this->request->data['Protocolo']['organo_citologia_id'];
+                    $this->request->data['Protocolo']['organo_citologia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'citologia';
+                    
             }
             else if  (!empty($this->data['Protocolo']['organo_biopsia_id'])) 
             {
                     $this->request->data['Protocolo']['organo_id'] = 
-                                          $this->request->data['Protocolo']['organo_biopsia_id'];
+                    $this->request->data['Protocolo']['organo_biopsia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'biopsia';
             }
     
@@ -101,7 +108,9 @@ class ProtocolosController extends AppController {
         $this->set('organosbiopsia'    , $this->organosbiopsia);
         $this->set('obrasociales'      , $this->obrasociales);
         $this->set('estudios'          , $this->estudios);
-
+        $this->set('pacientes'         , $this->pacientes);
+        $this->set('medicos'           , $this->medicos);
+        $this->set('tipo_protocolo'    , $this->tipo_protocolo);
 
         
          if ($this->request->is('get')) {
@@ -115,7 +124,30 @@ class ProtocolosController extends AppController {
              } 
          } else {
              
-         if(!empty($this->data)){            
+         if(!empty($this->data)){   
+             
+           $paciente_id = explode("-",$this->data['Protocolo']['paciente_id']);
+           $medico_id   = explode("-",$this->data['Protocolo']['medico_id']);
+           
+           $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
+           $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
+           $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
+             
+            if  (!empty($this->data['Protocolo']['organo_citologia_id']))
+            {
+                    $this->request->data['Protocolo']['organo_id'] = 
+                    $this->request->data['Protocolo']['organo_citologia_id'];
+                    $this->request->data['Protocolo']['tipoprotocolo'] = 'citologia';
+                    
+            }
+            else if  (!empty($this->data['Protocolo']['organo_biopsia_id'])) 
+            {
+                    $this->request->data['Protocolo']['organo_id'] = 
+                    $this->request->data['Protocolo']['organo_biopsia_id'];
+                    $this->request->data['Protocolo']['tipoprotocolo'] = 'biopsia';
+            }
+
+           
             if ($this->Protocolo->save($this->data)) {
                    
                 $this->Session->setFlash( MSJ_REG_EDT_OK );    
@@ -314,7 +346,7 @@ class ProtocolosController extends AppController {
         return $microscopia['0']['Organo'][$tipo];
     }    
 
-     public function search_estudio($id){
+    public function search_estudio($id){
         
         //= 'macroscopia';
         $respuesta = array ();

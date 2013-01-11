@@ -32,8 +32,27 @@
       $('#muestra_biopsia').css("display", "none"); 
     } 
     return false;
-}); 
+  }); 
 
+ $('#LimpiarMicro').click(function(){
+
+    $("#ProtocoloMicroscopia").val("");
+
+  });
+ 
+ $('#LimpiarMacro').click(function(){
+
+    $("#ProtocoloMacroscopia").val("");
+
+  });
+     /*
+        <input type="checkbox" value="1" name="LimpiarMicroscopia" id="LimpiarMicroscopia"/>
+        <label>Limpiar Microscopia</label>
+        <br>
+        <input type="checkbox" value="1" name="LimpiarMacroscopia" id="LimpiarMacroscopia"/>
+        <label>Limpiar Macroscopia</label>
+     */
+            
  $('#LimpiarMicroscopia').change(function(){
    var valorSeleccionado = $(this).val();
    
@@ -113,8 +132,9 @@
     
     <div class="form-content">
         <fieldset>
-                <legend>Nuevo Protocolo</legend> 
-                 <div class="col w40">
+          <legend>Nuevo Protocolo</legend> 
+          
+              <div class="col w40">
                         <?php                          
                             echo $this->Form->input(
                                   'paciente_id',
@@ -134,7 +154,7 @@
                                        )
                                   );               
 
-                             echo $this->Form->input(
+                            echo $this->Form->input(
                                     'NUC',
                                      array(
                                            'type'  => 'text', 
@@ -142,7 +162,7 @@
                                           )
                                     );
                              
-                             echo $this->Form->input(
+                            echo $this->Form->input(
                                     'obrasocial_id',
                                      array(
                                         'options' => $obrasociales,
@@ -194,7 +214,84 @@
                                 );   
                              
                           ?>
-              </div> 
+                   <br>
+                
+                   <legend>Practicas</legend>  
+                   <table class ="table_practicas">
+                      <tr>
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
+                      </tr>
+                      <tr>
+                        <td> 15.01.01 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150101]" id="ProtocoloPractica150101" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.02 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150102]" id="ProtocoloPractica150102" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.03 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150103]" id="ProtocoloPractica150103" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.04 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150104]" id="ProtocoloPractica150104" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.05 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150105]" id="ProtocoloPractica150105" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.06 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150106]" id="ProtocoloPractica150106" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.08 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150108]" id="ProtocoloPractica150108" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.09 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150109]" id="ProtocoloPractica150109" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.10 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150110]" id="ProtocoloPractica150110" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.11 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150111]" id="ProtocoloPractica150111" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.20 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150120]" id="ProtocoloPractica150120" value="0" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.21 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica150121]" id="ProtocoloPractica150121" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 14.47.90 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Protocolo][practica144790]" id="ProtocoloPractica144790" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                    </table>                   
+              </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php
                             echo $this->Form->input(
@@ -228,7 +325,7 @@
                           
                           ?> 
                </div>  
-               <div class="col w40" style="display:none" id="muestra_biopsia">
+              <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php
                             echo $this->Form->input(
                                  'organo_biopsia_id',
@@ -241,46 +338,39 @@
                                       )
                                  );
                            ?> 
-                          <br>  
-
-                          <input type="checkbox" value="1" name="LimpiarMicroscopia" id="LimpiarMicroscopia"/>
-                          <label>Limpiar Microscopia</label>
-                          <br>
-                          <input type="checkbox" value="1" name="LimpiarMacroscopia" id="LimpiarMacroscopia"/>
-                          <label>Limpiar Macroscopia</label>
+                          <br> 
                           
+                          <input class="btn_limpiar" type="button" value="Limpiar Macroscopia" name="LimpiarMacro" id="LimpiarMacro" />                    
+                          <br>  
                           <?php
-                          echo "<table>";
-                          echo "<tr>";
-                          echo "<td>";
+
                           echo $this->Form->input(
                                      'macroscopia',
                                       array( 'type' => 'textarea' )                                   
                                    );
-                          echo "</td>"; 
-                          echo "<td algin='richt'>"; 
+                          ?>
+                          
+                          <input class="btn_limpiar" type="button" value="Limpiar Microscopia" name="LimpiarMicro" id="LimpiarMicro" />
+                          <br>
+                          <?php
+                          
                           echo $this->Form->input(
                                      'microscopia',
                                       array( 'type' => 'textarea' )                                   
                                    );
-                          echo "</td>"; 
-                          echo "</tr>"; 
-                          echo "</table>";
                           
                           echo $this->Form->input(
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
-                                   );                          
-                          
-                         
-                          
+                                   );                                                    
                           ?> 
-                         
-              </div>    
+          
+              </div> 
+
                 <?php
                 echo $this->Form->end('Agregar protocolo');
                 ?>
-            </fieldset>  
+         </fieldset>  
      </div>
     
  

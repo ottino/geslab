@@ -16,13 +16,15 @@
             sortable: true
     });     
 
-  /*     
-   if ($("#CitologiaTipoProtocolo").attr("select")){
-    $("#muestra_citologia").css("display", "block");
-     }else{
-        $("#muestra_citologia").css("display", "none");
-     }; 
- */
+ $('#ProtocoloTipoProtocolo').val(
+  <?php
+         if ($this->data['Protocolo']['tipoprotocolo'] == 'citologia')
+              echo "0";
+         else echo "1";
+  ?>
+ );
+
+
  $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
@@ -32,17 +34,106 @@
     {    
         $('#muestra_citologia').css("display", "none"); 
         $('#muestra_biopsia').css("display", "block"); 
-       //    $("input").prop('disabled', true);
     }
-    else
+    else if(valorSeleccionado == 0)
     {
       $('#muestra_citologia').css("display", "block"); 
       $('#muestra_biopsia').css("display", "none"); 
-    }
+    } 
     return false;
-   }); 
+  }); 
+
+<?php
+         if ($this->data['Protocolo']['tipoprotocolo'] == 'citologia')
+              echo "$('#muestra_citologia').css(\"display\",\"block\");";
+         else if ($this->data['Protocolo']['tipoprotocolo'] == 'biopsia')
+              echo "$('#muestra_biopsia').css(\"display\",\"block\");";
+?>
+
+
+ $('#LimpiarMicro').click(function(){
+
+    $("#ProtocoloMicroscopia").val("");
+
+  });
  
+ $('#LimpiarMacro').click(function(){
+
+    $("#ProtocoloMacroscopia").val("");
+
+  });
+            
+ $('#LimpiarMicroscopia').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloMicroscopia").val("");
+     $("#LimpiarMicroscopia").removeAttr("checked");
+   }
+   
  });
+ 
+ $('#LimpiarMacroscopia').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloMacroscopia").val("");
+     $("#LimpiarMacroscopia").removeAttr("checked");
+   }
+   
+ });
+ 
+ $('#ProtocoloOrganoBiopsiaId').change(function(){
+   
+   $("#ProtocoloMacroscopia").val(function(){
+                    $.ajax({
+                    url:'http://localhost/geslab/protocolos/search_organo/' + 
+                                       $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
+                    success: function(data) {
+                        $('#ProtocoloMacroscopia').val(data);
+                        
+                    }
+                    });
+                }); 
+                
+   $("#ProtocoloMicroscopia").val(function(){
+                    $.ajax({
+                    url:'http://localhost/geslab/protocolos/search_organo/'  + 
+                                        $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
+                    success: function(data) {
+                        $('#ProtocoloMicroscopia').val(data);                        
+                    }
+                    });
+                }); 
+   
+ });
+ 
+$("#asmSelect0").change(function() {
+
+    var multipleValues = $("#EstudioEstudio").val() || [];
+    multipleValues = multipleValues.join("-");
+    multipleValues = multipleValues.split("-");
+    multipleValues = multipleValues[multipleValues.length-1]; 
+    datos_cargados = $('#ProtocoloDiagnostico').val();
+    $("#ProtocoloDiagnostico").val(
+    function(){
+            $.ajax({
+            url:'http://localhost/geslab/protocolos/search_estudio/'  + multipleValues      ,                                                                 
+            success: function(data) {
+                $('#ProtocoloDiagnostico').val( datos_cargados + '\n' + data);                        
+            }
+            })
+           }  
+      );
+
+
+});
+
+                            
+});
+ 
 </script>
  
 <div class="form">
@@ -53,16 +144,17 @@
     
     <div class="form-content">
         <fieldset>
-                <legend>Nuevo Protocolo</legend> 
-                 <div class="col w40">
-                        <?php                          
-                        
-                           echo $this->Form->input(
+          <legend>Nuevo Protocolo</legend> 
+          
+              <div class="col w40">
+                        <?php   
+                            //pr($this->data);
+                            echo $this->Form->input(
                                   'paciente_id',
                                    array(
-                                      'label' => 'Paciente',
-                                      'empty' => 'Eliga una opción',
-                                      'type'  => 'text',                                      
+                                      'type'  => 'text', 
+                                      'value' => $this->data['Paciente']['id'] . ' - ' .$this->data['Paciente']['razon_social'], 
+                                      'label' => 'Paciente'                                  
                                        )
                                   );      
 
@@ -70,12 +162,20 @@
                                   'medico_id',
                                    array(
                                       'label' => 'Medico',
-                                      'empty' => 'Eliga una opción',
+                                      'value' => $this->data['Medico']['id'] . ' - ' .$this->data['Medico']['razon_social'],
                                       'type'  => 'text' 
                                        )
                                   );               
-     
-                             echo $this->Form->input(
+
+                            echo $this->Form->input(
+                                    'NUC',
+                                     array(
+                                           'type'  => 'text', 
+                                           'label' => 'Codigo NUC'
+                                          )
+                                    );
+                             
+                            echo $this->Form->input(
                                     'obrasocial_id',
                                      array(
                                         'options' => $obrasociales,
@@ -93,7 +193,7 @@
                                         'label' => 'Sanatorio',
                                         'empty' => 'Eliga una opción')
                                     );
- 
+
                              echo $this->Form->input(
                                     'orden',
                                      array(
@@ -121,23 +221,102 @@
                              echo $this->Form->input(
                                 'tipo_protocolo',
                                  array(
-                                    'options' => array ('Citologia' , 'Biopsia'),
-                                    'label' => 'Protocolo',
-                                    'empty' => 'Eliga una opción')
+                                        'options' => array ('Citologia','Biopsia'),
+                                        'label' => 'Protocolo',
+                                        'empty' => 'Eliga una opción'
+                                      )
                                 );   
                              
                           ?>
-              </div> 
+                   <br>
+                
+                   <legend>Practicas</legend>  
+                   <table class ="table_practicas">
+                      <tr>
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
+                      </tr>
+                      <tr>
+                        <td> 15.01.01 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150101']; ?>" name="data[Protocolo][practica150101]" id="ProtocoloPractica150101" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.02 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150102']; ?>" name="data[Protocolo][practica150102]" id="ProtocoloPractica150102" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.03 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150103']; ?>" name="data[Protocolo][practica150103]" id="ProtocoloPractica150103" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.04 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150104']; ?>" name="data[Protocolo][practica150104]" id="ProtocoloPractica150104" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.05 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150105']; ?>" name="data[Protocolo][practica150105]" id="ProtocoloPractica150105" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.06 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150106']; ?>" name="data[Protocolo][practica150106]" id="ProtocoloPractica150106" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.08 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150108']; ?>" name="data[Protocolo][practica150108]" id="ProtocoloPractica150108" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.09 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150109']; ?>" name="data[Protocolo][practica150109]" id="ProtocoloPractica150109" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.10 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150110']; ?>" name="data[Protocolo][practica150110]" id="ProtocoloPractica150110" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.11 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150111']; ?>" name="data[Protocolo][practica150111]" id="ProtocoloPractica150111" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 15.01.20 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150120']; ?>" name="data[Protocolo][practica150120]" id="ProtocoloPractica150120" class="input_practicas_cant" >   
+                        </td>  
+                        <td> 15.01.21 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica150121']; ?>" name="data[Protocolo][practica150121]" id="ProtocoloPractica150121" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                      <tr>
+                        <td> 14.47.90 </td>  
+                        <td>
+                          <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica144790']; ?>" name="data[Protocolo][practica144790]" id="ProtocoloPractica144790" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
+                    </table>                   
+              </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php
                             echo $this->Form->input(
                                  'organo_citologia_id',
                                   array(
                                      'options' => $organoscitologia,
-                                     'label' => 'Organo',
-                                     'empty' => 'Eliga una opción',
-                                     'name'  => 'data[Protocolo][organo_citologia_id]',
-                                     'id'    => 'ProtocoloOrganoCitologiaId',                                
+                                     'label'   => 'Organo',
+                                     'empty'   => 'Eliga una opción',
+                                     'name'    => 'data[Protocolo][organo_citologia_id]',
+                                     'id'      => 'ProtocoloOrganoCitologiaId',   
+                                     'selected' => $this->data['Protocolo']['organo_id']
                                       )
                                  );    
 
@@ -151,7 +330,6 @@
                                       array( 'type' => 'textarea' )                                   
                                    );
 
-                          
                           echo $this->Form->input('Estudio', 
                                 array( 
                                        'label'    => 'Estudios',
@@ -159,11 +337,10 @@
                                        'options'  => $estudios,
                                        'empty' => 'Seleccione los estudios' 
                                 ));
-
                           
                           ?> 
                </div>  
-               <div class="col w40" style="display:none" id="muestra_biopsia">
+              <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php
                             echo $this->Form->input(
                                  'organo_biopsia_id',
@@ -173,32 +350,43 @@
                                      'empty' => 'Eliga una opción',
                                      'name'  => 'data[Protocolo][organo_biopsia_id]',
                                      'id'    => 'ProtocoloOrganoBiopsiaId',
+                                     'selected' => $this->data['Protocolo']['organo_id']
                                       )
-                                 );    
+                                 );
+                           ?> 
+                          <br> 
+                          
+                          <input class="btn_limpiar" type="button" value="Limpiar Macroscopia" name="LimpiarMacro" id="LimpiarMacro" />                    
+                          <br>  
+                          <?php
 
                           echo $this->Form->input(
                                      'macroscopia',
                                       array( 'type' => 'textarea' )                                   
                                    );
-
+                          ?>
+                          
+                          <input class="btn_limpiar" type="button" value="Limpiar Microscopia" name="LimpiarMicro" id="LimpiarMicro" />
+                          <br>
+                          <?php
+                          
                           echo $this->Form->input(
                                      'microscopia',
                                       array( 'type' => 'textarea' )                                   
                                    );
-
                           
                           echo $this->Form->input(
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
-                                   );                          
-                                                   
+                                   );                                                    
                           ?> 
-                         
-              </div>    
+          
+              </div> 
+
                 <?php
                   echo $this->Form->end('Guardar');
                 ?> 
-            </fieldset>  
+         </fieldset>  
      </div>
     
  

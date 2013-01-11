@@ -893,3 +893,26 @@ div.view_email {
         float:left;
         
 }
+.table_practicas {
+	border-right:0;
+	clear: both;
+	color: #333;
+	margin-bottom: 10px;
+	width: 35%;
+}
+
+.btn_limpiar {            
+  border: none;
+  color: #EE3322;
+  height: 18px; 
+  width: 150px; 
+  font-weight:bold;
+  padding: 2px 8px;
+  cursor: pointer
+}
+
+.input_practicas_cant {            
+  height: 5px; 
+  width: 40px; 
+  text-align: center;
+}
