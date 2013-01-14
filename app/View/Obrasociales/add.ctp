@@ -54,62 +54,78 @@
             <div class="col w40">
                    <table class ="table_practicas">
                       <tr>
-                       <th width ="15">Codigo</th>
-                       <th width ="15">Precio</th> 
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
+                       <th>Codigo</th>
+                       <th>Cantidad</th> 
                       </tr>
                       <tr>
-                        <td width ="15"> 15.01.01 </td>  
-                        <td width ="15"> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td> 15.01.01 </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150101]" id="ObrasocialPractica150101" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.02 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150102]" id="ObrasocialPractica150102" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
                       <tr>
                         <td> 15.01.03 </td>  
-                        <td> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150103]" id="ObrasocialPractica150103" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.04 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150104]" id="ObrasocialPractica150104" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
                       <tr>
                         <td> 15.01.05 </td>  
-                        <td> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150105]" id="ObrasocialPractica150105" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.06 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150106]" id="ObrasocialPractica150106" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
                       <tr>
                         <td> 15.01.08 </td>  
-                        <td> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150108]" id="ObrasocialPractica150108" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.09 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150109]" id="ObrasocialPractica150109" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
                       <tr>
                         <td> 15.01.10 </td>  
-                        <td> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150110]" id="ObrasocialPractica150110" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.11 </td>  
-                        <td> $ </td>  
-                      </tr>                     
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150111]" id="ObrasocialPractica150111" value="0" class="input_practicas_cant" >   
+                        </td>  
+                      </tr>    
                       <tr>
                         <td> 15.01.20 </td>  
-                        <td> $ </td>  
-                      </tr>    
-                      <tr>
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150120]" id="ObrasocialPractica150120" value="0" class="input_practicas_cant" >   
+                        </td>  
                         <td> 15.01.21 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica150121]" id="ObrasocialPractica150121" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
                       <tr>
                         <td> 14.47.90 </td>  
-                        <td> $ </td>  
+                        <td>
+                          <input type="text" size="2" name="data[Obrasocial][practica144790]" id="ObrasocialPractica144790" value="0" class="input_practicas_cant" >   
+                        </td>  
                       </tr>    
-                    </table>                    
+                    </table>                   
             </div>
             <?php echo $this->Form->end('Guardar'); ?>
             </fieldset>

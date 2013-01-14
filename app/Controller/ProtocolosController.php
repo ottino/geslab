@@ -131,6 +131,7 @@ class ProtocolosController extends AppController {
            
            $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
+           
            $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
              
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
