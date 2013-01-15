@@ -72,9 +72,9 @@ class ProtocolosController extends AppController {
            
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
-                    $this->request->data['Protocolo']['organo_id'] = 
-                    $this->request->data['Protocolo']['organo_citologia_id'];
-                    $this->request->data['Protocolo']['tipoprotocolo'] = 'citologia';
+                    $this->request->data['Protocolo']['organo_id']      = $this->request->data['Protocolo']['organo_citologia_id'];
+                    $this->request->data['Protocolo']['tipoprotocolo']  = 'citologia';
+                    $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticocitologia'];
                     
             }
             else if  (!empty($this->data['Protocolo']['organo_biopsia_id'])) 
@@ -82,6 +82,8 @@ class ProtocolosController extends AppController {
                     $this->request->data['Protocolo']['organo_id'] = 
                     $this->request->data['Protocolo']['organo_biopsia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'biopsia';
+                    $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticobiopsia'];
+
             }
     
            if ($this->Protocolo->save($this->data)) {
@@ -125,7 +127,7 @@ class ProtocolosController extends AppController {
          } else {
              
          if(!empty($this->data)){   
-             
+
            $paciente_id = explode("-",$this->data['Protocolo']['paciente_id']);
            $medico_id   = explode("-",$this->data['Protocolo']['medico_id']);
            
@@ -139,6 +141,8 @@ class ProtocolosController extends AppController {
                     $this->request->data['Protocolo']['organo_id'] = 
                     $this->request->data['Protocolo']['organo_citologia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'citologia';
+                    $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticocitologia'];
+                  
                     
             }
             else if  (!empty($this->data['Protocolo']['organo_biopsia_id'])) 
@@ -146,6 +150,8 @@ class ProtocolosController extends AppController {
                     $this->request->data['Protocolo']['organo_id'] = 
                     $this->request->data['Protocolo']['organo_biopsia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'biopsia';
+                    $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticobiopsia'];
+                    
             }
 
            

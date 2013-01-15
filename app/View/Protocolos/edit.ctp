@@ -116,13 +116,13 @@ $("#asmSelect0").change(function() {
     multipleValues = multipleValues.join("-");
     multipleValues = multipleValues.split("-");
     multipleValues = multipleValues[multipleValues.length-1]; 
-    datos_cargados = $('#ProtocoloDiagnostico').val();
-    $("#ProtocoloDiagnostico").val(
+    datos_cargados = $('#ProtocoloDiagnosticocitologia').val();
+    $("#ProtocoloDiagnosticocitologia").val(
     function(){
             $.ajax({
             url:'http://localhost/geslab/protocolos/search_estudio/'  + multipleValues      ,                                                                 
             success: function(data) {
-                $('#ProtocoloDiagnostico').val( datos_cargados + '\n' + data);                        
+                $('#ProtocoloDiagnosticocitologia').val( datos_cargados + '\n' + data);                        
             }
             })
            }  
@@ -140,6 +140,16 @@ $("#asmSelect0").change(function() {
     <?php 
           echo $this->Form->create('Protocolo',array('action' => 'edit')); 
           echo $this->Form->input('id', array('type' => 'hidden'));
+          
+          if ($this->data['Protocolo']['tipoprotocolo'] == 'citologia')
+          {   
+            $diagnostico_citologia = $this->data['Protocolo']['diagnostico'];
+            $diagnostico_biopsia   = '';
+          } else 
+                 {
+                   $diagnostico_biopsia   = $this->data['Protocolo']['diagnostico'];
+                   $diagnostico_citologia = '';  
+                 }
     ?> 
     
     <div class="form-content">
@@ -326,8 +336,10 @@ $("#asmSelect0").change(function() {
                                    );
  
                           echo $this->Form->input(
-                                     'diagnostico',
-                                      array( 'type' => 'textarea' )                                   
+                                     'diagnosticocitologia',
+                                      array( 'type' => 'textarea' ,
+                                             'value'=> $diagnostico_citologia 
+                                           )                                   
                                    );
 
                           echo $this->Form->input('Estudio', 
@@ -339,7 +351,7 @@ $("#asmSelect0").change(function() {
                                 ));
                           
                           ?> 
-               </div>  
+              </div>  
               <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php
                             echo $this->Form->input(
@@ -376,8 +388,10 @@ $("#asmSelect0").change(function() {
                                    );
                           
                           echo $this->Form->input(
-                                     'diagnostico',
-                                      array( 'type' => 'textarea' )                                   
+                                     'diagnosticobiopsia',
+                                      array( 'type'  => 'textarea' ,
+                                             'value' => $diagnostico_biopsia
+                                           )                                   
                                    );                                                    
                           ?> 
           

@@ -2570,3 +2570,11 @@
 #8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
 #9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-01-15 04:28:02 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\geslab\app\View\Protocolos\edit.ctp, line 332]
+2013-01-15 04:28:02 Error: [FatalErrorException] syntax error, unexpected ')'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 332)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 332, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 332, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

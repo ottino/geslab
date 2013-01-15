@@ -12,8 +12,7 @@
             <th>Celular</th>
             <th>eMail</th>  
             <th>Fecha de Nacimiento</th>
-            <th>Editar</th>
-            <th>Eliminar</th>                 
+            <th></th>               
     </tr>
     <?php        
     foreach ($data as $d):
@@ -27,26 +26,22 @@
                 echo "<td>" . $d['Paciente']['email']. "</td>";
                 echo "<td>" . $d['Paciente']['fecha_nacimiento']. "</td>";
 
-                echo "<td>";
+                echo "<td class='actions'>";
                 
                 $id = $d['Paciente']['id'];
                 
-                echo $this->Html->image('b_edit.png',
-                         array(
-                                "alt" => "Editar datos",
-                                'url' => array('action' => 'edit', $id)
-                              )
-                        );
+                echo $this->Html->link(
+                        BTN_EDIT, 
+                        array('action' => 'edit', $id), 
+                        array('title'=>BTN_EDIT,'escape' => false )
+                );
                 
-                echo "</td>";
-                echo "<td>";
-               
-                echo $this->Html->image('b_drop.png',
-                         array(
-                                "alt" => "Eliminar datos",
-                                'url' => array('action' => 'delete', $id)
-                              )
-                        );
+                echo $this->Form->postLink(
+                        BTN_DEL, 
+                        array('action' => 'delete', $id),
+                        array('title'=>'Eliminar','escape' => false ),
+                        MSG_PREG_ELIM_DATO
+                );
                 
                 echo "</td>";
                echo '</tr>';        

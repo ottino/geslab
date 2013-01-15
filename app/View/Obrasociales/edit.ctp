@@ -54,7 +54,7 @@
 
             ?> 
                </div>  
-               <div class="col w40">
+            <div class="col w40">
                 <table class ="table_practicas">
                   <tr>
                    <th>Codigo</th>

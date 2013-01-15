@@ -916,3 +916,7 @@ div.view_email {
   width: 40px; 
   text-align: center;
 }
+
+.btn_centrar {   
+ text-align:center;   
+}
