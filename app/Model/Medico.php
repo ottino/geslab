@@ -12,6 +12,14 @@ class Medico extends AppModel {
             'className' => 'Localidad',
             'foreignKey' => 'localidad_id',
         )
-    );   
+    );  
+
+    public $validate = array(
+        'razon_social' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        )
+    );      
 }
 ?>

@@ -12,6 +12,20 @@ class Paciente extends AppModel {
             'className' => 'Localidad',
             'foreignKey' => 'localidad_id',
         )
-    );   
+    );  
+    
+    
+    public $validate = array(
+        'dni' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        ),
+        'razon_social' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        )
+    );
 }
 ?>

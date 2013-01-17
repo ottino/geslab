@@ -37,6 +37,29 @@ class Protocolo extends AppModel {
             'order' => array('Estudio.descripcion' => 'ASC')
         )
     );
+    
+    public $validate = array(
+        'paciente_id' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        ),
+        'medico_id' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        ),
+        'obrasocial_id' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        ),
+        'sanatorio_id' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        )
+    );
 }
 
 ?>

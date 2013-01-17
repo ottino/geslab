@@ -144,6 +144,16 @@ div.columns{
         width: 23%;
 }
 
+div.columns_search{
+        float:left;        
+        width: 15%;
+}
+
+div.columns_search_1{
+        float:left;        
+        width: 15%;
+        vertical-align:text-bottom;
+}
 
 div.col{
         float:left;

@@ -21,6 +21,13 @@ class ProtocolosController extends AppController {
         'Biopsia'   => 'Biopsia'
     );  
     
+    public $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'Protocolo.id' => 'desc'
+        )
+    );
+    
     var $components = array('RequestHandler');
 
     public function  __construct($request = null, $response = null) {
@@ -45,8 +52,9 @@ class ProtocolosController extends AppController {
     }  
     
     public function index() {
-
-        $this->set('data',$this->Protocolo->find('all'));
+        $data = $this->paginate('Protocolo');
+        $this->set(compact('data'));
+        //$this->set('data',$this->Protocolo->find('all'));
         
     }
     
@@ -366,6 +374,50 @@ class ProtocolosController extends AppController {
         return $estudio['0']['Estudio']['descripcion'];
     }    
     
-    
+    public function search() {
+
+          if(!empty($this->data)) {
+
+              $buscar_valor = $this->Session->read('Protocolo.buscar_valor');
+              $buscar_por = $this->Session->read('Protocolo.buscar_por');
+
+              if(empty($buscar_valor) || empty($buscar_por)) {
+                      $this->Session->write('Protocolo.buscar_valor', $this->data['Protocolo']['buscar_valor']);
+                      $this->Session->write('Protocolo.buscar_por', $this->data['Protocolo']['buscar_por']);
+              }
+
+              if($this->data['Protocolo']['buscar_valor'] != $this->Session->read('Protocolo.buscar_valor')){
+                  $this->Session->delete('Protocolo.buscar_valor');
+                  $this->Session->write('Protocolo.buscar_valor', $this->data['Protocolo']['buscar_valor']);
+              }
+              if( $this->data['Protocolo']['buscar_por'] != $this->Session->read('Protocolo.buscar_por')){
+                  $this->Session->delete('Protocolo.buscar_por');
+                  $this->Session->write('Protocolo.buscar_por', $this->data['Protocolo']['buscar_por']);
+              }
+          }
+
+          $options = array();
+
+          switch ($this->Session->read('Protocolo.buscar_por')) {
+              case 1:
+                  $options = array("Paciente.dni = '{$this->Session->read('Protocolo.buscar_valor')}'");
+              break;
+              case 2:
+                  $options = array("Paciente.razon_social LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
+              break;
+              case 3:
+                  $options = array("Protocolo.id = '{$this->Session->read('Protocolo.buscar_valor')}'");
+              break;
+              case 4:
+                  $options = array("Medico.razon_social LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
+              break;
+          }
+
+          $this->set('data',$this->paginate('Protocolo', $options));
+
+          return $this->render('index');
+
+
+      }    
 }
 ?>

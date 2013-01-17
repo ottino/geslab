@@ -2578,3 +2578,31 @@
 #3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-01-17 02:43:54 Error: [MissingActionException] Action ProtocolosController::blank.gif() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-17 02:44:57 Error: [MissingActionException] Action ProtocolosController::blank.gif() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-17 02:56:16 Error: [MissingControllerException] Controller class ContratosController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-17 03:02:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Protocolo.dni' in 'where clause'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Protoco...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Protoco...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Protoco...', false)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Protocolo), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate('Protocolo', Array, Array)
+#7 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(402): Controller->paginate('Protocolo', Array)
+#8 [internal function]: ProtocolosController->search()
+#9 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#10 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
