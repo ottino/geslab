@@ -2715,3 +2715,31 @@
 #3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-01-18 22:51:51 Error: [MissingActionException] Action ReportesController::reporteFacturacion() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ReportesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 23:05:43 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\xampp\htdocs\geslab\app\View\Helper\ExcelHelper.php, line 149]
+2013-01-18 23:05:43 Error: [FatalErrorException] Call to a member function save() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 149)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 149, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 149, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 23:05:55 Error: [MissingActionException] Action ReportesController::reporteFacturacion() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ReportesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 23:06:26 Error: [MissingActionException] Action ReportesController::reporteFacturacion() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ReportesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 23:07:09 Error: [MissingActionException] Action ReportesController::reporteFacturacion() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ReportesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
