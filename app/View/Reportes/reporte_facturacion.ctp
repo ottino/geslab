@@ -1,34 +1,71 @@
 <div class="form">
-
-    <?php echo $this->Form->create(); ?>
-
-    <div class="form-content">        
-            <fieldset>
-            <legend>Reporte de Facturacion</legend>            
-            <div class="col w40">
+<fieldset>
+    <legend>Reporte de Factracion por Totales</legend>
+    
+    <table cellpadding="0" cellspacing="0">
+    <tr>
+            <th>Fecha</th>            
+            <th>Sanatorio</th>            
+            <th>Obra Social</th>            
+            <th>Paciente</th>            
+            <th>Dni Paciente</th>
+            <th>Nro. Protocolo</th>
+            <th>Internacion</th>
+            <th>Ambulatorio</th>
+            <th>NUC</th>
+            <th>150101</th>
+            <th>150102</th>
+            <th>150103</th>
+            <th>150104</th>
+            <th>150105</th>
+            <th>150106</th>
+            <th>150108</th>
+            <th>150109</th>
+            <th>150110</th>
+            <th>150111</th>
+            <th>150120</th>
+            <th>150121</th>
+            <th>144790</th>
+    </tr>
+    <?php        
+    foreach ($data as $d):
+             
+           if($d['a']['internacion']>0) 
+                $internacion = "si"; 
+           else $internacion= "no";
            
-            <?php
-                 echo $this->Form->input('fecha',array(                    
-                    'options' => $data,
-                    'label' => 'Fecha de Protocolo',
-                    'empty' => 'Todos'
-                     ));
-               
-            ?>
-                
-            </div>            
-            </fieldset>        
-     </div>
-      
-    <?php echo $this->Form->end('Descargar'); ?>
-</div>    
+           if($d['a']['ambulatorio']>0) 
+                $ambulatorio = "si"; 
+           else $ambulatorio = "no";
+           
+               echo "<tr>";
+                echo "<td>" . $d['a']['fecha'] . "</td>";
+                echo "<td>" . $d['d']['Sanatorio'] . "</td>";
+                echo "<td>" . $d['c']['Obra_Social'] . "</td>";
+                echo "<td>" . $d['b']['Paciente'] . "</td>";
+                echo "<td>" . $d['b']['Paciente_dni']. "</td>";
+                echo "<td>" . $d['a']['Protocolo_id']. "</td>";
+                echo "<td>" . $internacion . "</td>";
+                echo "<td>" . $ambulatorio . "</td>";
+                echo "<td>" . $d['a']['NUC'] . "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150101']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150102']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150103']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150104']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150105']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150106']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150108']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150109']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150110']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150111']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150120']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica150121']. "</td>";
+                echo "<td>" . $d['0']['Total_x_practica144790']. "</td>";
+                                    
+    endforeach;
 
-<div>
-    <?php
-        if(isset($data) && empty($data)){
-            echo "<br>";
-            echo "<h2>".MSG_SIN_RES."</h2>";
-        }
     ?>
     
+    </table>
+</fieldset>
 </div>

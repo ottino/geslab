@@ -1,4 +1,6 @@
 <?php
+App::uses('CakeTime', 'Utility');
+
 class ReportesController extends AppController{
     
     public $name = 'Reportes';
@@ -20,7 +22,6 @@ class ReportesController extends AppController{
     public function __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
-        $this->facturaciones = $this->Protocolo->find('list');
     }
     
     public function index(){
@@ -28,23 +29,11 @@ class ReportesController extends AppController{
     }
     
     public function reporteFacturacion(){
-
-            $data = $this->Protocolo->find('all');
-
-            $this->set('data', $data);
-            
-            if(!empty($data)){
-            
-                $this->set('title', 'Reporte Altas/Bajas Socios');
-                $this->set('model', array('Protocolo'));
-                $this->set('tipo_salida', 'XLS');
-                $this->set('pref', '');
-                $this->set('blacklist', array('id'));
-                $this->set('date', array('fecha'));
-                $this->set('money', null);
-                return $this->render('reporte', 'ajax');
-            }
-      
+                                         
+            $data = $this->Reporte->query_practicas_x_totales();
+            $this->set('data' ,$data);
+        //    pr($data);
+         //   die();
         }
 }
 ?>

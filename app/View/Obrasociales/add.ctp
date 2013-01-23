@@ -55,9 +55,9 @@
                    <table class ="table_practicas">
                       <tr>
                        <th>Codigo</th>
-                       <th>Cantidad</th> 
+                       <th>Precio</th> 
                        <th>Codigo</th>
-                       <th>Cantidad</th> 
+                       <th>Precio</th> 
                       </tr>
                       <tr>
                         <td> 15.01.01 </td>  
