@@ -159,6 +159,7 @@ $("#asmSelect0").change(function() {
               <div class="col w40">
                         <?php   
                             //pr($this->data);
+                       
                             echo $this->Form->input(
                                   'paciente_id',
                                    array(

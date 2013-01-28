@@ -37,7 +37,7 @@ class Protocolo extends AppModel {
             'order' => array('Estudio.descripcion' => 'ASC')
         )
     );
-    
+    /*
     public $validate = array(
         'paciente_id' => array(
             'rule'     => 'notEmpty',
@@ -60,6 +60,7 @@ class Protocolo extends AppModel {
             'message' => MSG_DATO_OBLIG
         )
     );
+      */
 }
 
 ?>

@@ -4,7 +4,14 @@ class OrganosController extends AppController {
     public $helpers = array('Html', 'Form');    
     public $name='Organos'; 
     public $uses = array('Organo');
-  
+
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array(
+            'Organo.id' => 'desc'
+        )
+    );
+    
     public function  __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
@@ -12,8 +19,9 @@ class OrganosController extends AppController {
  
     public function index() {
 
-        $this->set('data',$this->Organo->find('all'));
-
+        //$this->set('data',$this->Organo->find('all'));
+        $data = $this->paginate('Organo');
+        $this->set(compact('data'));
     }
      
     public function add() {
@@ -72,6 +80,48 @@ class OrganosController extends AppController {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
             $this->redirect(array('action' => 'index'));
         }
-    }     
+    }  
+    
+    public function search_organo() {
+
+          if(!empty($this->data)) {
+
+              $buscar_valor = $this->Session->read('Organo.buscar_valor');
+              $buscar_por = $this->Session->read('Organo.buscar_por');
+
+              if(empty($buscar_valor) || empty($buscar_por)) {
+                      $this->Session->write('Organo.buscar_valor', $this->data['Organo']['buscar_valor']);
+                      $this->Session->write('Organo.buscar_por', $this->data['Organo']['buscar_por']);
+              }
+
+              if($this->data['Organo']['buscar_valor'] != $this->Session->read('Organo.buscar_valor')){
+                  $this->Session->delete('Organo.buscar_valor');
+                  $this->Session->write('Organo.buscar_valor', $this->data['Organo']['buscar_valor']);
+              }
+              if( $this->data['Organo']['buscar_por'] != $this->Session->read('Organo.buscar_por')){
+                  $this->Session->delete('Organo.buscar_por');
+                  $this->Session->write('Organo.buscar_por', $this->data['Organo']['buscar_por']);
+              }
+          }
+
+          $options = array();
+
+          switch ($this->Session->read('Organo.buscar_por')) {
+              
+              case 1:
+                  $options = array("Organo.tipoprotocolo LIKE '%{$this->Session->read('Organo.buscar_valor')}%'");
+              break;
+              case 2:
+                  $options = array("Organo.descripcion LIKE '%{$this->Session->read('Organo.buscar_valor')}%'");
+              break;
+          
+          }
+
+          $this->set('data',$this->paginate('Organo', $options));
+
+          return $this->render('index');
+
+
+      }     
 }
 ?>

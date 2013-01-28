@@ -22,7 +22,7 @@ class ProtocolosController extends AppController {
     );  
     
     public $paginate = array(
-        'limit' => 5,
+        'limit' => 10,
         'order' => array(
             'Protocolo.id' => 'desc'
         )
@@ -223,12 +223,12 @@ class ProtocolosController extends AppController {
                             
                             Atte.-
                             Silvia Viale";
-                 $mail->SetFrom('maxi.ottino@gmail.com', 'Silvia Viale');
+                 $mail->SetFrom('silvia.viale.pna@gmail.com', 'Silvia Viale');
 
                  $mail->Subject    = "Diagnostico";
                  $mail->MsgHTML($body);
 
-                 $address = "maxi.ottino@gmail.com";
+                 $address = "silvia.viale.pna@gmail.com";
                  $mail->AddAttachment("../../../tmp/Comprobantes.".$id.".pdf"); // attachment
                  
                 $mail->AddAddress($address, "Enviar correo a?");
@@ -410,6 +410,9 @@ class ProtocolosController extends AppController {
               break;
               case 4:
                   $options = array("Medico.razon_social LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
+              break;
+              case 5:
+                  $options = array("Protocolo.tipoprotocolo LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
               break;
           }
 

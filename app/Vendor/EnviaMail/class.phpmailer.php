@@ -345,8 +345,8 @@ class PHPMailer {
     $this->SMTPSecure = "ssl";                 // sets the prefix to the servier
     $this->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
     $this->Port       = 465;                   // set the SMTP port for the GMAIL server
-    $this->Username   = "maxi.ottino@gmail.com";  // GMAIL username
-    $this->Password   = "choter69";            // GMAIL password
+    $this->Username   = "silvia.viale.pna@gmail.com";  // GMAIL username
+    $this->Password   = "silvia2013";            // GMAIL password
 
   }
 

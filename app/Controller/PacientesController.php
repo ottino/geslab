@@ -5,7 +5,14 @@ class PacientesController extends AppController {
  
     public $uses = array('Paciente','Localidad');
     public $localidades = array();
-  
+
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array(
+            'Paciente.id' => 'desc'
+        )
+    );
+    
     public function  __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
@@ -15,8 +22,9 @@ class PacientesController extends AppController {
     }    
  
     public function index() {
-
-        $this->set('data',$this->Paciente->find('all'));
+        $data = $this->paginate('Paciente');
+        $this->set(compact('data'));
+        //$this->set('data',$this->Paciente->find('all'));
 
     }
      
@@ -73,14 +81,14 @@ class PacientesController extends AppController {
            
      }
    
-   public function delete($id = null ){
+    public function delete($id = null ){
         if ($this->Paciente->delete($id, true)) {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
             $this->redirect(array('action' => 'index'));
         }
     }     
 
-   public function search(){
+    public function search(){
         $respuesta = array ();
         $this->autoRender=false;
         
@@ -110,7 +118,46 @@ class PacientesController extends AppController {
         }
        return json_encode($respuesta);
    }	    
-   
+ 
+    public function search_paciente() {
+
+          if(!empty($this->data)) {
+
+              $buscar_valor = $this->Session->read('Paciente.buscar_valor');
+              $buscar_por = $this->Session->read('Paciente.buscar_por');
+
+              if(empty($buscar_valor) || empty($buscar_por)) {
+                      $this->Session->write('Paciente.buscar_valor', $this->data['Paciente']['buscar_valor']);
+                      $this->Session->write('Paciente.buscar_por', $this->data['Paciente']['buscar_por']);
+              }
+
+              if($this->data['Paciente']['buscar_valor'] != $this->Session->read('Paciente.buscar_valor')){
+                  $this->Session->delete('Paciente.buscar_valor');
+                  $this->Session->write('Paciente.buscar_valor', $this->data['Paciente']['buscar_valor']);
+              }
+              if( $this->data['Paciente']['buscar_por'] != $this->Session->read('Paciente.buscar_por')){
+                  $this->Session->delete('Paciente.buscar_por');
+                  $this->Session->write('Paciente.buscar_por', $this->data['Paciente']['buscar_por']);
+              }
+          }
+
+          $options = array();
+
+          switch ($this->Session->read('Paciente.buscar_por')) {
+              case 1:
+                  $options = array("Paciente.dni = '{$this->Session->read('Paciente.buscar_valor')}'");
+              break;
+              case 2:
+                  $options = array("Paciente.razon_social LIKE '%{$this->Session->read('Paciente.buscar_valor')}%'");
+              break;
+          }
+
+          $this->set('data',$this->paginate('Paciente', $options));
+
+          return $this->render('index');
+
+
+      }   
      
 }
 ?>

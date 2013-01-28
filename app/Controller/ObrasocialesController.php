@@ -5,7 +5,14 @@ class ObrasocialesController extends AppController {
  
     public $uses = array('Obrasocial','Localidad');
     public $localidades = array();
-  
+    
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array(
+            'Obrasocial.id' => 'desc'
+        )
+    );  
+    
     public function  __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
@@ -16,7 +23,9 @@ class ObrasocialesController extends AppController {
  
     public function index() {
 
-        $this->set('data',$this->Obrasocial->find('all'));
+        //$this->set('data',$this->Obrasocial->find('all'));
+        $data = $this->paginate('Obrasocial');
+        $this->set(compact('data'));
 
     }
      
@@ -80,6 +89,44 @@ class ObrasocialesController extends AppController {
         }
     }     
 
-     
+    public function search_obrasocial() {
+
+          if(!empty($this->data)) {
+
+              $buscar_valor = $this->Session->read('Obrasocial.buscar_valor');
+              $buscar_por = $this->Session->read('Obrasocial.buscar_por');
+
+              if(empty($buscar_valor) || empty($buscar_por)) {
+                      $this->Session->write('Obrasocial.buscar_valor', $this->data['Obrasocial']['buscar_valor']);
+                      $this->Session->write('Obrasocial.buscar_por', $this->data['Obrasocial']['buscar_por']);
+              }
+
+              if($this->data['Obrasocial']['buscar_valor'] != $this->Session->read('Obrasocial.buscar_valor')){
+                  $this->Session->delete('Obrasocial.buscar_valor');
+                  $this->Session->write('Obrasocial.buscar_valor', $this->data['Obrasocial']['buscar_valor']);
+              }
+              if( $this->data['Obrasocial']['buscar_por'] != $this->Session->read('Obrasocial.buscar_por')){
+                  $this->Session->delete('Obrasocial.buscar_por');
+                  $this->Session->write('Obrasocial.buscar_por', $this->data['Obrasocial']['buscar_por']);
+              }
+          }
+
+          $options = array();
+
+          switch ($this->Session->read('Obrasocial.buscar_por')) {
+              
+              case 1:
+                  $options = array("Obrasocial.descripcion LIKE '%{$this->Session->read('Obrasocial.buscar_valor')}%'");
+              break;
+
+          
+          }
+
+          $this->set('data',$this->paginate('Obrasocial', $options));
+
+          return $this->render('index');
+
+
+      }       
 }
 ?>

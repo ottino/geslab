@@ -1,3 +1,35 @@
+<div id='search'>
+    <?php echo $this->Form->create('Paciente',array('action'=>'search_paciente'));?>
+    <fieldset>
+
+        <div class="columns">
+            <?php
+            echo $this->Form->input('Paciente.buscar_valor', array(
+                'label'=>'Buscar',
+                'placeholder'=> 'Escriba aquí'));
+            ?>
+                        <?php
+            echo $this->Form->submit('Buscar', array(
+                'div' => 'actions'
+            ));
+            ?>
+        </div>
+        <div class="columns_search">
+            <?php
+            echo $this->Form->input('Paciente.buscar_por', array(
+                            'options' => array(
+                                1 => 'DNI Paciente',
+                                2 => 'Nombre Paciente'
+                                ),
+                            'label' => 'Por',
+                            'default' => 1));
+            ?>
+        </div>
+
+    </fieldset>
+    <?php echo $this->Form->end();?>
+
+</div>
 <div class="form">
 <fieldset>
     <legend>Pacientes</legend>
@@ -49,6 +81,21 @@
 
     ?>
     </table>
+    
+     <p>
+        <?php
+        echo $this->Paginator->counter(array(
+                'format' => __d('cake', 'Página {:page} de {:pages} - Registros {:count} - Actual [{:start} a {:end}]')
+        ));
+        ?>
+    </p>
+    <div class="paging">
+        <?php
+                echo $this->Paginator->prev('< ' . __d('cake', ''), array(), null, array('class' => 'prev disabled'));
+                echo $this->Paginator->numbers(array('separator' => ''));
+                echo $this->Paginator->next(__d('cake', '') .' >', array(), null, array('class' => 'next disabled'));
+        ?>
+    </div>   
 </fieldset>
 </div>
 

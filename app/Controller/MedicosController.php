@@ -5,7 +5,14 @@ class MedicosController extends AppController {
  
     public $uses = array('Medico','Localidad');
     public $localidades = array();
-  
+
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array(
+            'Medico.id' => 'desc'
+        )
+    );
+    
     public function  __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
@@ -16,8 +23,9 @@ class MedicosController extends AppController {
  
     public function index() {
 
-        $this->set('data',$this->Medico->find('all'));
-
+        //$this->set('data',$this->Medico->find('all'));
+        $data = $this->paginate('Medico');
+        $this->set(compact('data'));
     }
      
     public function add() {
@@ -93,5 +101,44 @@ class MedicosController extends AppController {
         }
        return json_encode($respuesta);
     }    
+
+    public function search_medico() {
+
+          if(!empty($this->data)) {
+
+              $buscar_valor = $this->Session->read('Medico.buscar_valor');
+              $buscar_por = $this->Session->read('Medico.buscar_por');
+
+              if(empty($buscar_valor) || empty($buscar_por)) {
+                      $this->Session->write('Medico.buscar_valor', $this->data['Medico']['buscar_valor']);
+                      $this->Session->write('Medico.buscar_por', $this->data['Medico']['buscar_por']);
+              }
+
+              if($this->data['Medico']['buscar_valor'] != $this->Session->read('Medico.buscar_valor')){
+                  $this->Session->delete('Medico.buscar_valor');
+                  $this->Session->write('Medico.buscar_valor', $this->data['Medico']['buscar_valor']);
+              }
+              if( $this->data['Medico']['buscar_por'] != $this->Session->read('Medico.buscar_por')){
+                  $this->Session->delete('Medico.buscar_por');
+                  $this->Session->write('Medico.buscar_por', $this->data['Medico']['buscar_por']);
+              }
+          }
+
+          $options = array();
+
+          switch ($this->Session->read('Medico.buscar_por')) {
+              
+              case 1:
+                  $options = array("Medico.razon_social LIKE '%{$this->Session->read('Medico.buscar_valor')}%'");
+              break;
+          
+          }
+
+          $this->set('data',$this->paginate('Medico', $options));
+
+          return $this->render('index');
+
+
+      }       
 }
 ?>

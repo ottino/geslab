@@ -21,7 +21,8 @@
                                 1 => 'DNI Paciente',
                                 2 => 'Nombre Paciente',
                                 3 => 'Nro. Protocolo',
-                                4 => 'Nombre Medico'
+                                4 => 'Nombre Medico',
+                                5 => 'Tipo de Protocolo',
                                 ),
                             'label' => 'Por',
                             'default' => 1));
