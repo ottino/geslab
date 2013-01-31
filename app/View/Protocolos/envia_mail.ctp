@@ -52,8 +52,6 @@
                echo '</div>';
                echo '</fieldset>';              
 
-              // pr($Protocolo);
-              // die();
             ?>
             </div>
             <div id="muestra_pdf" class="pdf_view"  >

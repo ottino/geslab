@@ -2802,3 +2802,30 @@
 #11 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(OrganosController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-01-30 01:49:37 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-30 01:51:05 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-30 02:45:27 Error: [MissingActionException] Action ProtocolosController::search_organo_estudios() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-30 03:10:54 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 440]
+2013-01-30 03:10:54 Error: [FatalErrorException] syntax error, unexpected '='
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 440)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 440, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 440, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-30 03:12:02 Error: Fatal Error (1): Call to undefined function string() in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 437]
+2013-01-30 03:12:02 Error: [FatalErrorException] Call to undefined function string()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 437)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 437, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 437, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -23,9 +23,10 @@
                                 3 => 'Nro. Protocolo',
                                 4 => 'Nombre Medico',
                                 5 => 'Tipo de Protocolo',
+                                6 => 'Fecha (AAAAMMDD)',
                                 ),
                             'label' => 'Por',
-                            'default' => 1));
+                            'default' => 3));
             ?>
         </div>
 
@@ -71,6 +72,7 @@
            
                echo "<tr>";
                 echo "<td>" . $d['Protocolo']['id'] . "</td>";
+               
                 echo "<td>" . $d['Protocolo']['tipoprotocolo'] . "</td>";
                 echo "<td>" . $d['Paciente']['razon_social'] . "</td>";
                 echo "<td>" . $d['Medico']['razon_social'] . "</td>";

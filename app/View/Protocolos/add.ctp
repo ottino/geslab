@@ -8,15 +8,42 @@
          source   : '<?php echo $this->Html->url(array('controller'=>'Medicos', 'action'=>'search'));?>',
          minLength: 2
        }); 
-       
+
     $("#EstudioEstudio").asmSelect({
             addItemTarget: 'bottom',
             animate: true,
             highlight: false,
             sortable: true
-    });     
+    }); 
+    
+/*
+    $('#ProtocoloOrganoCitologiaId').change(function(){
 
- $('#ProtocoloTipoProtocolo').change(function(){
+
+       $('#Estuidos2Id').html(function(){
+                       $.ajax({
+                       url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                              + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
+                       success: function(data) {
+                           $('#Estuidos2Id').html(data);
+
+                       }
+                       });
+                   }); 
+
+       $('#DiagnosticoDiv').html(function(){
+                       $.ajax({
+                       url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                              + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
+                       success: function(data) {
+                           $('#DiagnosticoDiv').html(data);
+
+                       }
+                       });
+                   }); 
+    });
+ */      
+   $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
     var valorSeleccionado = $(this).val();
@@ -45,13 +72,7 @@
     $("#ProtocoloMacroscopia").val("");
 
   });
-     /*
-        <input type="checkbox" value="1" name="LimpiarMicroscopia" id="LimpiarMicroscopia"/>
-        <label>Limpiar Microscopia</label>
-        <br>
-        <input type="checkbox" value="1" name="LimpiarMacroscopia" id="LimpiarMacroscopia"/>
-        <label>Limpiar Macroscopia</label>
-     */
+    
             
  $('#LimpiarMicroscopia').change(function(){
    var valorSeleccionado = $(this).val();
@@ -74,6 +95,8 @@
    }
    
  });
+ 
+
  
  $('#ProtocoloOrganoBiopsiaId').change(function(){
    
@@ -100,27 +123,30 @@
                 }); 
    
  });
- 
-        $("#asmSelect0").change(function() {
-           
-            var multipleValues = $("#EstudioEstudio").val() || [];
-            multipleValues = multipleValues.join("-");
-            multipleValues = multipleValues.split("-");
-            multipleValues = multipleValues[multipleValues.length-1]; 
-            datos_cargados = $('#ProtocoloDiagnostico').val();
-            $("#ProtocoloDiagnostico").val(
-            function(){
-                    $.ajax({
-                    url:'http://localhost/geslab/protocolos/search_estudio/'  + multipleValues      ,                                                                 
-                    success: function(data) {
-                        $('#ProtocoloDiagnostico').val( datos_cargados + '\n' + data);                        
-                    }
-                    })
-                   }  
-              );
-                  
-    
-        });
+  
+
+    $("#asmSelect0").change(function() {
+
+        var multipleValues = $("#EstudioEstudio").val() || [];
+        multipleValues = multipleValues.join("-");
+        multipleValues = multipleValues.split("-");
+        multipleValues = multipleValues[multipleValues.length-1]; 
+        datos_cargados = $('#ProtocoloDiagnostico').val();
+        $("#ProtocoloDiagnostico").val(
+        function(){
+                $.ajax({
+                url:'http://localhost/geslab/protocolos/search_estudio/'  + multipleValues      ,                                                                 
+                success: function(data) {
+                    $('#ProtocoloDiagnostico').val( datos_cargados + '\n' + data);                        
+                }
+                })
+               }  
+          );
+
+
+    });
+
+   
 
                             
  });
@@ -137,6 +163,15 @@
           
               <div class="col w40">
                         <?php                          
+                            echo $this->Form->input(
+                                  'id',
+                                   array(
+                                      'label' => 'Numero de Protocolo',
+                                      'empty' => 'Eliga una opción',
+                                      'type'  => 'text',                                      
+                                       )
+                                  );      
+
                             echo $this->Form->input(
                                   'paciente_id',
                                    array(
@@ -310,11 +345,13 @@
                                      'material',
                                       array( 'type' => 'textarea' )                                   
                                    );
- 
+
+
                           echo $this->Form->input(
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
                                    );
+                         
 
                           echo $this->Form->input('Estudio', 
                                 array( 
@@ -323,8 +360,9 @@
                                        'options'  => $estudios,
                                        'empty' => 'Seleccione los estudios' 
                                 ));
-                          
+                       
                           ?> 
+                 
                </div>  
               <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php
@@ -363,8 +401,9 @@
                           echo $this->Form->input(
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
-                                   );                                                    
-                          ?> 
+                                   );     
+                          
+                          ?>                         
           
               </div> 
 

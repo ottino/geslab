@@ -154,12 +154,13 @@ $("#asmSelect0").change(function() {
     
     <div class="form-content">
         <fieldset>
-          <legend>Nuevo Protocolo</legend> 
+          <legend>Editar Protocolo : <?php  echo $this->data['Protocolo']['id']; ?> </legend> 
           
               <div class="col w40">
                         <?php   
                             //pr($this->data);
-                       
+                           
+                            
                             echo $this->Form->input(
                                   'paciente_id',
                                    array(

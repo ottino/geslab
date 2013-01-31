@@ -93,11 +93,13 @@ class ProtocolosController extends AppController {
                     $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticobiopsia'];
 
             }
-    
+            
            if ($this->Protocolo->save($this->data)) {
-                   
+                
+                
                 $this->Session->setFlash( MSJ_REG_AG_OK );    
                 
+
                 // Con esto vuelve al Index, 
                 // pasando por la funcion index del controlador
                 $this->redirect(array('action' => 'index'));
@@ -259,6 +261,7 @@ class ProtocolosController extends AppController {
         $Comp_Organo       = $protocolo['Organo']['descripcion'];
         $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
         $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
+        $Comp_Edad         = $protocolo['Paciente']['edad'];
        
         $pdf = new FPDF();
         
@@ -273,12 +276,45 @@ class ProtocolosController extends AppController {
        
         /* Logo del comprobante */
         $pdf->SetFont('Arial','B',20);
-        $pdf->SetY(1);
-        $pdf->SetX(1);
-        $pdf->Image(IMAGES . 'logo_geslab.jpg',0.1, 0.1 , 5 , 1);
+        $pdf->SetY(0.5);
+        $pdf->SetX(0.5);
+        //$pdf->Image(IMAGES . 'logo_geslab.jpg',0.1, 0.1 , 5 , 1);
+        $pdf->Cell(3.5,0.22,'SILVIA VIALE' );
         
+        $pdf->SetFont('Arial','B',30);
+        $pdf->SetY(0.6);
+        $pdf->SetX(5.5);
+        $pdf->Cell(3.5,0.22,'| LAP' );
+        
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetY(1.30);
+        $pdf->SetX(6);
+        $pdf->Cell(3.5,0.22,utf8_decode('Laboratorio de Anatomía Patológica y Citologia') );  
+        
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetXY(17,0.5);
+        $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
+        
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetXY(17,0.8);
+        $pdf->Cell(3.5,0.22,utf8_decode('Anotomía patologica')); 
+
+        $pdf->SetFont('Arial','B',8);
+        $pdf->SetXY(17,1.1);
+        $pdf->Cell(3.5,0.22,utf8_decode('Santiago del estero 42')); 
+
+        $pdf->SetFont('Arial','B',5);
+        $pdf->SetXY(17,1.4);
+        $pdf->Cell(3.5,0.22,utf8_decode('tel.:(0343)4217060 Paraná - Entre Ríos')); 
+/*
+        'Mat.:6939'
+        'Anotomía patologica'
+        'Santiago del estero 42'
+        'tel.:(0343)4217060 Paran{a - Entre Ríos'
+ * 
+ */
         /* Primer linea */
-        $pdf->Line(0, 3 , 21, 3);
+        $pdf->Line(0, 2 , 21, 2);
         
         /* Datos generales sobre el protocolo */
  
@@ -288,23 +324,23 @@ class ProtocolosController extends AppController {
 
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(16,3.5);
-        $pdf->Cell(3.5,0.22,'Fecha:    ' . '31/12/2012');
+        $pdf->Cell(3.5,0.22,'Fecha:    ' . date("Y-m-d"));
 
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(0.20,5.0);
-        $pdf->Cell(3.5,0.22,'Paciente:    ' . $Comp_Paciente );
+        $pdf->Cell(3.5,0.22,'Paciente:    ' . utf8_decode($Comp_Paciente) );
 
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(16,5.0);
-        $pdf->Cell(3.5,0.22,'Edad:    ' . '27' );
+        $pdf->Cell(3.5,0.22,'Edad:    ' . $Comp_Edad );
 
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(0.20,6.5);
-        $pdf->Cell(3.5,0.22,'Medico:    ' . $Comp_Medico );
+        $pdf->Cell(3.5,0.22,'Medico:    ' . utf8_decode($Comp_Medico) );
         
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(0.20,8.0);
-        $pdf->Cell(3.5,0.22,'Organo:    ' . $Comp_Organo );
+        $pdf->Cell(3.5,0.22,'Organo:    ' . utf8_decode($Comp_Organo) );
         
         /* Segunda linea */
         $pdf->Line(0, 9 , 21, 9);
@@ -316,7 +352,11 @@ class ProtocolosController extends AppController {
         
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(0.90,10.25);
-        $pdf->Cell(3.5,0.22,$Comp_Macroscopia );        
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
+        $pdf->SetXY(0.90,11.00);
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 100, 100 ) );        
+        $pdf->SetXY(0.90,11.75);
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 200, 100 ) );        
 
         /* Datos de Diagnostico */
         $pdf->SetFont('Arial','B',11);
@@ -325,9 +365,11 @@ class ProtocolosController extends AppController {
         
         $pdf->SetFont('Arial','B',10);
         $pdf->SetXY(0.90,14.75);
-        $pdf->Cell(3.5,0.22,substr($Comp_Diagnostico,0,100) );        
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),0,100) );        
         $pdf->SetXY(0.90,15.25);
-        $pdf->Cell(3.5,0.22,substr($Comp_Diagnostico,100,100) );   
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),100,100) );   
+        $pdf->SetXY(0.90,15.75);
+        $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
         
         //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
         $pdf->SetFont('Arial','B',10);
@@ -373,7 +415,7 @@ class ProtocolosController extends AppController {
        
         return $estudio['0']['Estudio']['descripcion'];
     }    
-    
+
     public function search() {
 
           if(!empty($this->data)) {
@@ -414,6 +456,9 @@ class ProtocolosController extends AppController {
               case 5:
                   $options = array("Protocolo.tipoprotocolo LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
               break;
+              case 6:
+                  $options = array("Protocolo.fecha = '{$this->Session->read('Protocolo.buscar_valor')}'");
+              break;
           }
 
           $this->set('data',$this->paginate('Protocolo', $options));
@@ -422,5 +467,31 @@ class ProtocolosController extends AppController {
 
 
       }    
+
+    public function search_organo_estudio($id){
+        
+        $respuesta = array ();
+        
+        $this->autoRender=false;
+        
+        $estudio=$this->Estudio->find('all',
+                                         array('conditions'=>array('Estudio.organo_id =' => $id ))
+                                        );      
+
+         $i=0;
+         $select_dinamico = '<div class="input textarea">';
+         $select_dinamico.= '<label for="ProtocoloDiagnostico">Diagnostico</label>';
+         $select_dinamico.= '<textarea name="data[Protocolo][diagnostico]" cols="30" rows="6" id="ProtocoloDiagnostico"/>';
+         foreach($estudio as $p){
+             $select_dinamico.= $p['Estudio']['descripcion'] . '\n';             
+             $i++;
+         }
+         $select_dinamico.='</textarea>'; 
+
+         return $select_dinamico;
+
+    }    
+
+      
 }
 ?>
