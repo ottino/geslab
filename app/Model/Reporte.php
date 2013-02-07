@@ -34,8 +34,9 @@ class Reporte extends AppModel{
                                          obrasociales c , sanatorios d
                                     WHERE a.paciente_id   = b.id
                                     AND   a.obrasocial_id = c.id
-                                    AND   a.sanatorio_id  = d.id             
-                            ");       
+                                    AND   a.sanatorio_id  = d.id 
+                                    and   a.paciente_id = 1 "
+                            );       
    }     
 }
 

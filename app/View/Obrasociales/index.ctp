@@ -31,11 +31,12 @@
 </div>
 <div class="form">
 <fieldset>
-    <legend>Sanatorios</legend>
+    <legend>Obras Sociales</legend>
     
     <table cellpadding="0" cellspacing="0">
     <tr>
             <th>Identificación</th>
+            <th>CUIT</th>
             <th>Descripcion</th>            
             <th>Localidad</th>            
             <th>Direccion</th>
@@ -48,6 +49,7 @@
     foreach ($data as $d):
             echo "<tr>";
                 echo "<td>" . $d['Obrasocial']['id'] . "</td>";
+                echo "<td>" . $d['Obrasocial']['cuit'] . "</td>";
                 echo "<td>" . $d['Obrasocial']['descripcion'] . "</td>";
                 echo "<td>" . $d['Localidad']['descripcion'] . "</td>";
                 echo "<td>" . $d['Obrasocial']['direccion']. "</td>";

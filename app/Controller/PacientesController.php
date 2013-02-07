@@ -5,11 +5,12 @@ class PacientesController extends AppController {
  
     public $uses = array('Paciente','Localidad');
     public $localidades = array();
-
+    
     public $paginate = array(
         'limit' => 10,
         'order' => array(
-            'Paciente.id' => 'desc'
+            'Paciente.apellido' => 'asc',
+            'Paciente.nombre'   => 'asc'
         )
     );
     
@@ -32,15 +33,21 @@ class PacientesController extends AppController {
         
         $this->set('localidades', $this->localidades);
         
-        if(!empty($this->data)){            
+        if(!empty($this->data)){ 
+
             if ($this->Paciente->save($this->data)) {
                    
-                $this->Session->setFlash( MSJ_REG_AG_OK );    
-                
                 // Con esto vuelve al Index, 
                 // pasando por la funcion index del controlador
-                $this->redirect(array('action' => 'index'));
-                
+                if($this->request->data['Paciente']['control']==1)
+                  {  
+                    $this->redirect(array('controller'=>'Protocolos', 'action'=>'add'));
+                    
+                  }else {
+                          $this->Session->setFlash( MSJ_REG_AG_OK ); 
+                          $this->redirect(array('action' => 'index'));                           
+                        }
+                        
             } else {
                      $this->Session->setFlash( MSJ_REG_AG_ERR );
                    }

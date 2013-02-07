@@ -9,7 +9,7 @@ class ObrasocialesController extends AppController {
     public $paginate = array(
         'limit' => 10,
         'order' => array(
-            'Obrasocial.id' => 'desc'
+            'Obrasocial.descripcion' => 'asc'
         )
     );  
     

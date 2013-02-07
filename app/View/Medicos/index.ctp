@@ -36,6 +36,8 @@
     <table cellpadding="0" cellspacing="0">
     <tr>
             <th>Razon Social</th>            
+            <th>Apellido</th>            
+            <th>Nombre</th>            
             <th>Dirección</th>            
             <th>Localidad</th>
             <th>Telefono</th>
@@ -48,6 +50,8 @@
     foreach ($data as $d):
             echo "<tr>";
                 echo "<td>" . $d['Medico']['razon_social'] . "</td>";
+                echo "<td>" . $d['Medico']['apellido'] . "</td>";
+                echo "<td>" . $d['Medico']['nombre'] . "</td>";
                 echo "<td>" . $d['Medico']['direccion'] . "</td>";
                 echo "<td>" . $d['Localidad']['descripcion'] . "</td>";
                 echo "<td>" . $d['Medico']['telefono']. "</td>";

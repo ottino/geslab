@@ -930,3 +930,21 @@ div.view_email {
 .btn_centrar {   
  text-align:center;   
 }
+
+
+.multiselect {
+    width:25em;
+    height:20em;
+    border:solid 1px #c0c0c0;
+    overflow:auto;
+    background-color:#E3E3E3;
+}
+ 
+.multiselect label {
+    display:block;
+}
+ 
+.multiselect-on {
+    color:#ffffff;
+    background-color:#000099;
+}

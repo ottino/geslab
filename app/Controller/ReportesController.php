@@ -18,7 +18,13 @@ class ReportesController extends AppController{
     
     public $facturaciones;
     public $tipo_reporte = array('Excel');
-	
+    
+    public $paginate = array(
+        'limit' => 100,
+        'order' => array(
+            'Protocolo.id' => 'desc'
+        )
+    );	
     public function __construct($request = null, $response = null) {
         parent::__construct($request, $response);
         
@@ -29,8 +35,11 @@ class ReportesController extends AppController{
     }
     
     public function reporteFacturacion(){
-                                         
-            $data = $this->Reporte->query_practicas_x_totales();
+
+        
+        
+            $data = $this->paginate($this->Reporte->query_practicas_x_totales());
+            //$this->set(compact('data'));
             $this->set('data' ,$data);
         //    pr($data);
          //   die();

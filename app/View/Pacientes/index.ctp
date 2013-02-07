@@ -37,13 +37,14 @@
     <table cellpadding="0" cellspacing="0">
     <tr>
             <th>DNI</th>
-            <th>Razon Social</th>            
+            <th>Razon Social</th>
+            <th>Apellido</th>            
+            <th>Nombre</th>            
             <th>Dirección</th>            
             <th>Localidad</th>
             <th>Telefono</th>
             <th>Celular</th>
             <th>eMail</th>  
-            <th>Fecha de Nacimiento</th>
             <th></th>               
     </tr>
     <?php        
@@ -51,12 +52,13 @@
             echo "<tr>";
                 echo "<td>" . $d['Paciente']['dni'] . "</td>";
                 echo "<td>" . $d['Paciente']['razon_social'] . "</td>";
+                echo "<td>" . $d['Paciente']['apellido'] . "</td>";
+                echo "<td>" . $d['Paciente']['nombre'] . "</td>";
                 echo "<td>" . $d['Paciente']['direccion'] . "</td>";
                 echo "<td>" . $d['Localidad']['descripcion'] . "</td>";
                 echo "<td>" . $d['Paciente']['telefono']. "</td>";
                 echo "<td>" . $d['Paciente']['celular']. "</td>";
                 echo "<td>" . $d['Paciente']['email']. "</td>";
-                echo "<td>" . $d['Paciente']['fecha_nacimiento']. "</td>";
 
                 echo "<td class='actions'>";
                 

@@ -22,7 +22,7 @@ class ProtocolosController extends AppController {
     );  
     
     public $paginate = array(
-        'limit' => 10,
+        'limit' => 5,
         'order' => array(
             'Protocolo.id' => 'desc'
         )
@@ -78,6 +78,10 @@ class ProtocolosController extends AppController {
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
            $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
            
+           $id_muestra = $this->request->data['Protocolo']['id'];
+           
+           //pr ($this->request->data['Protocolo']);
+           //die ();
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id']      = $this->request->data['Protocolo']['organo_citologia_id'];
@@ -97,7 +101,7 @@ class ProtocolosController extends AppController {
            if ($this->Protocolo->save($this->data)) {
                 
                 
-                $this->Session->setFlash( MSJ_REG_AG_OK );    
+                $this->Session->setFlash( MSJ_REG_AG_OK . 'Protocolo - ' . $id_muestra );    
                 
 
                 // Con esto vuelve al Index, 
@@ -142,18 +146,19 @@ class ProtocolosController extends AppController {
            $medico_id   = explode("-",$this->data['Protocolo']['medico_id']);
            
            $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
+           $this->request->data['Protocolo']['diagnostico'] = '';
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
            
            $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
-             
+ 
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id'] = 
                     $this->request->data['Protocolo']['organo_citologia_id'];
                     $this->request->data['Protocolo']['tipoprotocolo'] = 'citologia';
                     $this->request->data['Protocolo']['diagnostico']    = $this->request->data['Protocolo']['diagnosticocitologia'];
-                  
-                    
+
+
             }
             else if  (!empty($this->data['Protocolo']['organo_biopsia_id'])) 
             {
@@ -164,7 +169,8 @@ class ProtocolosController extends AppController {
                     
             }
 
-           
+                      // pr ($this->request->data['Protocolo']);
+                 //  die ();   
             if ($this->Protocolo->save($this->data)) {
                    
                 $this->Session->setFlash( MSJ_REG_EDT_OK );    
@@ -479,19 +485,21 @@ class ProtocolosController extends AppController {
                                         );      
 
          $i=0;
-         $select_dinamico = '<div class="input textarea">';
-         $select_dinamico.= '<label for="ProtocoloDiagnostico">Diagnostico</label>';
-         $select_dinamico.= '<textarea name="data[Protocolo][diagnostico]" cols="30" rows="6" id="ProtocoloDiagnostico"/>';
+         $select_dinamico='';
+        // $select_dinamico = '<div class="multiselect" id="multiselect" >';
          foreach($estudio as $p){
-             $select_dinamico.= $p['Estudio']['descripcion'] . '\n';             
+             $select_dinamico.= '<label>
+                                    <input type="checkbox" value="'. $p['Estudio']['descripcion'] . '">'
+                                     . $p['Estudio']['descripcion'] . 
+                                 '</label><br>';             
              $i++;
          }
-         $select_dinamico.='</textarea>'; 
+        // $select_dinamico.='</div>'; 
 
          return $select_dinamico;
 
     }    
-
+    
       
 }
 ?>

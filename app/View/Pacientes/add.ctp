@@ -56,6 +56,13 @@
                               )
                         );
                 
+                echo $this->Form->input(
+                       'control',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Ir a Protocolos ?'
+                             )
+                       );                
             ?>
             <?php echo $this->Form->end('Guardar'); ?>
             </fieldset>

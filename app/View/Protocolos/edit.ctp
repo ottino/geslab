@@ -24,7 +24,37 @@
   ?>
  );
 
+$('#ProtocoloOrganoCitologiaId').change(function(){
 
+   $('#multiselect').html(function(){
+                   $.ajax({
+                   url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                          + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
+                   success: function(data) {
+                       $('#multiselect').html(data);
+
+                   }
+                   });
+               }); 
+});
+
+function updateTextArea() {     
+   var allVals = [];
+   $('.taglist :checked').each(function(i) {
+
+           allVals.push((i!=0?"\r\n":"")+ $(this).val());
+   });
+   $('#ProtocoloDiagnosticoCitologia').val(allVals).attr('rows',allVals.length) ;
+
+ }
+
+   $(".taglist input").live('click',(function(event){
+       updateTextArea();
+
+       }));
+
+ 
+    
  $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
@@ -110,6 +140,7 @@
    
  });
  
+/* 
 $("#asmSelect0").change(function() {
 
     var multipleValues = $("#EstudioEstudio").val() || [];
@@ -130,7 +161,7 @@ $("#asmSelect0").change(function() {
 
 
 });
-
+*/
                             
 });
  
@@ -336,7 +367,7 @@ $("#asmSelect0").change(function() {
                                      'material',
                                       array( 'type' => 'textarea' )                                   
                                    );
- 
+                         /*
                           echo $this->Form->input(
                                      'diagnosticocitologia',
                                       array( 'type' => 'textarea' ,
@@ -351,8 +382,20 @@ $("#asmSelect0").change(function() {
                                        'options'  => $estudios,
                                        'empty' => 'Seleccione los estudios' 
                                 ));
-                          
-                          ?> 
+                          */
+                          ?>
+                  
+                        <label for="">Estudios (Depende del Organo seleccionado) </label>
+                        <div id="multiselect" class="taglist multiselect">
+                        </div>    
+                  
+                        <label for="">Diagnostico</label>
+                        <textarea class="textfield" id="ProtocoloDiagnosticoCitologia" 
+                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10">
+                        <?php echo $diagnostico_citologia; ?> 
+                            
+                        </textarea>
+                  
               </div>  
               <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php

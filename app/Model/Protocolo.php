@@ -37,6 +37,13 @@ class Protocolo extends AppModel {
             'order' => array('Estudio.descripcion' => 'ASC')
         )
     );
+    public $validate = array(
+        'id' => array(
+            'rule'     => 'notEmpty',
+            'required' => true,
+            'message' => MSG_DATO_OBLIG
+        )
+     );   
     /*
     public $validate = array(
         'paciente_id' => array(

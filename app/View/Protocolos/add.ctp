@@ -9,6 +9,7 @@
          minLength: 2
        }); 
 
+
     $("#EstudioEstudio").asmSelect({
             addItemTarget: 'bottom',
             animate: true,
@@ -16,33 +17,44 @@
             sortable: true
     }); 
     
-/*
+
     $('#ProtocoloOrganoCitologiaId').change(function(){
 
-
-       $('#Estuidos2Id').html(function(){
+       $('#multiselect').html(function(){
                        $.ajax({
                        url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
                               + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
                        success: function(data) {
-                           $('#Estuidos2Id').html(data);
-
-                       }
-                       });
-                   }); 
-
-       $('#DiagnosticoDiv').html(function(){
-                       $.ajax({
-                       url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
-                              + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
-                       success: function(data) {
-                           $('#DiagnosticoDiv').html(data);
+                           $('#multiselect').html(data);
 
                        }
                        });
                    }); 
     });
- */      
+ 
+    function updateTextArea() {     
+       var allVals = [];
+       $('.taglist :checked').each(function(i) {
+
+               allVals.push((i!=0?"\r\n":"")+ $(this).val());
+       });
+       $('#ProtocoloDiagnosticoCitologia').val(allVals).attr('rows',allVals.length) ;
+
+     }
+           
+       $(".taglist input").live('click',(function(event){
+           updateTextArea();
+           
+           }));
+        
+            
+      /* 
+       $(function() {
+              $('.taglist input').click(updateTextArea);
+              updateTextArea();
+       
+        });
+      */
    $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
@@ -124,7 +136,7 @@
    
  });
   
-
+/*
     $("#asmSelect0").change(function() {
 
         var multipleValues = $("#EstudioEstudio").val() || [];
@@ -145,7 +157,7 @@
 
 
     });
-
+*/
    
 
                             
@@ -170,8 +182,9 @@
                                       'empty' => 'Eliga una opción',
                                       'type'  => 'text',                                      
                                        )
-                                  );      
+                                  );    
 
+                            
                             echo $this->Form->input(
                                   'paciente_id',
                                    array(
@@ -180,7 +193,17 @@
                                       'type'  => 'text',                                      
                                        )
                                   );      
-
+                           
+                             
+                            echo $this->Html->link(
+                                    'Nuevo Paciente', 
+                                    array('controller'=>'Pacientes', 'action'=>'add'), 
+                                    array('title'=>'Nuevo Paciente','escape' => false)
+                            );
+                            
+                            echo "<br><br>";
+                            
+                            
                             echo $this->Form->input(
                                   'medico_id',
                                    array(
@@ -189,6 +212,14 @@
                                       'type'  => 'text' 
                                        )
                                   );               
+
+                            echo $this->Html->link(
+                                    'Nuevo Medico', 
+                                    array('controller'=>'Medicos', 'action'=>'add'), 
+                                    array('title'=>'Nuevo Medico','escape' => false)
+                            );
+                            
+                            echo "<br><br>";
 
                             echo $this->Form->input(
                                     'NUC',
@@ -346,13 +377,13 @@
                                       array( 'type' => 'textarea' )                                   
                                    );
 
-
+                         /* Se saco a pedido de Silvia
                           echo $this->Form->input(
                                      'diagnostico',
                                       array( 'type' => 'textarea' )                                   
                                    );
                          
-
+                          
                           echo $this->Form->input('Estudio', 
                                 array( 
                                        'label'    => 'Estudios',
@@ -360,9 +391,22 @@
                                        'options'  => $estudios,
                                        'empty' => 'Seleccione los estudios' 
                                 ));
-                       
+                          * 
+                          */
+                       //<textarea class="textfield" id="video0_tags" name="video0_tags"></textarea>
                           ?> 
-                 
+                        <label for="">Estudios (Depende del Organo seleccionado) </label>
+                        <div id="multiselect" class="taglist multiselect">
+                        </div>    
+                  
+                        <label for="">Diagnostico</label>
+                        <textarea class="textfield" id="ProtocoloDiagnosticoCitologia" 
+                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="1">
+                            
+                        </textarea>
+
+
+
                </div>  
               <div class="col w40" style="display:none" id="muestra_biopsia">
                           <?php
@@ -399,7 +443,7 @@
                                    );
                           
                           echo $this->Form->input(
-                                     'diagnostico',
+                                     'diagnosticobiopsia',
                                       array( 'type' => 'textarea' )                                   
                                    );     
                           
