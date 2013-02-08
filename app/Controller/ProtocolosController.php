@@ -36,13 +36,16 @@ class ProtocolosController extends AppController {
         # Obtengo los datos de todos los modelos para dar de alta protocolos
         $this->protocolos        = $this->Protocolo->find('list');     
         $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.descripcion'));     
-        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion'));     
+        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion'));
+                                                                    
         $this->medicos           = $this->Medico->find('list',array('fields' => 'Medico.razon_social'));     
         $this->organoscitologia  = $this->Organo->find('list',
-                                         array('conditions'=>array('Organo.tipoprotocolo ='=>'citologia'))
+                                         array('conditions'=>array('Organo.tipoprotocolo ='=>'citologia'),
+                                                'order'    => array('Organo.descripcion' => 'asc'))
                                         );
         $this->organosbiopsia    = $this->Organo->find('list',
-                                         array('conditions'=>array('Organo.tipoprotocolo ='=>'biopsia'))
+                                         array('conditions'=>array('Organo.tipoprotocolo ='=>'biopsia'),
+                                                'order'    => array('Organo.descripcion' => 'asc'))
                                         );
         
         $this->organos           = $this->Organo->find('list');       
@@ -52,6 +55,12 @@ class ProtocolosController extends AppController {
     }  
     
     public function index() {
+        
+        //$this->Protocolo->find('all', array('conditions'=>array('Protocolo.Fecha =' => '20130131' )) ); 
+        //$data = $this->paginate('Protocolo');
+        //$options = array("Protocolo.fecha = '20130131'");
+        //$data = $this->paginate($this->set('data',$this->paginate('Protocolo', $options)));
+        
         $data = $this->paginate('Protocolo');
         $this->set(compact('data'));
         //$this->set('data',$this->Protocolo->find('all'));
@@ -80,8 +89,8 @@ class ProtocolosController extends AppController {
            
            $id_muestra = $this->request->data['Protocolo']['id'];
            
-           //pr ($this->request->data['Protocolo']);
-           //die ();
+           pr ($this->request->data);
+           die ();
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id']      = $this->request->data['Protocolo']['organo_citologia_id'];
@@ -485,13 +494,20 @@ class ProtocolosController extends AppController {
                                         );      
 
          $i=0;
+         //$select_dinamico='<select name="data[Estudio][Estudio][]" multiple="multiple" id="EstudioEstudio">';
+        // $select_dinamico = '<div class="multiselect" id="multiselect" >';.
+         
          $select_dinamico='';
-        // $select_dinamico = '<div class="multiselect" id="multiselect" >';
          foreach($estudio as $p){
+            
              $select_dinamico.= '<label>
-                                    <input type="checkbox" value="'. $p['Estudio']['descripcion'] . '">'
+                                    <input name="data[Estudio][Estudio][]" id="EstudioEstudio" type="checkbox" value="'. $p['Estudio']['descripcion'] . '">'
                                      . $p['Estudio']['descripcion'] . 
-                                 '</label><br>';             
+                                 '</label><br>';
+              
+                      
+            // $select_dinamico.= '<option value="'. $p['Estudio']['id'] . '">' . $p['Estudio']['descripcion'] .'</option>';
+          
              $i++;
          }
         // $select_dinamico.='</div>'; 

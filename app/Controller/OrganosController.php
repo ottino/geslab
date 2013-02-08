@@ -8,7 +8,7 @@ class OrganosController extends AppController {
     public $paginate = array(
         'limit' => 10,
         'order' => array(
-            'Organo.id' => 'desc'
+            'Organo.descripcion' => 'asc',
         )
     );
     

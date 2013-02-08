@@ -34,6 +34,12 @@
                                 'label' => 'eMail'
                               )
                         );                  
+
+                echo $this->Form->input('email2',
+                        array (
+                                'label' => 'eMail Alternativo'
+                              )
+                        );                  
             ?>
             <?php echo $this->Form->end('Guardar'); ?>
             </fieldset>

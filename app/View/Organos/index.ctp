@@ -19,7 +19,7 @@
             echo $this->Form->input('Organo.buscar_por', array(
                             'options' => array(
                                 1 => 'Tipo de Protocolo',
-                                2 => 'Descripcion'
+                                2 => 'Organo'
                                 ),
                             'label' => 'Por',
                             'default' => 1));
@@ -44,11 +44,22 @@
     </tr>
     <?php        
     foreach ($data as $d):
+         
+           if (($d['Organo']['macroscopia'] <> null) or
+              ($d['Organo']['macroscopia'] <> ''))
+               $marca_macro = 'X';
+               else $marca_macro = '-';
+
+            if (($d['Organo']['microscopia'] <> null) or
+              ($d['Organo']['microscopia'] <> ''))
+               $marca_micro = 'X';
+               else $marca_micro = '-';
+           
             echo "<tr>";
                 echo "<td>" . $d['Organo']['tipoprotocolo'] . "</td>";
                 echo "<td>" . $d['Organo']['descripcion'] . "</td>";
-                echo "<td>" . $d['Organo']['macroscopia'] . "</td>";
-                echo "<td>" . $d['Organo']['microscopia'] . "</td>";
+                echo "<td>" . $marca_macro . "</td>";
+                echo "<td>" . $marca_micro . "</td>";
                 echo "<td class='actions'>";
                 
                 $id = $d['Organo']['id'];

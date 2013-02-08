@@ -9,14 +9,14 @@
          minLength: 2
        }); 
 
-
+/*
     $("#EstudioEstudio").asmSelect({
             addItemTarget: 'bottom',
             animate: true,
             highlight: false,
             sortable: true
     }); 
-    
+   */ 
 
     $('#ProtocoloOrganoCitologiaId').change(function(){
 
@@ -38,14 +38,21 @@
 
                allVals.push((i!=0?"\r\n":"")+ $(this).val());
        });
+       
        $('#ProtocoloDiagnosticoCitologia').val(allVals).attr('rows',allVals.length) ;
 
      }
            
        $(".taglist input").live('click',(function(event){
-           updateTextArea();
-           
-           }));
+           //updateTextArea();
+           //alert ( $("label[for='"+$(this).attr("id")+"']").selector.push);
+           //alert ( $(this).val());
+
+                    $('#ProtocoloDiagnosticoCitologia').val
+                     (
+                      $('#ProtocoloDiagnosticoCitologia').val().replace(/^\s*|\s*$/g,"") +  "\r\n" + $(this).val()
+                     );
+       }));
         
             
       /* 
@@ -383,25 +390,34 @@
                                       array( 'type' => 'textarea' )                                   
                                    );
                          
-                          
+                         */
+                         /*
+                          echo '<div id="multiselect" class="taglist multiselect">';
                           echo $this->Form->input('Estudio', 
                                 array( 
                                        'label'    => 'Estudios',
                                        'multiple' => 'multiple',
+                                       //'type'  => 'select',
                                        'options'  => $estudios,
                                        'empty' => 'Seleccione los estudios' 
                                 ));
-                          * 
-                          */
+                           echo '</div>';
+                        */
                        //<textarea class="textfield" id="video0_tags" name="video0_tags"></textarea>
-                          ?> 
+
+                        //<label for="">Estudios (Depende del Organo seleccionado) </label>
+                        //<div id="multiselect" class="taglist multiselect">
+                        //</div>    
+                            
+                         ?> 
+  
                         <label for="">Estudios (Depende del Organo seleccionado) </label>
                         <div id="multiselect" class="taglist multiselect">
                         </div>    
-                  
+                                             
                         <label for="">Diagnostico</label>
                         <textarea class="textfield" id="ProtocoloDiagnosticoCitologia" 
-                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="1">
+                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10">
                             
                         </textarea>
 

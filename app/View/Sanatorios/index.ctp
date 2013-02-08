@@ -10,6 +10,7 @@
             <th>Telefono Secundario</th>
             <th>Localidad</th>
             <th>eMail</th>
+            <th>eMail Alternativo</th>
             <th></th>        
     </tr>
     <?php        
@@ -21,6 +22,7 @@
                 echo "<td>" . $d['Sanatorio']['telefono2'] . "</td>";
                 echo "<td>" . $d['Localidad']['descripcion']. "</td>";
                 echo "<td>" . $d['Sanatorio']['email']. "</td>";
+                echo "<td>" . $d['Sanatorio']['email2']. "</td>";
 
                 echo "<td class='actions'>";
                 

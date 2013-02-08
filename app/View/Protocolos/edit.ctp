@@ -44,14 +44,21 @@ function updateTextArea() {
 
            allVals.push((i!=0?"\r\n":"")+ $(this).val());
    });
+
    $('#ProtocoloDiagnosticoCitologia').val(allVals).attr('rows',allVals.length) ;
 
  }
 
    $(".taglist input").live('click',(function(event){
-       updateTextArea();
+       //updateTextArea();
+       //alert ( $("label[for='"+$(this).attr("id")+"']").selector.push);
+       //alert ( $(this).val());
 
-       }));
+                $('#ProtocoloDiagnosticoCitologia').val
+                 (
+                  $('#ProtocoloDiagnosticoCitologia').val().replace(/^\s*|\s*$/g,"") +  "\r\n" + $(this).val()
+                 );
+   }));
 
  
     
@@ -448,4 +455,16 @@ $("#asmSelect0").change(function() {
          </fieldset>  
      </div>
     
- 
+<script type="text/javascript">
+
+                   $.ajax({
+                   url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                          + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
+                   success: function(data) {
+                       $('#multiselect').html(data);
+
+                   }
+                   });
+
+
+</script>

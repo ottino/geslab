@@ -16,7 +16,10 @@ class SanatoriosController extends AppController {
  
     public function index() {
 
-        $this->set('data',$this->Sanatorio->find('all'));
+        $this->set('data',$this->Sanatorio->find('all',array(
+                                                               'order'    => array('Sanatorio.descripcion' => 'asc')
+                                                            )
+                                                ));
 
     }
      

@@ -3,7 +3,7 @@
     <div class="form-content">
         <div class="columns">
             <fieldset>
-            <legend>Editar Obra Social</legend>
+            <legend>Editar Organos</legend>
             <?php
                 
                 echo $this->Form->input('id', array('type' => 'hidden'));
