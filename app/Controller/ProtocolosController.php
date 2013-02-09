@@ -89,8 +89,8 @@ class ProtocolosController extends AppController {
            
            $id_muestra = $this->request->data['Protocolo']['id'];
            
-           pr ($this->request->data);
-           die ();
+           //pr ($this->request->data);
+           //die ();
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id']      = $this->request->data['Protocolo']['organo_citologia_id'];
