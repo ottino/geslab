@@ -235,14 +235,6 @@ class ProtocolosController extends AppController {
 
                  $this->set('Protocolo',$this->request->data);
                  
-                 if ((trim ($protocolo['Paciente']['apellido']) <> null) ||
-                     (trim ($protocolo['Paciente']['apellido']) <> '') )
-                 { 
-                     $Comp_Apellido     = trim ($protocolo['Paciente']['apellido']);
-                 }else 
-                 {
-                     $Comp_Apellido     = 'SinApellido'; 
-                 }
 
                  $mail = new PHPMailer();
                  $mail->IsSMTP(); // telling the class to use SMTP
@@ -256,8 +248,11 @@ class ProtocolosController extends AppController {
 
                  $mail->Subject    = "Diagnostico";
                  $mail->MsgHTML($body);
+                 
+                 $address =  $this->request->data['Sanatorio']['email'];
+                                 
 
-                 $address = "silvia.viale.pna@gmail.com";
+                 //"silvia.viale.pna@gmail.com";
                  //$mail->AddAttachment("../../../tmp/Comprobantes.".$id.".pdf"); // attachment
                  $mail->AddAttachment('../../../tmp/Comp.' . $id . '.pdf'); 
                                      //  $Comp_Apellido . '.' . $id . '.pdf'); // attachment
@@ -268,7 +263,8 @@ class ProtocolosController extends AppController {
                  if(!$mail->Send()) {
                       return "Error: " . $mail->ErrorInfo;
                  } else {
-                      return "Mensaje Enviado";
+                          $this->Session->setFlash( MSJ_MAIL_OK );
+                          $this->redirect(array('action' => 'index'));
                  }
 
          }
