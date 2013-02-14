@@ -2,7 +2,8 @@
 	window.onload = function (){
 		var myPDF = new PDFObject({
 		  // cambiar ruta donde van a estar los pdf
-                  url: "../../../tmp/Comprobantes." + <?php echo $Protocolo['Protocolo']['id'] ?> + ".pdf" ,		 
+                  url: "../../../tmp/Comp." 
+                          + <?php echo $Protocolo['Protocolo']['id']; ?> + ".pdf" ,		 
 		  width: "750px",
 		  height: "300px",
                   
@@ -12,10 +13,10 @@
 	};
     </script>
     
-    <?php echo $this->Form->create(); ?>
+    <?php echo $this->Form->create();?>
 
     <div class="form-content">
-        
+          
             <fieldset>
             <legend>Informacion detallada del Mail</legend>            
             <div class="view_email">         

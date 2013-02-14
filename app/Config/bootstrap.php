@@ -234,6 +234,7 @@ define('MSJ_REG_EDT_OK'  , 'Registro modificado');
 define('MSJ_REG_EDT_ERR' , 'Error en la modificacion');
 define('MSJ_REG_DEL_OK'  , 'Registro eliminado');
 define('MSJ_MAIL_ENV_OK' , 'Correo enviado correctamente');
+define('MSJ_PDF_GEN_OK' , 'Comprobante generado correctamente');
 
 
 define('MSG_AUTH_USR_PASS', 'Usuario y claves incorrectos');

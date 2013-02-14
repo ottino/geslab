@@ -3037,3 +3037,39 @@
 #11 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-02-14 03:52:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'genera_comprobante' at line 1
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('genera_comproba...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('genera_comproba...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('genera_comproba...', Array, Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(784): DboSource->query('genera_comproba...', Array, Object(Protocolo))
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(414): Model->__call('genera_comproba...', Array)
+#6 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(414): Protocolo->genera_comprobante('990233346', true)
+#7 [internal function]: ProtocolosController->genera_comprobante('990233346')
+#8 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-02-14 03:58:31 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'genera_comprobante' at line 1
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('genera_comproba...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('genera_comproba...', Array, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('genera_comproba...', Array, Array)
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(784): DboSource->query('genera_comproba...', Array, Object(Protocolo))
+#5 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(414): Model->__call('genera_comproba...', Array)
+#6 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(414): Protocolo->genera_comprobante('990233345', true)
+#7 [internal function]: ProtocolosController->genera_comprobante('990233345')
+#8 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-02-14 04:32:54 Error: Fatal Error (1): Call to undefined function concat() in [C:\xampp\htdocs\geslab\app\View\Protocolos\envia_mail.ctp, line 6]
+2013-02-14 04:32:54 Error: [FatalErrorException] Call to undefined function concat()
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
