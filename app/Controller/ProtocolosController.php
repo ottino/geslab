@@ -406,16 +406,22 @@ class ProtocolosController extends AppController {
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
 
                  //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
+
+
+      
+
+                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,17.90);
+                 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,18);
+                 $pdf->SetXY(16,22);
                  $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
-
+                 
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.35,18.30);
-                 $pdf->Cell(3.5,0.22,'Medica Patologa');         
-
+                 $pdf->SetXY(16.35,22.30);
+                 $pdf->Cell(3.5,0.22,'Medica Patologa');                   
+                 
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.80,18.60);
+                 $pdf->SetXY(16.80,22.60);
                  $pdf->Cell(3.5,0.22,'M.P 6939');         
 
                  $data = $pdf->Output('C:\\xampp\\htdocs\\tmp\\Comp.' . $id .
