@@ -87,6 +87,12 @@
                 $id = $d['Protocolo']['id'];
                 
                 echo $this->Html->link(
+                        BTN_VIEW, 
+                        array('action' => 'vista_preliminar', $id), 
+                        array('title'=>BTN_EDIT,'escape' => false )
+                );
+
+                echo $this->Html->link(
                         BTN_EDIT, 
                         array('action' => 'edit', $id), 
                         array('title'=>BTN_EDIT,'escape' => false )
