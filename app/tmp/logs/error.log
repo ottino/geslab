@@ -3073,3 +3073,10 @@
 #3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-02-16 00:26:23 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\vista_protocolo.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

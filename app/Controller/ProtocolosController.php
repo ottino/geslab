@@ -77,7 +77,7 @@ class ProtocolosController extends AppController {
         $this->set('estudios'          , $this->estudios);
  
            if(!empty($this->data)){ 
-           
+             
            /* Formateo el array para guardar los datos */
                
            $paciente_id = explode("-",$this->data['Protocolo']['paciente_id']);
@@ -109,13 +109,24 @@ class ProtocolosController extends AppController {
             
            if ($this->Protocolo->save($this->data)) {
                 
+                  
                 
-                $this->Session->setFlash( MSJ_REG_AG_OK . 'Protocolo - ' . $id_muestra );    
+                if($this->request->data['Protocolo']['checkadd_vista'] == 1)
+                {
+                   $this->redirect(array('action' => 'vista_preliminar' , 
+                                         $this->request->data['Protocolo']['id'])
+                                  ); 
+                   
+                } else 
+                {
+                    $this->Session->setFlash( MSJ_REG_AG_OK . ' Protocolo - ' . $id_muestra );  
+                    $this->redirect(array('action' => 'index'));                
+                }
                 
-
                 // Con esto vuelve al Index, 
                 // pasando por la funcion index del controlador
-                $this->redirect(array('action' => 'index'));
+                
+                
                 
             } else {
                      $this->Session->setFlash( MSJ_REG_AG_ERR );
@@ -125,6 +136,7 @@ class ProtocolosController extends AppController {
        
     }
  
+   
     public function edit ($id = null){
    
         $this->set('sanatorios'        , $this->sanatorios);
@@ -178,13 +190,21 @@ class ProtocolosController extends AppController {
                     
             }
 
-                      // pr ($this->request->data['Protocolo']);
-                 //  die ();   
+ 
             if ($this->Protocolo->save($this->data)) {
-                   
-                $this->Session->setFlash( MSJ_REG_EDT_OK );    
-                // Con esto vuelve al Index, 
-                // pasando por la funcion index del controlador
+                                  
+               if($this->request->data['Protocolo']['checkadd_vista'] == 1)
+                {
+                   $this->redirect(array('action' => 'vista_preliminar' , 
+                                         $this->request->data['Protocolo']['id'])
+                                  );                   
+                } else 
+                {
+                    $this->Session->setFlash( MSJ_REG_EDT_OK );  
+                    $this->redirect(array('action' => 'index'));                
+                }
+
+                
                 $this->redirect(array('action' => 'index'));
                 
             } else {
@@ -384,19 +404,26 @@ class ProtocolosController extends AppController {
                  $pdf->SetXY(0.20,9.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
-                 $pdf->SetFont('Arial','B',10);
+                 $pdf->SetFont('Arial','B',7);
                  $pdf->SetXY(0.90,10.25);
+                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Macroscopia));
+                 /*
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
                  $pdf->SetXY(0.90,11.00);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 100, 100 ) );        
                  $pdf->SetXY(0.90,11.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 200, 100 ) );        
-
+                 */
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
                  $pdf->SetXY(0.20,14);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
+                 $pdf->SetFont('Arial','B',7);
+                 $pdf->SetXY(0.90,14.75);
+                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Diagnostico));
+                 
+                 /*
                  $pdf->SetFont('Arial','B',10);
                  $pdf->SetXY(0.90,14.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),0,100) );        
@@ -404,24 +431,24 @@ class ProtocolosController extends AppController {
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),100,100) );   
                  $pdf->SetXY(0.90,15.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
-
+                 */
                  //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
 
 
       
 
-                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,17.90);
+                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,20.90);
                  
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,22);
+                 $pdf->SetXY(16,25);
                  $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.35,22.30);
+                 $pdf->SetXY(16.35,25.30);
                  $pdf->Cell(3.5,0.22,'Medica Patologa');                   
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.80,22.60);
+                 $pdf->SetXY(16.80,25.60);
                  $pdf->Cell(3.5,0.22,'M.P 6939');         
 
                  $data = $pdf->Output('C:\\xampp\\htdocs\\tmp\\Comp.' . $id .
@@ -555,44 +582,51 @@ class ProtocolosController extends AppController {
                  $pdf->SetXY(0.20,9.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
-                 $pdf->SetFont('Arial','B',10);
+                 $pdf->SetFont('Arial','B',7);
                  $pdf->SetXY(0.90,10.25);
+                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Macroscopia));
+                 /*
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
                  $pdf->SetXY(0.90,11.00);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 100, 100 ) );        
                  $pdf->SetXY(0.90,11.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 200, 100 ) );        
-
+                 */
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
                  $pdf->SetXY(0.20,14);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
-                 $pdf->SetFont('Arial','B',10);
+                 $pdf->SetFont('Arial','B',7);
                  $pdf->SetXY(0.90,14.75);
+                 
+                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Diagnostico));
+                 
+                 /*
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),0,100) );        
                  $pdf->SetXY(0.90,15.25);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),100,100) );   
                  $pdf->SetXY(0.90,15.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
-
+                 */
+                 
                  //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
 
 
       
 
-                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,17.90);
+                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,20.90);
                  
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,22);
+                 $pdf->SetXY(16,25);
                  $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.35,22.30);
+                 $pdf->SetXY(16.35,25.30);
                  $pdf->Cell(3.5,0.22,'Medica Patologa');                   
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.80,22.60);
+                 $pdf->SetXY(16.80,25.60);
                  $pdf->Cell(3.5,0.22,'M.P 6939');         
 
                  $data = $pdf->Output(null , 'S');

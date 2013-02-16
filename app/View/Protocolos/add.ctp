@@ -61,7 +61,7 @@
               updateTextArea();
        
         });
-      */
+      */  
    $('#ProtocoloTipoProtocolo').change(function(){
 
     //Almaceno el valor seleccionado en una variable
@@ -165,12 +165,30 @@
 
     });
 */
+  
+    
+ $('#ProtocoloCheckaddVista').change(function(){
+   var valorSeleccionado = $(this).val();
    
-
-                            
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckadd").removeAttr("checked");
+   }
+   
  });
  
+  $('#ProtocoloCheckadd').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+   }
+   
+ });
  
+ });
+
 </script>
  
 <div class="form">
@@ -364,7 +382,27 @@
                           <input type="text" size="2" name="data[Protocolo][practica144790]" id="ProtocoloPractica144790" value="0" class="input_practicas_cant" >   
                         </td>  
                       </tr>    
-                    </table>                   
+                    </table> 
+                   <?php
+                   
+                      echo $this->Form->input(
+                       'checkadd_vista',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Agregar + Vista Preliminar'
+                             )
+                       );   
+
+                      echo $this->Form->input(
+                       'checkadd',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Agregar',
+                              'Checked' => 'true'
+                             )
+                       );  
+                      
+                   ?>
               </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php
@@ -468,7 +506,10 @@
               </div> 
 
                 <?php
-                echo $this->Form->end('Agregar protocolo');
+                      
+                
+                echo $this->Form->end('Ejecutar');                
+                
                 ?>
          </fieldset>  
      </div>

@@ -169,7 +169,25 @@ $("#asmSelect0").change(function() {
 
 });
 */
-                            
+ $('#ProtocoloCheckaddVista').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckadd").removeAttr("checked");
+   }
+   
+ });
+ 
+  $('#ProtocoloCheckadd').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+   }
+   
+ });                           
 });
  
 </script>
@@ -354,7 +372,27 @@ $("#asmSelect0").change(function() {
                           <input type="text" size="2" value="<?php echo $this->data['Protocolo']['practica144790']; ?>" name="data[Protocolo][practica144790]" id="ProtocoloPractica144790" class="input_practicas_cant" >   
                         </td>  
                       </tr>    
-                    </table>                   
+                    </table> 
+                   <?php
+                   
+                      echo $this->Form->input(
+                       'checkadd_vista',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Guardar + Vista Preliminar'
+                             )
+                       );   
+
+                      echo $this->Form->input(
+                       'checkadd',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Guardar',
+                              'Checked' => 'true'
+                             )
+                       );  
+                      
+                   ?>                   
               </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php
@@ -450,7 +488,7 @@ $("#asmSelect0").change(function() {
               </div> 
 
                 <?php
-                  echo $this->Form->end('Guardar');
+                  echo $this->Form->end('Ejecutar');
                 ?> 
          </fieldset>  
      </div>
