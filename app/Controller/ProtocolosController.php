@@ -22,10 +22,9 @@ class ProtocolosController extends AppController {
     );  
     
     public $paginate = array(
-        'limit' => 5,
-        'order' => array(
-            'Protocolo.id' => 'desc'
-        )
+        'limit' => 6,
+        'order' => array('Protocolo.fecha' => 'desc')//,
+       // 'conditions'=>array('Protocolo.fecha'=>'20130216')
     );
     
     var $components = array('RequestHandler');
@@ -34,9 +33,15 @@ class ProtocolosController extends AppController {
         parent::__construct($request, $response);
         
         # Obtengo los datos de todos los modelos para dar de alta protocolos
-        $this->protocolos        = $this->Protocolo->find('list');     
-        $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.descripcion'));     
-        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion'));
+       // $this->protocolos        = $this->Protocolo->find('list');
+                                        // array('conditions'=>array('Protocolo.fecha'=>'20130216'),
+                                         //       'order'    => array('Protocolo.id' => 'asc'))
+                                        //);     
+        $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.descripcion',
+                                        'order' => array('Sanatorio.descripcion' => 'asc'))                                             
+                     );     
+        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion',
+                                                        'order' => array('Obrasocial.descripcion' => 'asc')));
                                                                     
         $this->medicos           = $this->Medico->find('list',array('fields' => 'Medico.razon_social'));     
         $this->organoscitologia  = $this->Organo->find('list',
@@ -60,7 +65,7 @@ class ProtocolosController extends AppController {
         //$data = $this->paginate('Protocolo');
         //$options = array("Protocolo.fecha = '20130131'");
         //$data = $this->paginate($this->set('data',$this->paginate('Protocolo', $options)));
-        
+
         $data = $this->paginate('Protocolo');
         $this->set(compact('data'));
         //$this->set('data',$this->Protocolo->find('all'));

@@ -41,6 +41,7 @@
     
     <table cellpadding="0" cellspacing="0">
     <tr>
+            <th>Fecha Alta</th>            
             <th>Numero</th>            
             <th>Protocolo</th>            
             <th>Paciente</th>            
@@ -71,6 +72,7 @@
            else $ambulatorio = "no";
            
                echo "<tr>";
+                echo "<td>" . $d['Protocolo']['fecha'] . "</td>";
                 echo "<td>" . $d['Protocolo']['id'] . "</td>";
                
                 echo "<td>" . $d['Protocolo']['tipoprotocolo'] . "</td>";
