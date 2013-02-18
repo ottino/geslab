@@ -53,8 +53,7 @@
             <th>Ambulatorio</th>
             <th>Organo</th>
             <th></th>
-            <th>eMail</th>  
-            <th>PDF</th>  
+            <th>eMail</th>
     </tr>
     <?php        
     foreach ($data as $d):
@@ -117,6 +116,7 @@
                               )
                         );
                 echo "</td>";
+                /*
                 echo "<td>";
                 
                 echo $this->Html->image('pdf2.png',
@@ -126,6 +126,8 @@
                               )
                         );             
                 echo "</td>";
+                 * 
+                 */
                echo '</tr>';        
     endforeach;
 

@@ -59,19 +59,37 @@ class ProtocolosController extends AppController {
 
     }  
     
-    public function index() {
+    public function index($vista_rapida = 0) {
+        
         
         //$this->Protocolo->find('all', array('conditions'=>array('Protocolo.Fecha =' => '20130131' )) ); 
         //$data = $this->paginate('Protocolo');
         //$options = array("Protocolo.fecha = '20130131'");
         //$data = $this->paginate($this->set('data',$this->paginate('Protocolo', $options)));
 
-        $data = $this->paginate('Protocolo');
-        $this->set(compact('data'));
+        if ($vista_rapida == 1)
+        {
+            
+            $data = $this->paginate('Protocolo',array('Protocolo.fecha'=>date("Y-m-d")));    
+   
+            $this->set(compact('data'));
+
+        } else
+        {
+            $data = $this->paginate('Protocolo');
+            $this->set(compact('data'));
+        }
         //$this->set('data',$this->Protocolo->find('all'));
         
     }
-    
+
+    public function vista_rapida()
+    {
+       
+       $this->redirect(array('action' => 'index' ,1)); 
+       
+    }
+
     public function add() {
 
         $this->set('sanatorios'        , $this->sanatorios);
@@ -125,7 +143,8 @@ class ProtocolosController extends AppController {
                 } else 
                 {
                     $this->Session->setFlash( MSJ_REG_AG_OK . ' Protocolo - ' . $id_muestra );  
-                    $this->redirect(array('action' => 'index'));                
+                    //$this->redirect(array('action' => 'index'));                
+                    $this->redirect(array('action' => 'vista_rapida'));                
                 }
                 
                 // Con esto vuelve al Index, 
@@ -140,8 +159,7 @@ class ProtocolosController extends AppController {
            }
        
     }
- 
-   
+  
     public function edit ($id = null){
    
         $this->set('sanatorios'        , $this->sanatorios);
@@ -206,7 +224,8 @@ class ProtocolosController extends AppController {
                 } else 
                 {
                     $this->Session->setFlash( MSJ_REG_EDT_OK );  
-                    $this->redirect(array('action' => 'index'));                
+                    //$this->redirect(array('action' => 'index'));                
+                    $this->redirect(array('action' => 'vista_rapida'));                
                 }
 
                 
@@ -224,7 +243,8 @@ class ProtocolosController extends AppController {
     public function delete($id = null ){
         if ($this->Protocolo->delete($id, true)) {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
-            $this->redirect(array('action' => 'index'));
+            //$this->redirect(array('action' => 'index'));
+            $this->redirect(array('action' => 'vista_rapida'));
         }
     }
     
@@ -236,6 +256,9 @@ class ProtocolosController extends AppController {
         $this->set('organosbiopsia'    , $this->organosbiopsia);
         $this->set('obrasociales'      , $this->obrasociales);
         $this->set('estudios'          , $this->estudios);
+        
+        // Genero PDF
+        $this->genera_comprobante($id);
         //$this->set('pacientes'         , $this->pacientes);
        
        if ($this->request->is('get')) {
@@ -251,13 +274,13 @@ class ProtocolosController extends AppController {
              } else {
                      // error cuando no se puede abrir envia_mail.ctp
                      $this->Session->setFlash( MSJ_REG_EDT_ERR );
-                     $this->redirect(array('action' => 'index'));
+                     $this->redirect(array('action' => 'vista_rapida'));
              } 
          } else {
                  // cuando toco enviar vuelvo acá
                  $this->Protocolo->id = $id;           
                  $this->request->data = $this->Protocolo->read();
-
+                 
                  $this->set('Protocolo',$this->request->data);
                  
 
@@ -289,7 +312,8 @@ class ProtocolosController extends AppController {
                       return "Error: " . $mail->ErrorInfo;
                  } else {
                           $this->Session->setFlash( MSJ_MAIL_OK );
-                          $this->redirect(array('action' => 'index'));
+                         // $this->redirect(array('action' => 'index'));
+                          $this->redirect(array('action' => 'vista_rapida'));
                  }
 
          }
@@ -378,40 +402,40 @@ class ProtocolosController extends AppController {
                  /* Datos generales sobre el protocolo */
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,3.5);
+                 $pdf->SetXY(0.20,2.5);
                  $pdf->Cell(3.5,0.22,'Protocolo Nro:    ' . $Comp_ProtocoloNro );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,3.5);
+                 $pdf->SetXY(16,2.5);
                  $pdf->Cell(3.5,0.22,'Fecha:    ' . date("Y-m-d"));
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,5.0);
+                 $pdf->SetXY(0.20,4.0);
                  $pdf->Cell(3.5,0.22,'Paciente:    ' . utf8_decode($Comp_Paciente) );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,5.0);
+                 $pdf->SetXY(16,4.0);
                  $pdf->Cell(3.5,0.22,'Edad:    ' . $Comp_Edad );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,6.5);
+                 $pdf->SetXY(0.20,5.5);
                  $pdf->Cell(3.5,0.22,'Medico:    ' . utf8_decode($Comp_Medico) );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,8.0);
+                 $pdf->SetXY(0.20,7.0);
                  $pdf->Cell(3.5,0.22,'Organo:    ' . utf8_decode($Comp_Organo) );
 
                  /* Segunda linea */
-                 $pdf->Line(0, 9 , 21, 9);
+                 $pdf->Line(0, 8 , 21, 8);
 
                  /* Datos de Macroscopia */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,9.5);
+                 $pdf->SetXY(0.20,8.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
                  $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,10.25);
-                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Macroscopia));
+                 $pdf->SetXY(0.90,9.25);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Macroscopia));
                  /*
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
                  $pdf->SetXY(0.90,11.00);
@@ -421,12 +445,12 @@ class ProtocolosController extends AppController {
                  */
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,14);
+                 $pdf->SetXY(0.20,18);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
-                 $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,14.75);
-                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Diagnostico));
+                 $pdf->SetFont('Arial','B',5);
+                 $pdf->SetXY(0.90,18.75);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Diagnostico));
                  
                  /*
                  $pdf->SetFont('Arial','B',10);
@@ -460,10 +484,11 @@ class ProtocolosController extends AppController {
                                       // $Comp_Apellido . '.' .                                       
                                       '.pdf'    , 'F');
                  
-                 $this->Session->setFlash( MSJ_PDF_GEN_OK . ' -  Ubicación: ' . 'C:\\xampp\\htdocs\\tmp\\Comp.' . 
-                                          //$Comp_Apellido . '.' .
-                                           $id . '.pdf' );
-                 $this->redirect(array('action' => 'index'));
+                 //$this->Session->setFlash( MSJ_PDF_GEN_OK . ' -  Ubicación: ' . 'C:\\xampp\\htdocs\\tmp\\Comp.' . 
+                  //                        //$Comp_Apellido . '.' .
+                 //                          $id . '.pdf' );
+                 //$this->redirect(array('action' => 'index'));
+                 //$this->redirect(array('action' => 'vista_rapida'));
         
                  
                  /*
@@ -556,40 +581,40 @@ class ProtocolosController extends AppController {
                  /* Datos generales sobre el protocolo */
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,3.5);
+                 $pdf->SetXY(0.20,2.5);
                  $pdf->Cell(3.5,0.22,'Protocolo Nro:    ' . $Comp_ProtocoloNro );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,3.5);
+                 $pdf->SetXY(16,2.5);
                  $pdf->Cell(3.5,0.22,'Fecha:    ' . date("Y-m-d"));
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,5.0);
+                 $pdf->SetXY(0.20,4.0);
                  $pdf->Cell(3.5,0.22,'Paciente:    ' . utf8_decode($Comp_Paciente) );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,5.0);
+                 $pdf->SetXY(16,4.0);
                  $pdf->Cell(3.5,0.22,'Edad:    ' . $Comp_Edad );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,6.5);
+                 $pdf->SetXY(0.20,5.5);
                  $pdf->Cell(3.5,0.22,'Medico:    ' . utf8_decode($Comp_Medico) );
 
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.20,8.0);
+                 $pdf->SetXY(0.20,7.0);
                  $pdf->Cell(3.5,0.22,'Organo:    ' . utf8_decode($Comp_Organo) );
 
                  /* Segunda linea */
-                 $pdf->Line(0, 9 , 21, 9);
+                 $pdf->Line(0, 8 , 21, 8);
 
                  /* Datos de Macroscopia */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,9.5);
+                 $pdf->SetXY(0.20,8.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
                  $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,10.25);
-                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Macroscopia));
+                 $pdf->SetXY(0.90,9.25);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Macroscopia));
                  /*
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
                  $pdf->SetXY(0.90,11.00);
@@ -599,22 +624,22 @@ class ProtocolosController extends AppController {
                  */
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,14);
+                 $pdf->SetXY(0.20,18);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
-                 $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,14.75);
-                 
-                 $pdf->MultiCell(0,0.5,utf8_decode($Comp_Diagnostico));
+                 $pdf->SetFont('Arial','B',5);
+                 $pdf->SetXY(0.90,18.75);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Diagnostico));
                  
                  /*
+                 $pdf->SetFont('Arial','B',10);
+                 $pdf->SetXY(0.90,14.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),0,100) );        
                  $pdf->SetXY(0.90,15.25);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),100,100) );   
                  $pdf->SetXY(0.90,15.75);
                  $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
                  */
-                 
                  //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
 
 
@@ -632,8 +657,9 @@ class ProtocolosController extends AppController {
                  
                  $pdf->SetFont('Arial','B',8);
                  $pdf->SetXY(16.80,25.60);
-                 $pdf->Cell(3.5,0.22,'M.P 6939');         
-
+                 $pdf->Cell(3.5,0.22,'M.P 6939');    
+                 
+                 
                  $data = $pdf->Output(null , 'S');
                  
                  //$this->Session->setFlash( MSJ_PDF_GEN_OK . ' -  Ubicación: ' . 'C:\\xampp\\htdocs\\tmp\\Comp.' . 
@@ -707,7 +733,7 @@ class ProtocolosController extends AppController {
                   $options = array("Paciente.razon_social LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");
               break;
               case 3:
-                  $options = array("Protocolo.id = '{$this->Session->read('Protocolo.buscar_valor')}'");
+                  $options = array("Protocolo.id LIKE '%{$this->Session->read('Protocolo.buscar_valor')}'");
               break;
               case 4:
                   $options = array("Medico.razon_social LIKE '%{$this->Session->read('Protocolo.buscar_valor')}%'");

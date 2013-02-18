@@ -48,13 +48,6 @@
                                 'label' => 'eMail - Correo electronico'
                               )
                         );
-
-                echo $this->Form->input('fecha_nacimiento',
-                        array (
-                                'label' => 'Fecha de Nacimiento',
-                                'minYear' => 1960
-                              )
-                        );
                 
                 echo $this->Form->input(
                        'control',
