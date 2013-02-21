@@ -16,6 +16,12 @@
                                'label' => 'Apellido y Nombre'
                              )
                         );
+
+                echo $this->Form->input('edad',
+                        array(
+                               'label' => 'Edad'
+                             )
+                        );
                 
                 echo $this->Form->input('direccion',
                         array (
