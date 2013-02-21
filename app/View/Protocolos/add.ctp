@@ -389,7 +389,7 @@
                        'checkadd_vista',
                         array(
                               'type'  => 'checkbox',
-                              'label' => 'Agregar + Vista Preliminar'
+                              'label' => 'Vista Preliminar'
                              )
                        );   
 

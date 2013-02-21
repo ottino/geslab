@@ -379,7 +379,7 @@ $("#asmSelect0").change(function() {
                        'checkadd_vista',
                         array(
                               'type'  => 'checkbox',
-                              'label' => 'Guardar + Vista Preliminar'
+                              'label' => 'Vista Preliminar'
                              )
                        );   
 

@@ -83,8 +83,7 @@ class ProtocolosController extends AppController {
         
     }
 
-    public function vista_rapida()
-    {
+    public function vista_rapida() {
        
        $this->redirect(array('action' => 'index' ,1)); 
        
@@ -334,6 +333,7 @@ class ProtocolosController extends AppController {
                  $Comp_Medico       = $protocolo['Medico']['razon_social'];
                  $Comp_Organo       = $protocolo['Organo']['descripcion'];
                  $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
+                 $Comp_Microscopia  = $protocolo['Protocolo']['microscopia'];
                  $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  
@@ -433,23 +433,26 @@ class ProtocolosController extends AppController {
                  $pdf->SetXY(0.20,8.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
-                 $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,9.25);
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,8.9);
                  $pdf->MultiCell(0,0.3,utf8_decode($Comp_Macroscopia));
-                 /*
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
-                 $pdf->SetXY(0.90,11.00);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 100, 100 ) );        
-                 $pdf->SetXY(0.90,11.75);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 200, 100 ) );        
-                 */
+                 
+                 /* Datos de Microscopia */
+                 $pdf->SetFont('Arial','B',11);
+                 $pdf->SetXY(0.20,$pdf->GetY()+0.4);
+                 $pdf->Cell(3.5,0.22,'Microscopia:');   
+
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,$pdf->GetY()+0.4);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Microscopia));
+
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,18);
+                 $pdf->SetXY(0.20,$pdf->GetY()+0.4);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
-                 $pdf->SetFont('Arial','B',5);
-                 $pdf->SetXY(0.90,18.75);
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,$pdf->GetY()+0.4);
                  $pdf->MultiCell(0,0.3,utf8_decode($Comp_Diagnostico));
                  
                  /*
@@ -465,20 +468,20 @@ class ProtocolosController extends AppController {
 
 
       
-
-                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,20.90);
+                 $ordenada_x = $pdf->GetY();
+                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,$ordenada_x+3);
                  
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,25);
+                 $pdf->SetXY(16,$ordenada_x+7);
                  $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.35,25.30);
+                 $pdf->SetXY(16.35,$pdf->GetY()+0.30);
                  $pdf->Cell(3.5,0.22,'Medica Patologa');                   
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.80,25.60);
-                 $pdf->Cell(3.5,0.22,'M.P 6939');         
+                 $pdf->SetXY(16.80,$pdf->GetY()+0.30);
+                 $pdf->Cell(3.5,0.22,'M.P 6939');       
 
                  $data = $pdf->Output('C:\\xampp\\htdocs\\tmp\\Comp.' . $id .
                                       // $Comp_Apellido . '.' .                                       
@@ -513,6 +516,7 @@ class ProtocolosController extends AppController {
                  $Comp_Medico       = $protocolo['Medico']['razon_social'];
                  $Comp_Organo       = $protocolo['Organo']['descripcion'];
                  $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
+                 $Comp_Microscopia  = $protocolo['Protocolo']['microscopia'];
                  $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  
@@ -612,51 +616,41 @@ class ProtocolosController extends AppController {
                  $pdf->SetXY(0.20,8.5);
                  $pdf->Cell(3.5,0.22,'Macroscopia:');   
 
-                 $pdf->SetFont('Arial','B',7);
-                 $pdf->SetXY(0.90,9.25);
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,8.9);
                  $pdf->MultiCell(0,0.3,utf8_decode($Comp_Macroscopia));
-                 /*
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 0, 100 ));        
-                 $pdf->SetXY(0.90,11.00);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 100, 100 ) );        
-                 $pdf->SetXY(0.90,11.75);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Macroscopia) , 200, 100 ) );        
-                 */
+                 
+                 /* Datos de Microscopia */
+                 $pdf->SetFont('Arial','B',11);
+                 $pdf->SetXY(0.20,$pdf->GetY()+0.4);
+                 $pdf->Cell(3.5,0.22,'Microscopia:');   
+
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,$pdf->GetY()+0.4);
+                 $pdf->MultiCell(0,0.3,utf8_decode($Comp_Microscopia));
+
                  /* Datos de Diagnostico */
                  $pdf->SetFont('Arial','B',11);
-                 $pdf->SetXY(0.20,18);
+                 //$pdf->SetXY(0.20,18);
+                 $pdf->SetXY(0.20,$pdf->GetY()+0.4);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
-                 $pdf->SetFont('Arial','B',5);
-                 $pdf->SetXY(0.90,18.75);
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(0.90,$pdf->GetY()+0.4);
                  $pdf->MultiCell(0,0.3,utf8_decode($Comp_Diagnostico));
+                
                  
-                 /*
+                 /* Firma */
                  $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(0.90,14.75);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),0,100) );        
-                 $pdf->SetXY(0.90,15.25);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),100,100) );   
-                 $pdf->SetXY(0.90,15.75);
-                 $pdf->Cell(3.5,0.22,substr( utf8_decode($Comp_Diagnostico),200,100) );   
-                 */
-                 //$pdf->Image(IMAGES . 'logo2_geslab.png',16, 18);
-
-
-      
-
-                 $pdf->Image(IMAGES . 'firma_pdf.png',15.94,20.90);
-                 
-                 $pdf->SetFont('Arial','B',10);
-                 $pdf->SetXY(16,25);
+                 $pdf->SetXY(16,$pdf->GetY()+6);
                  $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.35,25.30);
+                 $pdf->SetXY(16.35,$pdf->GetY()+0.30);
                  $pdf->Cell(3.5,0.22,'Medica Patologa');                   
                  
                  $pdf->SetFont('Arial','B',8);
-                 $pdf->SetXY(16.80,25.60);
+                 $pdf->SetXY(16.80,$pdf->GetY()+0.30);
                  $pdf->Cell(3.5,0.22,'M.P 6939');    
                  
                  
