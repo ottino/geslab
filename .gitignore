@@ -8,7 +8,7 @@
 .DS_Store
 /tags
 
-/app/tmp/cache/models
-/app/tmp/cache/persistent
-/app/tmp/logs
-/app/tmp/
+/app/tmp/cache/models/*
+/app/tmp/cache/persistent/*
+/app/tmp/logs/*
+/app/tmp/*
