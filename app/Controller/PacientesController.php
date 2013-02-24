@@ -35,8 +35,10 @@ class PacientesController extends AppController {
         
         if(!empty($this->data)){ 
 
+            $this->request->data['Paciente']['razon_social'] = strtoupper($this->request->data['Paciente']['razon_social']);
+             
             if ($this->Paciente->save($this->data)) {
-                   
+                
                 // Con esto vuelve al Index, 
                 // pasando por la funcion index del controlador
                 if($this->request->data['Paciente']['control']==1)
