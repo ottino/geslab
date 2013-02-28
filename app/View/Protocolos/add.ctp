@@ -1,4 +1,5 @@
 <script type="text/javascript">
+
  $(function() {
    $('#ProtocoloPacienteId').autocomplete({
          source   : '<?php echo $this->Html->url(array('controller'=>'Pacientes', 'action'=>'search'));?>',
@@ -217,18 +218,23 @@
                                       'empty' => 'Eliga una opción',
                                       'type'  => 'text',                                      
                                        )
-                                  );      
-                           
-                             
+                                  );     
+                            
+                            
+                            echo '<a href='.$this->Html->url(array('controller'=>'Pacientes', 'action'=>'add')).
+                                 ' target="_blank"> Nuevo Paciente </a>';
+                            
+                            /*
                             echo $this->Html->link(
                                     'Nuevo Paciente', 
                                     array('controller'=>'Pacientes', 'action'=>'add'), 
                                     array('title'=>'Nuevo Paciente','escape' => false)
                             );
+                            */
                             
                             echo "<br><br>";
                             
-                            
+                             
                             echo $this->Form->input(
                                   'medico_id',
                                    array(
@@ -237,12 +243,17 @@
                                       'type'  => 'text' 
                                        )
                                   );               
-
+                            
+                            echo '<a href='.$this->Html->url(array('controller'=>'Medicos', 'action'=>'add')).
+                            ' target="_blank"> Nuevo Medico </a>';
+                            
+                            /*
                             echo $this->Html->link(
                                     'Nuevo Medico', 
                                     array('controller'=>'Medicos', 'action'=>'add'), 
                                     array('title'=>'Nuevo Medico','escape' => false)
                             );
+                            */
                             
                             echo "<br><br>";
 

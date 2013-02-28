@@ -1,9 +1,14 @@
 <div id='search'>
+    
+    <a href='http://www.gmail.com'  target="_blank">
+    <img src="/geslab/img/gmail.png" alt="Correo"/>&nbsp;&nbsp;Correo Electronico 
+    </a>
+    <br><br>
     <?php echo $this->Form->create('Protocolo',array('action'=>'search'));?>
     <fieldset>
-
         <div class="columns">
             <?php
+            
             echo $this->Form->input('Protocolo.buscar_valor', array(
                 'label'=>'Buscar',
                 'placeholder'=> 'Escriba aquí'));

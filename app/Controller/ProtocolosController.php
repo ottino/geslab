@@ -89,6 +89,13 @@ class ProtocolosController extends AppController {
        
     }
 
+    public function puente_paciente() {
+       
+       //$this->redirect(array('action' => 'index' ,1)); 
+       pr($this->request->data);
+       die();
+    }
+    
     public function add() {
 
         $this->set('sanatorios'        , $this->sanatorios);
@@ -143,7 +150,10 @@ class ProtocolosController extends AppController {
                 {
                     $this->Session->setFlash( MSJ_REG_AG_OK . ' Protocolo - ' . $id_muestra );  
                     //$this->redirect(array('action' => 'index'));                
-                    $this->redirect(array('action' => 'vista_rapida'));                
+                    //$this->redirect(array('action' => 'vista_rapida'));
+                    $this->redirect(array('action' => 'edit' , 
+                                    $this->request->data['Protocolo']['id'])
+                                   );  
                 }
                 
                 // Con esto vuelve al Index, 
@@ -223,8 +233,11 @@ class ProtocolosController extends AppController {
                 } else 
                 {
                     $this->Session->setFlash( MSJ_REG_EDT_OK );  
-                    //$this->redirect(array('action' => 'index'));                
-                    $this->redirect(array('action' => 'vista_rapida'));                
+                    //$this->redirect(array('action' => 'index'));
+                    $this->redirect(array('action' => 'edit' , 
+                                    $this->request->data['Protocolo']['id'])
+                                   );  
+                     //$this->redirect(array('action' => 'vista_rapida'));                
                 }
 
                 
