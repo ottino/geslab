@@ -23,7 +23,7 @@
 
        $('#multiselect').html(function(){
                        $.ajax({
-                       url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                       url:'http://maxi-pc/geslab/protocolos/search_organo_estudio/' 
                               + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
                        success: function(data) {
                            $('#multiselect').html(data);
@@ -122,7 +122,7 @@
    
    $("#ProtocoloMacroscopia").val(function(){
                     $.ajax({
-                    url:'http://localhost/geslab/protocolos/search_organo/' + 
+                    url:'http://maxi-pc/geslab/protocolos/search_organo/' + 
                                        $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
                     success: function(data) {
                         $('#ProtocoloMacroscopia').val(data);
@@ -133,7 +133,7 @@
                 
    $("#ProtocoloMicroscopia").val(function(){
                     $.ajax({
-                    url:'http://localhost/geslab/protocolos/search_organo/'  + 
+                    url:'http://maxi-pc/geslab/protocolos/search_organo/'  + 
                                         $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
                     success: function(data) {
                         $('#ProtocoloMicroscopia').val(data);

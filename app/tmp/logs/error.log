@@ -3142,3 +3142,18 @@
 2013-02-28 01:51:27 Error: [MissingControllerException] Controller class Www.gmail.comController could not be found.
 #0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-02 14:44:46 Error: [MissingControllerException] Controller class Blank.gifController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-22 01:09:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `ge...')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1730): DboSource->create(Object(Protocolo), Array, Array)
+#4 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(226): Model->save(Array)
+#5 [internal function]: ProtocolosController->edit()
+#6 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#7 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

@@ -28,7 +28,7 @@ $('#ProtocoloOrganoCitologiaId').change(function(){
 
    $('#multiselect').html(function(){
                    $.ajax({
-                   url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                   url:'http://maxi-pc/geslab/protocolos/search_organo_estudio/' 
                           + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
                    success: function(data) {
                        $('#multiselect').html(data);
@@ -126,7 +126,7 @@ function updateTextArea() {
    
    $("#ProtocoloMacroscopia").val(function(){
                     $.ajax({
-                    url:'http://localhost/geslab/protocolos/search_organo/' + 
+                    url:'http://maxi-pc/geslab/protocolos/search_organo/' + 
                                        $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
                     success: function(data) {
                         $('#ProtocoloMacroscopia').val(data);
@@ -137,7 +137,7 @@ function updateTextArea() {
                 
    $("#ProtocoloMicroscopia").val(function(){
                     $.ajax({
-                    url:'http://localhost/geslab/protocolos/search_organo/'  + 
+                    url:'http://maxi-pc/geslab/protocolos/search_organo/'  + 
                                         $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
                     success: function(data) {
                         $('#ProtocoloMicroscopia').val(data);                        
@@ -496,7 +496,7 @@ $("#asmSelect0").change(function() {
 <script type="text/javascript">
 
                    $.ajax({
-                   url:'http://localhost/geslab/protocolos/search_organo_estudio/' 
+                   url:'http://maxi-pc/geslab/protocolos/search_organo_estudio/' 
                           + $("#ProtocoloOrganoCitologiaId").val(),                                                                 
                    success: function(data) {
                        $('#multiselect').html(data);

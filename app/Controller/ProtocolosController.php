@@ -202,7 +202,7 @@ class ProtocolosController extends AppController {
            $this->request->data['Protocolo']['diagnostico'] = '';
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
            
-           $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
+           //$this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
  
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
@@ -475,7 +475,7 @@ class ProtocolosController extends AppController {
                  /* Datos de Diagnostico */              
                  $pdf->SetFont('Arial','B',11);
                  $pdf->SetXY(0.20,$pdf->GetY()+1);
-                 $pdf->Cell(3.5,0.22,'Informe:');   
+                 $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
                  $pdf->SetFont('Arial','',11);
                  $pdf->SetXY(0.90,$pdf->GetY()+0.6);
@@ -646,7 +646,7 @@ class ProtocolosController extends AppController {
                  
                  $pdf->SetFont('Arial','B',11);
                  $pdf->SetXY(0.20,$pdf->GetY()+1);
-                 $pdf->Cell(3.5,0.22,'Informe:');   
+                 $pdf->Cell(3.5,0.22,'Diagnostico:');   
 
                  $pdf->SetFont('Arial','',11);
                  $pdf->SetXY(0.90,$pdf->GetY()+0.6);
