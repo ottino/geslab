@@ -175,8 +175,8 @@ $("#asmSelect0").change(function() {
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckadd").removeAttr("checked");
-   }
-   
+     $("#ProtocoloCheckaddPrint").removeAttr("checked");
+   } 
  });
  
   $('#ProtocoloCheckadd').change(function(){
@@ -185,9 +185,21 @@ $("#asmSelect0").change(function() {
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
-   }
+     $("#ProtocoloCheckaddPrint").removeAttr("checked");
+   } 
+ });
+ 
+   $('#ProtocoloCheckaddPrint').change(function(){
+   var valorSeleccionado = $(this).val();
    
- });                           
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckadd").removeAttr("checked");
+   } 
+ });
+ 
+ 
 });
  
 </script>
@@ -391,7 +403,14 @@ $("#asmSelect0").change(function() {
                               'Checked' => 'true'
                              )
                        );  
-                      
+ 
+                      echo $this->Form->input(
+                       'checkadd_print',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Imprimir'
+                             )
+                       );                        
                    ?>                   
               </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >

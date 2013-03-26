@@ -3157,3 +3157,79 @@
 #8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-03-25 02:55:54 Error: [MissingViewException] View file "C:\xampp\htdocs\geslab\app\View\Protocolos\imprimir_comprobante.ctp" is missing.
+#0 C:\xampp\htdocs\geslab\lib\Cake\View\View.php(473): View->_getViewFileName('imprimir_compro...')
+#1 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(956): View->render('imprimir_compro...', 'ajax')
+#2 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(845): Controller->render('imprimir_compro...', 'ajax')
+#3 [internal function]: ProtocolosController->imprimir_comprobante('980018116')
+#4 C:\xampp\htdocs\geslab\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtocolosController), Array)
+#5 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-25 02:59:27 Error: Fatal Error (1): Call to a member function Output() on a non-object in [C:\xampp\htdocs\geslab\app\View\Protocolos\imprimir_comprobante.ctp, line 3]
+2013-03-25 02:59:27 Error: [FatalErrorException] Call to a member function Output() on a non-object
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 22:38:23 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\xampp\htdocs\geslab\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3157): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(1092): Model->setDataSource('default')
+#4 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(3179): Model->setSource('sanatorios')
+#5 C:\xampp\htdocs\geslab\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#6 C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php(42): Model->find('list', Array)
+#7 [internal function]: ProtocolosController->__construct(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(242): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(152): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-03-26 01:28:32 Error: [MissingControllerException] Controller class ImprimirComprobateController could not be found.
+#0 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 01:28:50 Error: [MissingActionException] Action ProtocolosController::imprimir_comprobate() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 01:29:46 Error: [MissingActionException] Action ProtocolosController::imprimir_comprobate() could not be found.
+#0 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 01:30:13 Error: Fatal Error (1): Class 'PDF_AutoPrint' not found in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 679]
+2013-03-26 01:30:13 Error: [FatalErrorException] Class 'PDF_AutoPrint' not found
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 679)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 679, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 679, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 01:31:10 Error: Fatal Error (1): Class 'PDF_AutoPrint' not found in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 680]
+2013-03-26 01:31:10 Error: [FatalErrorException] Class 'PDF_AutoPrint' not found
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 01:31:32 Error: Fatal Error (1): Class 'PDF_AutoPrint' not found in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 680]
+2013-03-26 01:31:32 Error: [FatalErrorException] Class 'PDF_AutoPrint' not found
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 01:31:40 Error: Fatal Error (1): Class 'PDF_AutoPrint' not found in [C:\xampp\htdocs\geslab\app\Controller\ProtocolosController.php, line 680]
+2013-03-26 01:31:40 Error: [FatalErrorException] Class 'PDF_AutoPrint' not found
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'PDF_Auto...', 'C:\xampp\htdocs...', 680, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

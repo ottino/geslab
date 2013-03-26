@@ -1,6 +1,7 @@
 <?php
 App::import('Vendor', 'EnviaMail', array('file'=>'EnviaMail'.DS.'class.phpmailer.php')  );
 App::import('Vendor', 'fpdf', array('file'=>'fpdf'.DS.'fpdf.php')  );
+App::import('Vendor', 'PDF_AutoPrint', array('file'=>'fpdf'.DS.'PDF_AutoPrint.php')  );
 
 class ProtocolosController extends AppController {
      
@@ -91,7 +92,6 @@ class ProtocolosController extends AppController {
 
     public function puente_paciente() {
        
-       //$this->redirect(array('action' => 'index' ,1)); 
        pr($this->request->data);
        die();
     }
@@ -118,8 +118,7 @@ class ProtocolosController extends AppController {
            
            $id_muestra = $this->request->data['Protocolo']['id'];
            
-           //pr ($this->request->data);
-           //die ();
+
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id']      = $this->request->data['Protocolo']['organo_citologia_id'];
@@ -146,14 +145,17 @@ class ProtocolosController extends AppController {
                                          $this->request->data['Protocolo']['id'])
                                   ); 
                    
-                } else 
+                } else if($this->request->data['Protocolo']['checkadd'] == 1)
                 {
                     $this->Session->setFlash( MSJ_REG_AG_OK . ' Protocolo - ' . $id_muestra );  
-                    //$this->redirect(array('action' => 'index'));                
-                    //$this->redirect(array('action' => 'vista_rapida'));
                     $this->redirect(array('action' => 'edit' , 
                                     $this->request->data['Protocolo']['id'])
                                    );  
+                } else 
+                {
+                    $this->redirect(array('action' => 'vista_preliminar' , 
+                                          $this->request->data['Protocolo']['id'],1)
+                                    );    
                 }
                 
                 // Con esto vuelve al Index, 
@@ -229,18 +231,24 @@ class ProtocolosController extends AppController {
                 {
                    $this->redirect(array('action' => 'vista_preliminar' , 
                                          $this->request->data['Protocolo']['id'])
-                                  );                   
-                } else 
+                                  );         
+                   
+                } else if($this->request->data['Protocolo']['checkadd'] == 1)
                 {
                     $this->Session->setFlash( MSJ_REG_EDT_OK );  
-                    //$this->redirect(array('action' => 'index'));
                     $this->redirect(array('action' => 'edit' , 
                                     $this->request->data['Protocolo']['id'])
                                    );  
-                     //$this->redirect(array('action' => 'vista_rapida'));                
+                }else 
+                {
+                   // $this->redirect(array('action' => 'imprimir_comprobante' , 
+                   //                 $this->request->data['Protocolo']['id'])
+                   //                );  
+                    $this->redirect(array('action' => 'vista_preliminar' , 
+                                          $this->request->data['Protocolo']['id'],1)
+                                    );
                 }
-
-                
+               
                 $this->redirect(array('action' => 'index'));
                 
             } else {
@@ -306,7 +314,7 @@ class ProtocolosController extends AppController {
                             Silvia Viale";
                  $mail->SetFrom('silvia.viale.pna@gmail.com', 'Silvia Viale');
 
-                 $mail->Subject    = "Diagnostico";
+                 $mail->Subject    = "Paciente: ". $this->request->data['Paciente']['apellido'];
                  $mail->MsgHTML($body);
                  
                  $address =  $this->request->data['Sanatorio']['email'];
@@ -502,7 +510,7 @@ class ProtocolosController extends AppController {
                 
     }    
 
-    public function vista_preliminar ($id = null) {
+    public function vista_preliminar ($id = null , $modo = 0) {
 
                  $this->Protocolo->id = $id;           
                  $protocolo = $this->Protocolo->read();
@@ -526,9 +534,16 @@ class ProtocolosController extends AppController {
                  {
                      $Comp_Apellido     = 'SinApellido'; 
                  }
+                 
+                 if ($modo == 0)
+                 {     
+                     $pdf = new FPDF();
                      
-                 $pdf = new FPDF();
-
+                 } else if ($modo == 1)
+                 {
+                     $pdf = new PDF_AutoPrint();
+                 }
+                 
                  $pdf->FPDF('P','cm','A4');
 
 
@@ -666,13 +681,44 @@ class ProtocolosController extends AppController {
                  $pdf->SetXY(16.80,$pdf->GetY()+0.30);
                  $pdf->Cell(3.5,0.22,'M.P 6939');    
                  
-                 
-                 $data = $pdf->Output(null , 'S');
-
-                 $this->set('id', $Comp_ProtocoloNro);
-                 $this->set('pdf_comprobantes', $data);
-                 $this->render('vista_preliminar', 'ajax');               
+                 if ($modo == 0)
+                 {   
+                    $data = $pdf->Output(null , 'S');
+                    $this->set('id', $Comp_ProtocoloNro);
+                    $this->set('pdf_comprobantes', $data);
+                    $this->render('vista_preliminar', 'ajax');
+                 } else if ($modo==1)
+                 {
+                    $pdf->AutoPrint(false);
+                    $data=$pdf->Output();
+                    $this->set('pdf_comprobantes', $data);
+                    $this->render('imprimir_comprobante','ajax');    
+                     
+                 }
     }  
+ 
+    public function imprimir_comprobante ($id = null) {
+
+        /*
+                 $this->Protocolo->id = $id;           
+                 $protocolo = $this->Protocolo->read();
+                
+                 $this->render('imprimir_comprobante','ajax');   
+       */
+            //$this->autoRender=false;
+        
+                $pdf=new PDF_AutoPrint();
+                $pdf->AddPage();
+                $pdf->SetFont('Arial','',20);
+                $pdf->Text(90, 50, 'Print me!');
+
+                //Open the print dialog
+
+                $pdf->AutoPrint(false);
+                $data=$pdf->Output();
+                $this->set('pdf_comprobantes', $data);
+                $this->render('imprimir_comprobante','ajax');   
+    } 
     
     public function search_organo($id,$tipo){
         
