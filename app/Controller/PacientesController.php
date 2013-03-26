@@ -106,6 +106,10 @@ class PacientesController extends AppController {
                                               'conditions'=>array(
                                                                    'Paciente.dni LIKE' => '%'.$_GET['term'].'%'
                                                                  )
+                                             , 'order'    => array(
+                                                                   'Paciente.apellido' => 'asc',
+                                                                   'Paciente.nombre' => 'asc'
+                                                                  )
                                              )
                                         );
         
@@ -116,7 +120,11 @@ class PacientesController extends AppController {
                                                   'conditions'=>array(
                                                                        'Paciente.razon_social LIKE' => '%'.$_GET['term'].'%'
                                                                      )
-                                                 )
+                                                  , 'order'    => array(
+                                                                        'Paciente.apellido' => 'asc',
+                                                                        'Paciente.nombre' => 'asc'
+                                                                        )
+                                                   )                                                 
                                             );
         }
         
