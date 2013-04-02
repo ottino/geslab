@@ -830,7 +830,30 @@ class ProtocolosController extends AppController {
          return $select_dinamico;
 
     }    
-    
+
+    public function verifica_id($id){
+      
+        $this->autoRender=false;
+        
+        $busca=$this->Protocolo->find('all',
+                                         array('conditions'=>array('Protocolo.id =' => $id ))
+                                        );      
+         //pr($busca[0]['Protocolo']['id']);
+         //die();
+         /*
+         if (isset($busca[0]['Protocolo']['id'])){
+             $mensaje= '<label class="alerta_1"> El numero de protocolo ya existe </label>';
+         } else
+             $mensaje= '<label class="alerta_2">Numero de Protocolo correcto</label>';
+         */
+         if (isset($busca[0]['Protocolo']['id'])){
+             $mensaje= '1';
+         } else
+             $mensaje= '0';
+         
+         return $mensaje;
+        
+   }	    
       
 }
 ?>
