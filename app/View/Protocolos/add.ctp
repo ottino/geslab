@@ -189,12 +189,24 @@
     });
 */
   
+ $('#ProtocoloCheckaddVistaLogo').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddPrint").removeAttr("checked");
+   } 
+ });
+ 
  $('#ProtocoloCheckaddVista').change(function(){
    var valorSeleccionado = $(this).val();
    
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -205,6 +217,7 @@
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -215,6 +228,7 @@
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckadd").removeAttr("checked");
    } 
  });
@@ -431,13 +445,21 @@
                    <?php
                    
                       echo $this->Form->input(
-                       'checkadd_vista',
+                       'checkadd_vista_logo',
                         array(
                               'type'  => 'checkbox',
-                              'label' => 'Vista Preliminar'
+                              'label' => 'Vista Preliminar Con Logo'
                              )
                        );   
 
+                      echo $this->Form->input(
+                       'checkadd_vista',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Vista Preliminar Sin Logo'
+                             )
+                       );  
+                      
                       echo $this->Form->input(
                        'checkadd',
                         array(
