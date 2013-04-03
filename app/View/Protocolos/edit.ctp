@@ -169,12 +169,24 @@ $("#asmSelect0").change(function() {
 
 });
 */
+ $('#ProtocoloCheckaddVistaLogo').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddPrint").removeAttr("checked");
+   } 
+ });
+ 
  $('#ProtocoloCheckaddVista').change(function(){
    var valorSeleccionado = $(this).val();
    
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -185,6 +197,7 @@ $("#asmSelect0").change(function() {
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -195,6 +208,7 @@ $("#asmSelect0").change(function() {
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckadd").removeAttr("checked");
    } 
  });
@@ -388,13 +402,29 @@ $("#asmSelect0").change(function() {
                    <?php
                    
                       echo $this->Form->input(
+                       'checkadd_vista_logo',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Vista Preliminar Con Logo'
+                             )
+                       );   
+                                         
+                      echo $this->Form->input(
                        'checkadd_vista',
                         array(
                               'type'  => 'checkbox',
-                              'label' => 'Vista Preliminar'
+                              'label' => 'Imprimir Sin Logo'
                              )
                        );   
 
+                      echo $this->Form->input(
+                       'checkadd_print',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Imprimir Con Logo'
+                             )
+                       );     
+                      
                       echo $this->Form->input(
                        'checkadd',
                         array(
@@ -404,14 +434,7 @@ $("#asmSelect0").change(function() {
                              )
                        );  
  
-                      echo $this->Form->input(
-                       'checkadd_print',
-                        array(
-                              'type'  => 'checkbox',
-                              'label' => 'Imprimir'
-                             )
-                       );                        
-                   ?>                   
+                     ?>                   
               </div>  
               <div class="col w40" style="display:none" id="muestra_citologia" >
                           <?php

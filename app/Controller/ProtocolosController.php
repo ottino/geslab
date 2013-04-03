@@ -138,11 +138,16 @@ class ProtocolosController extends AppController {
            if ($this->Protocolo->save($this->data)) {
                 
                   
-                
-                if($this->request->data['Protocolo']['checkadd_vista'] == 1)
+                if($this->request->data['Protocolo']['checkadd_vista_logo'] == 1)
+                {
+                 $this->redirect(array('action' => 'vista_preliminar' , 
+                                         $this->request->data['Protocolo']['id'],0,1)
+                                  );    
+                }
+                else if($this->request->data['Protocolo']['checkadd_vista'] == 1)
                 {
                    $this->redirect(array('action' => 'vista_preliminar' , 
-                                         $this->request->data['Protocolo']['id'])
+                                         $this->request->data['Protocolo']['id'],0,0)
                                   ); 
                    
                 } else if($this->request->data['Protocolo']['checkadd'] == 1)
@@ -226,11 +231,16 @@ class ProtocolosController extends AppController {
 
  
             if ($this->Protocolo->save($this->data)) {
-                                  
-               if($this->request->data['Protocolo']['checkadd_vista'] == 1)
+               
+                if($this->request->data['Protocolo']['checkadd_vista_logo'] == 1)
+                {
+                 $this->redirect(array('action' => 'vista_preliminar' , 
+                                         $this->request->data['Protocolo']['id'],0,1)
+                                  );    
+                } else if($this->request->data['Protocolo']['checkadd_vista'] == 1)
                 {
                    $this->redirect(array('action' => 'vista_preliminar' , 
-                                         $this->request->data['Protocolo']['id'])
+                                         $this->request->data['Protocolo']['id'],1,0)
                                   );         
                    
                 } else if($this->request->data['Protocolo']['checkadd'] == 1)
@@ -510,7 +520,7 @@ class ProtocolosController extends AppController {
                 
     }    
 
-    public function vista_preliminar ($id = null , $modo = 0) {
+    public function vista_preliminar ($id = null , $modo = 0 , $logo = 1) {
 
                  $this->Protocolo->id = $id;           
                  $protocolo = $this->Protocolo->read();
@@ -553,50 +563,52 @@ class ProtocolosController extends AppController {
                  $pdf->SetMargins(0,0,0);
                  $pdf->SetTopMargin(11);
 
-                 /* Logo del comprobante */
-                 $pdf->SetFont('Arial','',22);
-                 $pdf->SetY(0.55);
-                 $pdf->SetX(0.5);
-                 $pdf->Cell(3.5,0.22,'SILVIA VIALE' );
+                 if ($logo == 1)
+                 { 
+                        /* Logo del comprobante */
+                        $pdf->SetFont('Arial','',22);
+                        $pdf->SetY(0.55);
+                        $pdf->SetX(0.5);
+                        $pdf->Cell(3.5,0.22,'SILVIA VIALE' );
 
-                 $pdf->SetFont('Arial','',35);
-                 $pdf->SetY(0.6);
-                 $pdf->SetX(5.5);
-                 $pdf->Cell(3.5,0.22,'| LAP' );
+                        $pdf->SetFont('Arial','',35);
+                        $pdf->SetY(0.6);
+                        $pdf->SetX(5.5);
+                        $pdf->Cell(3.5,0.22,'| LAP' );
 
-                 $pdf->SetFont('Arial','',8);
-                 $pdf->SetY(1.5);
-                 $pdf->SetX(6);
-                 $pdf->Cell(3.5,0.22,utf8_decode('Laboratorio de Anatomía Patológica y Citologia') );  
+                        $pdf->SetFont('Arial','',8);
+                        $pdf->SetY(1.5);
+                        $pdf->SetX(6);
+                        $pdf->Cell(3.5,0.22,utf8_decode('Laboratorio de Anatomía Patológica y Citologia') );  
+  
+                        /* Datos del encabezado */
+                        $pdf->SetFont('Arial','',11);
+                        $pdf->SetXY(15.5,0.5);
+                        $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale .'); 
+
+                        $pdf->SetFont('Arial','',11);
+                        $pdf->SetXY(16.1,0.9);
+                        $pdf->Cell(3.5,0.22,'Mat.: 6939 .'); 
+
+                        $pdf->SetFont('Arial','',11);
+                        $pdf->SetXY(15.3,1.3);
+                        $pdf->Cell(3.5,0.22,utf8_decode('Anotomía patológica.')); 
+
+                        $pdf->SetFont('Arial','',11);
+                        $pdf->SetXY(15.1,1.7);
+                        $pdf->Cell(3.5,0.22,utf8_decode('Santiago del estero 42.')); 
+
+                        $pdf->SetFont('Arial','',11);
+                        $pdf->SetXY(13.9,2.1);
+                        $pdf->Cell(3.5,0.22,utf8_decode('tel.:(0343)4217060 Paraná - Entre Ríos')); 
                  
-                 /* Datos del encabezado */
-                 $pdf->SetFont('Arial','',11);
-                 $pdf->SetXY(15.5,0.5);
-                 $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale .'); 
-
-                 $pdf->SetFont('Arial','',11);
-                 $pdf->SetXY(16.1,0.9);
-                 $pdf->Cell(3.5,0.22,'Mat.: 6939 .'); 
-
-                 $pdf->SetFont('Arial','',11);
-                 $pdf->SetXY(15.3,1.3);
-                 $pdf->Cell(3.5,0.22,utf8_decode('Anotomía patológica.')); 
-
-                 $pdf->SetFont('Arial','',11);
-                 $pdf->SetXY(15.1,1.7);
-                 $pdf->Cell(3.5,0.22,utf8_decode('Santiago del estero 42.')); 
-
-                 $pdf->SetFont('Arial','',11);
-                 $pdf->SetXY(13.9,2.1);
-                 $pdf->Cell(3.5,0.22,utf8_decode('tel.:(0343)4217060 Paraná - Entre Ríos')); 
-
-                 /* Primer linea */
-                 $pdf->Line(0, 2.700 , 21, 2.700);
-                 $pdf->Line(0, 2.701 , 21, 2.701);
-                 $pdf->Line(0, 2.702 , 21, 2.702);
-                 $pdf->Line(0, 2.703 , 21, 2.703);
-                 $pdf->Line(0, 2.704 , 21, 2.704);
-
+                        /* Primer linea */
+                        $pdf->Line(0, 2.700 , 21, 2.700);
+                        $pdf->Line(0, 2.701 , 21, 2.701);
+                        $pdf->Line(0, 2.702 , 21, 2.702);
+                        $pdf->Line(0, 2.703 , 21, 2.703);
+                        $pdf->Line(0, 2.704 , 21, 2.704);
+                 }
                  /* Datos generales sobre el protocolo */
 
                  $pdf->SetFont('Arial','B',10);
@@ -830,7 +842,30 @@ class ProtocolosController extends AppController {
          return $select_dinamico;
 
     }    
-    
+
+    public function verifica_id($id){
+      
+        $this->autoRender=false;
+        
+        $busca=$this->Protocolo->find('all',
+                                         array('conditions'=>array('Protocolo.id =' => $id ))
+                                        );      
+         //pr($busca[0]['Protocolo']['id']);
+         //die();
+         /*
+         if (isset($busca[0]['Protocolo']['id'])){
+             $mensaje= '<label class="alerta_1"> El numero de protocolo ya existe </label>';
+         } else
+             $mensaje= '<label class="alerta_2">Numero de Protocolo correcto</label>';
+         */
+         if (isset($busca[0]['Protocolo']['id'])){
+             $mensaje= '1';
+         } else
+             $mensaje= '0';
+         
+         return $mensaje;
+        
+   }	    
       
 }
 ?>

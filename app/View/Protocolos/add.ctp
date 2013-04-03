@@ -5,11 +5,33 @@
          source   : '<?php echo $this->Html->url(array('controller'=>'Pacientes', 'action'=>'search'));?>',
          minLength: 2
        });
+       
    $('#ProtocoloMedicoId').autocomplete({
          source   : '<?php echo $this->Html->url(array('controller'=>'Medicos', 'action'=>'search'));?>',
          minLength: 2
        }); 
 
+    $('#ProtocoloId').change(function(){
+
+       $('#verifica').html(function(){
+                       $.ajax({
+                       url:'http://maxi-pc/geslab/protocolos/verifica_id/' 
+                              + $("#ProtocoloId").val(),                                                                 
+                       success: function(data) {
+                           if (data == 1)
+                              {
+                                $('#verifica').html('<label class="alerta_1"> El numero de protocolo ya existe - Vuelva a Ingresarlo </label>'); 
+                                $('#ProtocoloId').val('');
+                                $('#ProtocoloId').focus();
+                              } 
+                           else {
+                                  $('#verifica').html('<label class="alerta_2">Numero de Protocolo correcto</label>');                 
+                                }
+
+                       }
+                       });
+                   }); 
+    });
 /*
     $("#EstudioEstudio").asmSelect({
             addItemTarget: 'bottom',
@@ -167,12 +189,24 @@
     });
 */
   
+ $('#ProtocoloCheckaddVistaLogo').change(function(){
+   var valorSeleccionado = $(this).val();
+   
+   if(valorSeleccionado == "1")
+   {
+     $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddPrint").removeAttr("checked");
+   } 
+ });
+ 
  $('#ProtocoloCheckaddVista').change(function(){
    var valorSeleccionado = $(this).val();
    
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckadd").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -183,6 +217,7 @@
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckaddPrint").removeAttr("checked");
    } 
  });
@@ -193,6 +228,7 @@
    if(valorSeleccionado == "1")
    {
      $("#ProtocoloCheckaddVista").removeAttr("checked");
+     $("#ProtocoloCheckaddVistaLogo").removeAttr("checked");
      $("#ProtocoloCheckadd").removeAttr("checked");
    } 
  });
@@ -219,7 +255,10 @@
                                        )
                                   );    
 
-                            
+                         ?>
+                  <div id="verifica">
+                  </div>
+                         <?php
                             echo $this->Form->input(
                                   'paciente_id',
                                    array(
@@ -406,13 +445,21 @@
                    <?php
                    
                       echo $this->Form->input(
-                       'checkadd_vista',
+                       'checkadd_vista_logo',
                         array(
                               'type'  => 'checkbox',
-                              'label' => 'Vista Preliminar'
+                              'label' => 'Vista Preliminar Con Logo'
                              )
                        );   
 
+                      echo $this->Form->input(
+                       'checkadd_vista',
+                        array(
+                              'type'  => 'checkbox',
+                              'label' => 'Vista Preliminar Sin Logo'
+                             )
+                       );  
+                      
                       echo $this->Form->input(
                        'checkadd',
                         array(
