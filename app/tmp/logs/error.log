@@ -3249,3 +3249,11 @@
 #1 C:\xampp\htdocs\geslab\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProtocolosController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\geslab\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-04-04 05:08:58 Error: Fatal Error (64): Can't use function return value in write context in [C:\xampp\htdocs\geslab\app\View\Protocolos\envia_mail.ctp, line 25]
+2013-04-04 05:08:58 Error: [FatalErrorException] Can't use function return value in write context
+#0 C:\xampp\htdocs\geslab\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Can't use funct...', 'C:\xampp\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use funct...', 'C:\xampp\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use funct...', 'C:\xampp\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\geslab\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -22,17 +22,19 @@
             <div class="view_email">         
              <br>
             <?php
+               if(trim($Protocolo['Sanatorio']['email']) == '')
+                  $email = 'Sin registrar en la base';  
+               else $email = $Protocolo['Sanatorio']['email'];
+               
+               if(trim($Protocolo['Sanatorio']['email2']) == '')
+                  $email2 = 'Sin registrar en la base';  
+               else $email2 = $Protocolo['Sanatorio']['email2'];
+               
                echo '<li>'; 
                echo '<b>Sanatorio :</b>';             
                echo '<i>'.$Protocolo['Sanatorio']['descripcion'].'</i>';
                echo '</li>';
-               
-               
-               echo '<li>'; 
-               echo '<b>Correo :</b>';
-               echo '<i>'.$Protocolo['Sanatorio']['email'].'</i>';
-               echo '</li>';
-               
+                              
                echo '<li>';
                echo '<b>Paciente :</b>';
                echo '<i>'.$Protocolo['Paciente']['razon_social'].'</i>';
@@ -42,6 +44,27 @@
                echo '<b>Protocolo :</b>';
                echo '<i>'.$Protocolo['Protocolo']['id'].'</i>';
                echo '</li>';              
+ 
+               echo '<li>'; 
+               echo '<b>Correo :</b>';
+               echo '<i>'.$email.'</i>';
+               echo '</li>';
+
+               echo '<li>'; 
+               echo '<b>Correo Alternativo:</b>';
+               echo '<i>'.$email2.'</i>';
+               echo '</li>';
+               
+               echo $this->Form->input(
+                    'email_personalizado',
+                    array(
+                            'label' => 'Email Personalizado',
+                            'empty' => 'eMail',
+                            'type'  => 'text',
+                            'name'  => 'data[email_personalizado]'
+                        )
+                );    
+                
                echo '<br>';
                echo '<br>';
                echo '<br>';

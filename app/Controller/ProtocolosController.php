@@ -308,6 +308,18 @@ class ProtocolosController extends AppController {
              } 
          } else {
                  // cuando toco enviar vuelvo acá
+                 //pr($this->request->data['email_personalizado']);
+                 
+                 if(trim($this->request->data['email_personalizado']) == '' || 
+                    !isset($this->request->data['email_personalizado']))
+                 { 
+                   $email_personalizado =  '';  
+                 }
+                 else
+                 { 
+                    $email_personalizado = $this->request->data['email_personalizado'];
+                 }
+               
                  $this->Protocolo->id = $id;           
                  $this->request->data = $this->Protocolo->read();
                  
@@ -324,19 +336,54 @@ class ProtocolosController extends AppController {
                             Silvia Viale";
                  $mail->SetFrom('silvia.viale.pna@gmail.com', 'Silvia Viale');
 
-                 $mail->Subject    = "Paciente: ". $this->request->data['Paciente']['apellido'];
+                 $mail->Subject    = "Paciente: " . $this->request->data['Paciente']['razon_social'];
+                                                    
                  $mail->MsgHTML($body);
                  
-                 $address =  $this->request->data['Sanatorio']['email'];
-                                 
+                 // Correo Principal
+                 if(trim($this->request->data['Sanatorio']['email']) == '' || 
+                    !isset($this->request->data['Sanatorio']['email']))
+                 { 
+                    $address = ''; 
+                 }
+                 else
+                 { 
+                    $address  =  $this->request->data['Sanatorio']['email'];
+                    $mail->AddAddress($address, "Enviar correo a?");
+                 }
+                 
+                 // Correo Alternativo
+                 if(trim($this->request->data['Sanatorio']['email2']) == '' || 
+                    !isset($this->request->data['Sanatorio']['email2']))
+                 { 
+                    $address1 = ''; 
+                 }
+                 else
+                 { 
+                    $address1  =  $this->request->data['Sanatorio']['email2'];
+                    $mail->AddAddress($address1, "Enviar correo a?");
+                 }
 
+                 // Correo Personalizado
+                 if(trim($email_personalizado) == '' || 
+                    !isset($email_personalizado))
+                 { 
+                    $address2 = ''; 
+                 }
+                 else
+                 { 
+                    $address2  =  $email_personalizado;
+                    $mail->AddAddress($address2, "Enviar correo a?");
+                 }               
+
+                 //echo $address . "<br>" . $address1 . "<br>" . $address2;
+                 //die ();
                  //"silvia.viale.pna@gmail.com";
                  //$mail->AddAttachment("../../../tmp/Comprobantes.".$id.".pdf"); // attachment
                  $mail->AddAttachment('../../../tmp/Comp.' . $id . '.pdf'); 
                                      //  $Comp_Apellido . '.' . $id . '.pdf'); // attachment
                  
-                 $mail->AddAddress($address, "Enviar correo a?");
-       
+                 //$mail->AddAddress($address, "Enviar correo a?");
 
                  if(!$mail->Send()) {
                       return "Error: " . $mail->ErrorInfo;
