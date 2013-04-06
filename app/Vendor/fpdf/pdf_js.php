@@ -5,7 +5,8 @@ class PDF_JavaScript extends FPDF {
 
 	var $javascript;
 	var $n_js;
-
+        
+        
 	function IncludeJS($script) {
 		$this->javascript=$script;
 	}

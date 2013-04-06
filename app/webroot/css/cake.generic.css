@@ -26,7 +26,7 @@ body {
 	background: #003d4c;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-	font-size:80%;
+	font-size:70%;
 	margin: 0;
 }
 a {
@@ -915,7 +915,7 @@ div.view_email {
   border: none;
   color: #EE3322;
   height: 18px; 
-  width: 150px; 
+  width: 160px; 
   font-weight:bold;
   padding: 2px 8px;
   cursor: pointer

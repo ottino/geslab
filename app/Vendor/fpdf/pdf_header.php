@@ -1,8 +1,8 @@
 <?php
-require('pdf_js.php');
+require('fpdf.php');
 
-class PDF_AutoPrint extends PDF_JavaScript
-{
+class PDF_header extends FPDF {
+    
     var $logo;
     var $Comp_ProtocoloNro;
     var $Comp_Fecha;
@@ -65,13 +65,13 @@ class PDF_AutoPrint extends PDF_JavaScript
                    $this->SetXY(13.9,2.1);
                    $this->Cell(3.5,0.22,utf8_decode('tel.:(0343)4217060 Paraná - Entre Ríos')); 
             }
-
+            
             /* Primer linea */
             $this->Line(0, 2.700 , 21, 2.700);
             $this->Line(0, 2.701 , 21, 2.701);
             $this->Line(0, 2.702 , 21, 2.702);
             $this->Line(0, 2.703 , 21, 2.703);
-            $this->Line(0, 2.704 , 21, 2.704);           
+            $this->Line(0, 2.704 , 21, 2.704);
             
             /* Datos generales sobre el protocolo */
             $this->SetFont('Arial','B',10);
@@ -108,27 +108,7 @@ class PDF_AutoPrint extends PDF_JavaScript
 
             $this->SetY(8.06);
 
-    } 
-        function AutoPrint($dialog=false)
-	{
-		//Open the print dialog or start printing immediately on the standard printer
-		$param=($dialog ? 'true' : 'false');
-		$script="print($param);";
-		$this->IncludeJS($script);
-	}
-
-	function AutoPrintToPrinter($server, $printer, $dialog=false)
-	{
-		//Print on a shared printer (requires at least Acrobat 6)
-		$script = "var pp = getPrintParams();";
-		if($dialog)
-			$script .= "pp.interactive = pp.constants.interactionLevel.full;";
-		else
-			$script .= "pp.interactive = pp.constants.interactionLevel.automatic;";
-		$script .= "pp.printerName = '\\\\\\\\".$server."\\\\".$printer."';";
-		$script .= "print(pp);";
-		$this->IncludeJS($script);
-	}
+    }
 }
-
 ?>
+
