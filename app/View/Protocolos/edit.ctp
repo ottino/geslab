@@ -123,27 +123,39 @@ function updateTextArea() {
  });
  
  $('#ProtocoloOrganoBiopsiaId').change(function(){
+     
+   var checkMacro = $('#ProtocoloCheckBorrarMacro:checked').val();                 
+   var checkMicro = $('#ProtocoloCheckBorrarMicro:checked').val();
    
-   $("#ProtocoloMacroscopia").val(function(){
-                    $.ajax({
-                    url:'http://maxi-pc/geslab/protocolos/search_organo/' + 
-                                       $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
-                    success: function(data) {
-                        $('#ProtocoloMacroscopia').val(data);
-                        
-                    }
-                    });
-                }); 
-                
-   $("#ProtocoloMicroscopia").val(function(){
-                    $.ajax({
-                    url:'http://maxi-pc/geslab/protocolos/search_organo/'  + 
-                                        $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
-                    success: function(data) {
-                        $('#ProtocoloMicroscopia').val(data);                        
-                    }
-                    });
-                }); 
+   //alert (checkMacro);
+   
+   if (checkMacro != "1")
+   {
+    $("#ProtocoloMacroscopia").val(function(){
+                     $.ajax({
+                     url:'http://maxi-pc/geslab/protocolos/search_organo/' + 
+                                        $("#ProtocoloOrganoBiopsiaId").val() + '/macroscopia',                                                                 
+                     success: function(data) {
+                         $('#ProtocoloMacroscopia').val(data);
+
+                     }
+                     });
+                 }); 
+   }
+   
+   if (checkMicro != "1")
+   {
+    $("#ProtocoloMicroscopia").val(function(){
+                     $.ajax({
+                     url:'http://maxi-pc/geslab/protocolos/search_organo/'  + 
+                                         $("#ProtocoloOrganoBiopsiaId").val() + '/microscopia',                                                                 
+                     success: function(data) {
+                         $('#ProtocoloMicroscopia').val(data);
+
+                     }
+                     });
+                 }); 
+   }
    
  });
  
@@ -505,15 +517,28 @@ $("#asmSelect0").change(function() {
                           <?php
 
                           echo $this->Form->input(
+                                'checkBorrarMacro',
+                                 array(
+                                       'type'  => 'checkbox',
+                                       'label' => 'No borrar macroscopia',
+                                       'Checked' => 'true'
+                                      )
+                                );  
+                          
+                          echo $this->Form->input(
                                      'macroscopia',
                                       array( 'type' => 'textarea' )                                   
                                    );
-                          ?>
-                          
-                          <input class="btn_limpiar" type="button" value="Limpiar Texto" name="LimpiarMicro" id="LimpiarMicro" />
-                          <br>
-                          <?php
-                          
+ 
+                          echo $this->Form->input(
+                                'checkBorrarMicro',
+                                 array(
+                                       'type'  => 'checkbox',
+                                       'label' => 'No borrar microscopia',
+                                       'Checked' => 'true'
+                                      )
+                                );  
+                                                  
                           echo $this->Form->input(
                                      'microscopia',
                                       array( 'type' => 'textarea' )                                   
