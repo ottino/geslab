@@ -1,3 +1,4 @@
 tmp/*
 app/tmp/*
+app/tmp/logs/*
 !empty

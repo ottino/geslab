@@ -39,10 +39,10 @@ class ProtocolosController extends AppController {
                                         // array('conditions'=>array('Protocolo.fecha'=>'20130216'),
                                          //       'order'    => array('Protocolo.id' => 'asc'))
                                         //);     
-        $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.descripcion',
+        $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.desc_corta',
                                         'order' => array('Sanatorio.descripcion' => 'asc'))                                             
                      );     
-        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.descripcion',
+        $this->obrasociales      = $this->Obrasocial->find('list',array('fields' => 'Obrasocial.desc_corta',
                                                         'order' => array('Obrasocial.descripcion' => 'asc')));
                                                                     
         $this->medicos           = $this->Medico->find('list',array('fields' => 'Medico.razon_social'));     
