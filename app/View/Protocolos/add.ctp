@@ -553,7 +553,7 @@
                            ?> 
                           <br> 
                           
-                          <input class="btn_limpiar" type="button" value="Limpiar Macroscopia" name="LimpiarMacro" id="LimpiarMacro" />                    
+                          <input class="btn_limpiar" type="button" value="Limpiar Texto" name="LimpiarMacro" id="LimpiarMacro" />                    
                           <br>  
                           <?php
 
@@ -563,7 +563,7 @@
                                    );
                           ?>
                           
-                          <input class="btn_limpiar" type="button" value="Limpiar Microscopia" name="LimpiarMicro" id="LimpiarMicro" />
+                          <input class="btn_limpiar" type="button" value="Limpiar Texto" name="LimpiarMicro" id="LimpiarMicro" />
                           <br>
                           <?php
                           

@@ -915,10 +915,11 @@ div.view_email {
   border: none;
   color: #EE3322;
   height: 18px; 
-  width: 160px; 
+  width: 120px; 
   font-weight:bold;
   padding: 2px 8px;
-  cursor: pointer
+  cursor: pointer;
+  font-size:12px;
 }
 
 .input_practicas_cant {            
