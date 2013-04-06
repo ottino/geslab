@@ -24,7 +24,7 @@ class ProtocolosController extends AppController {
     );  
     
     public $paginate = array(
-        'limit' => 6,
+        'limit' => 4,
         'order' => array('Protocolo.fecha' => 'desc')//,
        // 'conditions'=>array('Protocolo.fecha'=>'20130216')
     );
