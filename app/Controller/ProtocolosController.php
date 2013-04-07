@@ -55,7 +55,7 @@ class ProtocolosController extends AppController {
         $this->pacientes         = $this->Paciente->find('list',array('fields' => 'Paciente.razon_social'));       
         $this->estudios          = $this->Estudio->find('list',array('fields' => 'Estudio.descripcion'));       
 
-    }  
+    }   
     
     public function index($vista_rapida = 0) {
         
