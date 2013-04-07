@@ -24,7 +24,6 @@ class MedicosController extends AppController {
  
     public function index() {
 
-        //$this->set('data',$this->Medico->find('all'));
         $data = $this->paginate('Medico');
         $this->set(compact('data'));
     }
@@ -46,8 +45,7 @@ class MedicosController extends AppController {
                           $this->Session->setFlash( MSJ_REG_AG_OK ); 
                           $this->redirect(array('action' => 'index'));                          
                         }
-                               
-                
+                                               
             } else {
                      $this->Session->setFlash( MSJ_REG_AG_ERR );
                    }

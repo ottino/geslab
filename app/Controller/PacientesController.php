@@ -25,8 +25,6 @@ class PacientesController extends AppController {
     public function index() {
         $data = $this->paginate('Paciente');
         $this->set(compact('data'));
-        //$this->set('data',$this->Paciente->find('all'));
-
     }
      
     public function add() {

@@ -35,10 +35,6 @@ class ProtocolosController extends AppController {
         parent::__construct($request, $response);
         
         # Obtengo los datos de todos los modelos para dar de alta protocolos
-       // $this->protocolos        = $this->Protocolo->find('list');
-                                        // array('conditions'=>array('Protocolo.fecha'=>'20130216'),
-                                         //       'order'    => array('Protocolo.id' => 'asc'))
-                                        //);     
         $this->sanatorios        = $this->Sanatorio->find('list',array('fields' => 'Sanatorio.desc_corta',
                                         'order' => array('Sanatorio.descripcion' => 'asc'))                                             
                      );     
@@ -63,12 +59,6 @@ class ProtocolosController extends AppController {
     
     public function index($vista_rapida = 0) {
         
-        
-        //$this->Protocolo->find('all', array('conditions'=>array('Protocolo.Fecha =' => '20130131' )) ); 
-        //$data = $this->paginate('Protocolo');
-        //$options = array("Protocolo.fecha = '20130131'");
-        //$data = $this->paginate($this->set('data',$this->paginate('Protocolo', $options)));
-
         if ($vista_rapida == 1)
         {
             
@@ -81,8 +71,7 @@ class ProtocolosController extends AppController {
             $data = $this->paginate('Protocolo');
             $this->set(compact('data'));
         }
-        //$this->set('data',$this->Protocolo->find('all'));
-        
+
     }
 
     public function vista_rapida() {
@@ -108,8 +97,7 @@ class ProtocolosController extends AppController {
  
            if(!empty($this->data)){ 
              
-           /* Formateo el array para guardar los datos */
-               
+           /* Formateo el array para guardar los datos */             
            $paciente_id = explode("-",$this->data['Protocolo']['paciente_id']);
            $medico_id   = explode("-",$this->data['Protocolo']['medico_id']);
            
@@ -163,12 +151,7 @@ class ProtocolosController extends AppController {
                                           $this->request->data['Protocolo']['id'],1)
                                     );    
                 }
-                
-                // Con esto vuelve al Index, 
-                // pasando por la funcion index del controlador
-                
-                
-                
+               
             } else {
                      $this->Session->setFlash( MSJ_REG_AG_ERR );
                    }
@@ -210,8 +193,6 @@ class ProtocolosController extends AppController {
            $this->request->data['Protocolo']['diagnostico'] = '';
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
            
-           //$this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
- 
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {
                     $this->request->data['Protocolo']['organo_id'] = 
@@ -252,9 +233,7 @@ class ProtocolosController extends AppController {
                                    );  
                 }else 
                 {
-                   // $this->redirect(array('action' => 'imprimir_comprobante' , 
-                   //                 $this->request->data['Protocolo']['id'])
-                   //                );  
+
                     $this->redirect(array('action' => 'vista_preliminar' , 
                                           $this->request->data['Protocolo']['id'],1)
                                     );
@@ -274,7 +253,6 @@ class ProtocolosController extends AppController {
     public function delete($id = null ){
         if ($this->Protocolo->delete($id, true)) {
             $this->Session->setFlash( MSJ_REG_DEL_OK );
-            //$this->redirect(array('action' => 'index'));
             $this->redirect(array('action' => 'vista_rapida'));
         }
     }
@@ -290,7 +268,6 @@ class ProtocolosController extends AppController {
         
         // Genero PDF
         $this->genera_comprobante($id);
-        //$this->set('pacientes'         , $this->pacientes);
        
        if ($this->request->is('get')) {
              if ($id <> null )
@@ -309,8 +286,6 @@ class ProtocolosController extends AppController {
              } 
          } else {
                  // cuando toco enviar vuelvo acá
-                 //pr($this->request->data['email_personalizado']);
-                 
                  if(trim($this->request->data['email_personalizado']) == '' || 
                     !isset($this->request->data['email_personalizado']))
                  { 
@@ -377,20 +352,12 @@ class ProtocolosController extends AppController {
                     $mail->AddAddress($address2, "Enviar correo a?");
                  }               
 
-                 //echo $address . "<br>" . $address1 . "<br>" . $address2;
-                 //die ();
-                 //"silvia.viale.pna@gmail.com";
-                 //$mail->AddAttachment("../../../tmp/Comprobantes.".$id.".pdf"); // attachment
                  $mail->AddAttachment('../../../tmp/Comp.' . $id . '.pdf'); 
-                                     //  $Comp_Apellido . '.' . $id . '.pdf'); // attachment
-                 
-                 //$mail->AddAddress($address, "Enviar correo a?");
 
                  if(!$mail->Send()) {
                       return "Error: " . $mail->ErrorInfo;
                  } else {
                           $this->Session->setFlash( MSJ_MAIL_OK );
-                         // $this->redirect(array('action' => 'index'));
                           $this->redirect(array('action' => 'vista_rapida'));
                  }
 
@@ -522,7 +489,6 @@ class ProtocolosController extends AppController {
                  
                  if ($modo == 0)
                  {     
-                     //$pdf = new FPDF();
                      $pdf = new pdf_header();
                      $pdf->put_header(
                                         $logo,$Comp_ProtocoloNro,$Comp_Fecha,
@@ -573,8 +539,7 @@ class ProtocolosController extends AppController {
                     $pdf->MultiCell(0,0.6,utf8_decode($Comp_Microscopia));
                  }
                  
-                 /* Datos de Diagnostico */
-                 
+                 /* Datos de Diagnostico */               
                  $pdf->SetFont('Arial','B',11);
                  $pdf->SetXY(0.20,$pdf->GetY()+1);
                  $pdf->Cell(3.5,0.22,'Diagnostico:');   
@@ -617,7 +582,6 @@ class ProtocolosController extends AppController {
    
     public function search_organo($id,$tipo){
         
-        //= 'macroscopia';
         $respuesta = array ();
         $this->autoRender=false;
         
@@ -630,7 +594,6 @@ class ProtocolosController extends AppController {
 
     public function search_estudio($id){
         
-        //= 'macroscopia';
         $respuesta = array ();
         $this->autoRender=false;
         
@@ -704,8 +667,6 @@ class ProtocolosController extends AppController {
                                         );      
 
          $i=0;
-         //$select_dinamico='<select name="data[Estudio][Estudio][]" multiple="multiple" id="EstudioEstudio">';
-        // $select_dinamico = '<div class="multiselect" id="multiselect" >';.
          
          $select_dinamico='';
          foreach($estudio as $p){
@@ -714,14 +675,9 @@ class ProtocolosController extends AppController {
                                     <input name="data[Estudio][Estudio][]" id="EstudioEstudio" type="checkbox" value="'. $p['Estudio']['descripcion'] . '">'
                                      . $p['Estudio']['descripcion'] . 
                                  '</label><br>';
-              
-                      
-            // $select_dinamico.= '<option value="'. $p['Estudio']['id'] . '">' . $p['Estudio']['descripcion'] .'</option>';
           
              $i++;
          }
-        // $select_dinamico.='</div>'; 
-
          return $select_dinamico;
 
     }    
@@ -733,17 +689,10 @@ class ProtocolosController extends AppController {
         $busca=$this->Protocolo->find('all',
                                          array('conditions'=>array('Protocolo.id =' => $id ))
                                         );      
-         //pr($busca[0]['Protocolo']['id']);
-         //die();
-         /*
-         if (isset($busca[0]['Protocolo']['id'])){
-             $mensaje= '<label class="alerta_1"> El numero de protocolo ya existe </label>';
-         } else
-             $mensaje= '<label class="alerta_2">Numero de Protocolo correcto</label>';
-         */
-         if (isset($busca[0]['Protocolo']['id'])){
+
+        if (isset($busca[0]['Protocolo']['id'])){
              $mensaje= '1';
-         } else
+        } else
              $mensaje= '0';
          
          return $mensaje;

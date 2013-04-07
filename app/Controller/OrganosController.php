@@ -19,7 +19,6 @@ class OrganosController extends AppController {
  
     public function index() {
 
-        //$this->set('data',$this->Organo->find('all'));
         $data = $this->paginate('Organo');
         $this->set(compact('data'));
     }

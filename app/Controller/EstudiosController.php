@@ -20,8 +20,6 @@ class EstudiosController extends AppController {
                                                    )                                                 
                                             );                
                 
-                //array('Organo.tipoprotocolo'=>'CITOLOGIA'));     
-
     }    
  
     public $paginate = array(
@@ -33,7 +31,6 @@ class EstudiosController extends AppController {
         
     public function index() {
         $data = $this->paginate('Estudio',array('Organo.tipoprotocolo'=>'CITOLOGIA')); 
-       //$data = $this->paginate('Estudio');
         $this->set(compact('data'));
     }
      

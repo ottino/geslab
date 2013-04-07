@@ -23,7 +23,6 @@ class ObrasocialesController extends AppController {
  
     public function index() {
 
-        //$this->set('data',$this->Obrasocial->find('all'));
         $data = $this->paginate('Obrasocial');
         $this->set(compact('data'));
 
