@@ -5,7 +5,7 @@ class Sanatorio extends AppModel {
     public $primaryKey = 'id';
 
     public $virtualFields = array (
-        'desc_corta' => 'substr(Sanatorio.descripcion , 1 , 50)'     
+        'desc_corta' => 'substr(Sanatorio.descripcion , 1 , 30)'     
     );
     
     public $belongsTo = array(

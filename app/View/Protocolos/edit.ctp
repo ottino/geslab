@@ -509,12 +509,6 @@ $("#asmSelect0").change(function() {
                                      'selected' => $this->data['Protocolo']['organo_id']
                                       )
                                  );
-                           ?> 
-                          <br> 
-                          
-                          <input class="btn_limpiar" type="button" value="Limpiar Texto" name="LimpiarMacro" id="LimpiarMacro" />                    
-                          <br>  
-                          <?php
 
                           echo $this->Form->input(
                                 'checkBorrarMacro',

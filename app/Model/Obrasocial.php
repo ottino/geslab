@@ -6,7 +6,7 @@ class Obrasocial extends AppModel {
     public $primaryKey = 'id';
 
     public $virtualFields = array(
-            'desc_corta' => 'substr(Obrasocial.descripcion , 1 , 45)' 
+            'desc_corta' => 'substr(Obrasocial.descripcion , 1 , 30)' 
     );
     
     public $belongsTo = array(
