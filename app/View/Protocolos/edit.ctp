@@ -237,7 +237,7 @@ $("#asmSelect0").change(function() {
           
           if ($this->data['Protocolo']['tipoprotocolo'] == 'citologia')
           {   
-            $diagnostico_citologia = $this->data['Protocolo']['diagnostico'];
+            $diagnostico_citologia = ltrim($this->data['Protocolo']['diagnostico']);
             $diagnostico_biopsia   = '';
           } else 
                  {
@@ -490,8 +490,7 @@ $("#asmSelect0").change(function() {
                   
                         <label for="">Diagnostico</label>
                         <textarea class="textfield" id="ProtocoloDiagnosticoCitologia" 
-                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10">
-                        <?php echo $diagnostico_citologia; ?> 
+                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10" ><?php echo $diagnostico_citologia; ?> 
                             
                         </textarea>
                   

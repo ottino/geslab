@@ -542,9 +542,7 @@
                                              
                         <label for="">Diagnostico</label>
                         <textarea class="textfield" id="ProtocoloDiagnosticoCitologia" 
-                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10">
-                            
-                        </textarea>
+                                  name="data[Protocolo][diagnosticocitologia]" cols="44" rows="10"></textarea>
 
 
 

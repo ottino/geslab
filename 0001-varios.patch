@@ -1,0 +1,25 @@
+From 9d0122a993f97a13ee60e2829270f1e5c0b40943 Mon Sep 17 00:00:00 2001
+From: ottino <maxi.ottino@gmail.com>
+Date: Sun, 7 Apr 2013 14:09:30 -0300
+Subject: [PATCH] varios
+
+---
+ app/Controller/ProtocolosController.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/Controller/ProtocolosController.php b/app/Controller/ProtocolosController.php
+index 6b8a2ec..2982ede 100644
+--- a/app/Controller/ProtocolosController.php
++++ b/app/Controller/ProtocolosController.php
+@@ -55,7 +55,7 @@ class ProtocolosController extends AppController {
+         $this->pacientes         = $this->Paciente->find('list',array('fields' => 'Paciente.razon_social'));       
+         $this->estudios          = $this->Estudio->find('list',array('fields' => 'Estudio.descripcion'));       
+ 
+-    }  
++    }   
+     
+     public function index($vista_rapida = 0) {
+         
+-- 
+1.8.0.msysgit.0
+
