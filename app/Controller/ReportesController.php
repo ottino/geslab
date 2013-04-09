@@ -34,15 +34,9 @@ class ReportesController extends AppController{
         
     }
     
-    public function reporteFacturacion(){
-
-        
-        
-            $data = $this->paginate($this->Reporte->query_practicas_x_totales());
-            //$this->set(compact('data'));
+    public function reporteFacturacion(){     
+            $data = $this->Reporte->query_practicas_x_totales();
             $this->set('data' ,$data);
-        //    pr($data);
-         //   die();
         }
 }
 ?>

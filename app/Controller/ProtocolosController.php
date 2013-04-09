@@ -107,6 +107,31 @@ class ProtocolosController extends AppController {
            
            $id_muestra = $this->request->data['Protocolo']['id'];
            
+           /* 
+            * Toma los precios de la obra social y los carga en protocolos para 
+            * mantener un historico de precios
+            * 
+            */
+           
+           $this->Obrasocial->id =  $this->request->data['Protocolo']['obrasocial_id'];                     
+           $obrasocial = $this->Obrasocial->read();
+           
+           $this->request->data['Protocolo']['precio150101']=$obrasocial['Obrasocial']['practica150101'];
+           $this->request->data['Protocolo']['precio150102']=$obrasocial['Obrasocial']['practica150102'];
+           $this->request->data['Protocolo']['precio150103']=$obrasocial['Obrasocial']['practica150103'];
+           $this->request->data['Protocolo']['precio150104']=$obrasocial['Obrasocial']['practica150104'];
+           $this->request->data['Protocolo']['precio150105']=$obrasocial['Obrasocial']['practica150105'];
+           $this->request->data['Protocolo']['precio150106']=$obrasocial['Obrasocial']['practica150106'];
+           $this->request->data['Protocolo']['precio150108']=$obrasocial['Obrasocial']['practica150108'];
+           $this->request->data['Protocolo']['precio150109']=$obrasocial['Obrasocial']['practica150109'];
+           $this->request->data['Protocolo']['precio150110']=$obrasocial['Obrasocial']['practica150110'];
+           $this->request->data['Protocolo']['precio150111']=$obrasocial['Obrasocial']['practica150111'];
+           $this->request->data['Protocolo']['precio150120']=$obrasocial['Obrasocial']['practica150120'];
+           $this->request->data['Protocolo']['precio150121']=$obrasocial['Obrasocial']['practica150121'];
+           $this->request->data['Protocolo']['precio144790']=$obrasocial['Obrasocial']['practica144790'];
+                   
+          // pr($this->request->data['Protocolo']);
+          // die();
 
             if  (!empty($this->data['Protocolo']['organo_citologia_id']))
             {

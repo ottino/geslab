@@ -67,19 +67,5 @@
     ?>
     
     </table>
-    <p>
-        <?php
-        echo $this->Paginator->counter(array(
-                'format' => __d('cake', 'Página {:page} de {:pages} - Registros {:count} - Actual [{:start} a {:end}]')
-        ));
-        ?>
-    </p>
-    <div class="paging">
-        <?php
-                echo $this->Paginator->prev('< ' . __d('cake', ''), array(), null, array('class' => 'prev disabled'));
-                echo $this->Paginator->numbers(array('separator' => ''));
-                echo $this->Paginator->next(__d('cake', '') .' >', array(), null, array('class' => 'next disabled'));
-        ?>
-    </div>    
 </fieldset>
 </div>
