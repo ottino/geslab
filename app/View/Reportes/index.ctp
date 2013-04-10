@@ -1,8 +1,10 @@
 <?php
+
 header('Content-type: application/vnd.ms-excel');
 header("Content-Disposition: attachment; filename=Reporte.xls");
 header("Pragma: no-cache");
-header("Expires: 0");
+header("Expires: 0"); 
+ 
 ?> 
 
 <div class="form">
@@ -47,9 +49,9 @@ header("Expires: 0");
            
                echo "<tr>";
                 echo "<td>" . $d['Reporte']['fecha'] . "</td>";
-                //echo "<td>" . $d['Reporte']['Sanatorio'] . "</td>";
-                echo "<td>" . $d['Reporte']['Obra_Social'] . "</td>";
-                //echo "<td>" . $d['Reporte']['Paciente'] . "</td>";
+                echo "<td>" . utf8_decode($d['Reporte']['Sanatorio']) . "</td>";
+                echo "<td>" . utf8_decode($d['Reporte']['Obra_Social']) . "</td>";
+                echo "<td>" . utf8_decode($d['Reporte']['Paciente']) . "</td>";
                 echo "<td>" . $d['Reporte']['Paciente_dni']. "</td>";
                 echo "<td>" . $d['Reporte']['Protocolo_id']. "</td>";
                 echo "<td>" . $internacion . "</td>";

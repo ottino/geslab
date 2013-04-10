@@ -20,7 +20,6 @@ class ReportesController extends AppController{
     public $tipo_reporte = array('Excel');
     
     public $paginate = array(
-        'limit' => 10,
         'order' => array(
                          'Reporte.fecha' => 'asc'
                         )
@@ -35,30 +34,11 @@ class ReportesController extends AppController{
     
     public function index(){
         
-           $data = $this->Reporte->find('list');
-                        
-            $this->set('data', $data);
-            
-            if(!empty($data)){
-            
-                $this->set('title', 'Reporte de Cobranza');
-                $this->set('model', 'Reporte');
-                $this->set('tipo_salida', 'XLS');
-                $this->set('pref', '');
-                $this->set('blacklist', null);
-                $this->set('date', array('Fecha'));
-                //$this->set('money', array('Comp__Importe'));
-                
-                return $this->render('index', 'ajax');
- 
-
-    }
+                      
     }
     
     public function reporteFacturacion(){     
-            $data = $this->paginate('Reporte');
-            $this->set(compact('data'));
-            //$this->set('data' ,$data);
+
         }
  
     public function search() {
@@ -97,12 +77,14 @@ class ReportesController extends AppController{
               break;
           }
 
-          $this->set('data',$this->paginate('Reporte', $options));
-
-          return $this->render('reporteFacturacion');
-          //return $this->render('index','ajax');
-
-
+          $this->set('data',
+                  $this->Reporte->find('all',
+                                             array(
+                                                  'conditions'=>$options['0']
+                                                   )                                                 
+                                            ));     
+                  
+          return $this->render('index','ajax');
       }            
 }
 ?>
