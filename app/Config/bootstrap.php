@@ -236,6 +236,7 @@ define('MSJ_REG_DEL_OK'  , 'Registro eliminado');
 define('MSJ_MAIL_ENV_OK' , 'Correo enviado correctamente');
 define('MSJ_PDF_GEN_OK' , 'Comprobante generado correctamente');
 define('MSJ_MAIL_OK'     , 'Correo enviado correctamente');
+define('MSJ_REP_ERR'     , 'Completar al menos alguno de estos 3 campos: ');
 
 
 define('MSG_AUTH_USR_PASS', 'Usuario y claves incorrectos');
