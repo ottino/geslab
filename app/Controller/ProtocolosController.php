@@ -403,6 +403,7 @@ class ProtocolosController extends AppController {
                  $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
                  $Comp_Microscopia  = $protocolo['Protocolo']['microscopia'];
                  $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
+                 $Comp_Material     = $protocolo['Protocolo']['material'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  $Comp_Fecha        = $protocolo['Protocolo']['fecha'];
                  
@@ -454,6 +455,17 @@ class ProtocolosController extends AppController {
                     $pdf->SetXY(0.90,$pdf->GetY()+0.6);
                     $pdf->MultiCell(0,0.6,utf8_decode($Comp_Microscopia));
                  }
+  
+                 if (($Comp_Material != null) or (trim($Comp_Material) != ''))
+                 {
+                    $pdf->SetFont('Arial','B',11);
+                    $pdf->SetXY(0.20,$pdf->GetY()+1);
+                    $pdf->Cell(3.5,0.22,'Meterial Remitido:');   
+
+                    $pdf->SetFont('Arial','',11);
+                    $pdf->SetXY(0.90,$pdf->GetY()+0.6);
+                    $pdf->MultiCell(0,0.6,utf8_decode($Comp_Material));
+                 }
                  
                  /* Datos de Diagnostico */              
                  $pdf->SetFont('Arial','B',11);
@@ -500,6 +512,7 @@ class ProtocolosController extends AppController {
                  $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
                  $Comp_Microscopia  = $protocolo['Protocolo']['microscopia'];
                  $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
+                 $Comp_Material     = $protocolo['Protocolo']['material'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  $Comp_Fecha        = $protocolo['Protocolo']['fecha'];
                  
@@ -563,6 +576,17 @@ class ProtocolosController extends AppController {
                     $pdf->SetXY(0.90,$pdf->GetY()+0.6);
                     $pdf->MultiCell(0,0.6,utf8_decode($Comp_Microscopia));
                  }
+
+                 if (($Comp_Material != null) or (trim($Comp_Material) != ''))
+                 {
+                    $pdf->SetFont('Arial','B',11);
+                    $pdf->SetXY(0.20,$pdf->GetY()+1);
+                    $pdf->Cell(3.5,0.22,'Meterial Remitido:');   
+
+                    $pdf->SetFont('Arial','',11);
+                    $pdf->SetXY(0.90,$pdf->GetY()+0.6);
+                    $pdf->MultiCell(0,0.6,utf8_decode($Comp_Material));
+                 }
                  
                  /* Datos de Diagnostico */               
                  $pdf->SetFont('Arial','B',11);
@@ -603,8 +627,7 @@ class ProtocolosController extends AppController {
                      
                  }
     }  
- 
-   
+  
     public function search_organo($id,$tipo){
         
         $respuesta = array ();
