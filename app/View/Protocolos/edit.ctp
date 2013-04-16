@@ -259,7 +259,8 @@ $("#asmSelect0").change(function() {
                                   'paciente_id',
                                    array(
                                       'type'  => 'text', 
-                                      'value' => $this->data['Paciente']['id'] . ' - ' .$this->data['Paciente']['razon_social'], 
+                                      'value' => $this->data['Paciente']['id'] . ' - ' .$this->data['Paciente']['razon_social']. 
+                                                ' (' .$this->data['Paciente']['dni']. ') (' .$this->data['Paciente']['edad'].')', 
                                       'label' => 'Paciente'                                  
                                        )
                                   );      
