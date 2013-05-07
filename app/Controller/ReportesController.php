@@ -54,7 +54,7 @@ class ReportesController extends AppController{
         
         }
  
-    public function search() {
+    public function search_facturacion() {
         
         //pr($this->request->data);
         
@@ -109,7 +109,7 @@ class ReportesController extends AppController{
         
         $data = $this->Reporte->query_reporte($filtro);
         $this->set('data' ,$data);
-        return $this->render('index','ajax');
+        return $this->render('facturacion','ajax');
 
       }   
       

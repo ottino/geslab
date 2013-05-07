@@ -1,5 +1,5 @@
 <div id='search'>
-    <?php echo $this->Form->create('Reporte',array('action'=>'search'));?>
+    <?php echo $this->Form->create('Reporte',array('action'=>'search_facturacion'));?>
     <fieldset>
 
         <div class="columns">
