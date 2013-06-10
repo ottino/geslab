@@ -39,7 +39,21 @@ class Reporte extends AppModel{
                                                 (ifnull(a.practica150120,0) * ifnull(a.precio150120,0)) +
                                                 (ifnull(a.practica150121,0) * ifnull(a.precio150121,0)) +
                                                 (ifnull(a.practica144790,0) * ifnull(a.precio144790,0)) 
-                                               ) AS precio
+                                               ) AS precio,
+                                                concat(
+                                                IF (ifnull(a.practica150101,0) > 0 , concat('150101x',a.practica150101,' ') , ''),
+                                                IF (ifnull(a.practica150102,0) > 0 , concat('150102x',a.practica150102,' ') , ''),
+                                                IF (ifnull(a.practica150103,0) > 0 , concat('150103x',a.practica150103,' ') , ''),
+                                                IF (ifnull(a.practica150104,0) > 0 , concat('150104x',a.practica150104,' ') , ''),
+                                                IF (ifnull(a.practica150105,0) > 0 , concat('150105x',a.practica150105,' ') , ''),
+                                                IF (ifnull(a.practica150106,0) > 0 , concat('150106x',a.practica150106,' ') , ''),
+                                                IF (ifnull(a.practica150108,0) > 0 , concat('150108x',a.practica150108,' ') , ''),
+                                                IF (ifnull(a.practica150109,0) > 0 , concat('150109x',a.practica150109,' ') , ''),
+                                                IF (ifnull(a.practica150110,0) > 0 , concat('150110x',a.practica150110,' ') , ''),
+                                                IF (ifnull(a.practica150111,0) > 0 , concat('150111x',a.practica150111,' ') , ''),
+                                                IF (ifnull(a.practica150120,0) > 0 , concat('150120x',a.practica150120,' ') , ''),
+                                                IF (ifnull(a.practica150121,0) > 0 , concat('150121x',a.practica150121,' ') , '')
+                                                ) AS codigo                                               
                                 from (((protocolos a join pacientes b) join obrasociales c) 
                                                 join sanatorios d) 
                                 where  ((a.paciente_id = b.id)     and 
@@ -51,6 +65,8 @@ class Reporte extends AppModel{
                             );       
          
         }        
+
+        
 }
 ?>
 

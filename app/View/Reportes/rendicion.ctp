@@ -26,7 +26,7 @@ header("Expires: 0");
                echo "<tr>";
                 echo "<td>" . utf8_decode($d['b']['Paciente']) . "</td>";
                 echo "<td>" . $d['a']['NUC'] . "</td>";
-                echo "<td>" . '-' . "</td>";
+                echo "<td>" . $d['0']['codigo'] . "</td>";
                 echo "<td>" . $d['0']['precio'] . "</td>";
                echo "</tr>";     
                
