@@ -159,6 +159,10 @@ div.col{
         float:left;
 }
 
+.w10{
+    width: 10%;
+}
+
 .w30{
     width: 30%;
 }
@@ -185,6 +189,8 @@ div.actions {
 	width:16%;
 	padding:10px 1.5%;
 }
+
+
 div.actions h3 {
 	padding-top:0;
 	color:#777;

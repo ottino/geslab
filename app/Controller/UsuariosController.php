@@ -44,7 +44,7 @@ class UsuariosController extends AppController {
                 return $this->redirect($this->Auth->redirect());
             } else {
                 $this->Session->setFlash( MSG_AUTH_USR_PASS, 'default');
-                //echo MSG_AUTH_USR_PASS;
+             echo MSG_AUTH_USR_PASS;
             }
         }
     }

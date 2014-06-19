@@ -289,3 +289,11 @@ define('CONST_FORMAT_HORA_VISTA', 'H:i:s');
  */
 define('CONST_NIVEL_PRIMERO', 1);
 define('CONST_NIVEL_SEGUNDO', 2);
+
+/*
+ * Log de auditoria
+ * 
+ */
+
+define('AUDIT_LOG', 'C:\\temp\\logs\\');
+
