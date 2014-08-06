@@ -311,6 +311,9 @@ class ProtocolosController extends AppController {
              } 
          } else {
                  // cuando toco enviar vuelvo acá
+                 // Para que reciba en copia todos los envios
+                 $encopia= "silviaviale@arnet.com.ar"; 
+                 
                  if(trim($this->request->data['email_personalizado']) == '' || 
                     !isset($this->request->data['email_personalizado']))
                  { 
@@ -320,7 +323,10 @@ class ProtocolosController extends AppController {
                  { 
                     $email_personalizado = $this->request->data['email_personalizado'];
                  }
-               
+                 
+                // pr($email_personalizado);
+                // die();
+                    
                  $this->Protocolo->id = $id;           
                  $this->request->data = $this->Protocolo->read();
                  
@@ -364,7 +370,9 @@ class ProtocolosController extends AppController {
                     $address1  =  $this->request->data['Sanatorio']['email2'];
                     $mail->AddAddress($address1, "Enviar correo a?");
                  }
-
+                 
+                 $mail->AddCC($encopia); // En copia el otro correo de silvia
+                 
                  // Correo Personalizado
                  if(trim($email_personalizado) == '' || 
                     !isset($email_personalizado))

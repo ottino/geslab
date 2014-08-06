@@ -347,7 +347,6 @@ class PHPMailer {
     $this->Port       = 465;                   // set the SMTP port for the GMAIL server
     $this->Username   = "silvia.viale.pna@gmail.com";  // GMAIL username
     $this->Password   = "silvia2013";            // GMAIL password
-
   }
 
   /**
