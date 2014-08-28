@@ -97,6 +97,12 @@
                         array('action' => 'vista_preliminar', $id), 
                         array('title'=>BTN_EDIT,'escape' => false )
                 );
+                
+                echo $this->Html->link(
+                        BTN_PRINT, 
+                        array('action' => 'vista_preliminar', $id, 1 , 0), 
+                        array('title'=>BTN_PRINT,'escape' => false )
+                );
 
                 echo $this->Html->link(
                         BTN_EDIT, 
@@ -121,6 +127,8 @@
                               )
                         );
                 echo "</td>";
+                
+                
                 /*
                 echo "<td>";
                 
