@@ -264,6 +264,14 @@ $("#asmSelect0").change(function() {
                                       'label' => 'Paciente'                                  
                                        )
                                   );      
+                            
+                            echo $this->Form->input(
+                                  'paciente_edad',
+                                   array(
+                                      'value' => $this->data['Paciente']['edad'], 
+                                      'label' => 'Edad del Paciente'                                  
+                                       )
+                                  );      
 
                             echo $this->Form->input(
                                   'medico_id',

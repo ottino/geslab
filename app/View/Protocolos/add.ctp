@@ -279,7 +279,13 @@
                                        )
                                   );     
                             
-                            
+                             echo $this->Form->input(
+                                  'paciente_edad',
+                                   array(
+                                      'label' => 'Edad del Paciente'                                  
+                                       )
+                                  );      
+                             
                             echo '<a href='.$this->Html->url(array('controller'=>'Pacientes', 'action'=>'add')).
                                  ' target="_blank"> Nuevo Paciente </a>';
                             

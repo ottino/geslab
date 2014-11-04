@@ -103,7 +103,16 @@ class ProtocolosController extends AppController {
            
            $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
-           $this->request->data['Protocolo']['fecha']   = date("Y-m-d");    
+           $this->request->data['Protocolo']['fecha']   = date("Y-m-d");
+           
+           if (
+               ($this->data['Protocolo']['paciente_edad'] <> NULL) or 
+               (!empty($this->data['Protocolo']['paciente_edad']))     
+              )
+             {
+               $this->request->data['Paciente']['id']     = $paciente_id[0] ;
+               $this->request->data['Paciente']['edad']   = $this->data['Protocolo']['paciente_edad'];
+             }  
            
            $id_muestra = $this->request->data['Protocolo']['id'];
            
@@ -151,7 +160,9 @@ class ProtocolosController extends AppController {
             
            if ($this->Protocolo->save($this->data)) {
                 
-                  
+                // Grabo edad del paciente
+                $this->Paciente->save($this->data['Paciente']);
+                
                 if($this->request->data['Protocolo']['checkadd_vista_logo'] == 1)
                 {
                  $this->redirect(array('action' => 'vista_preliminar' , 
@@ -210,10 +221,22 @@ class ProtocolosController extends AppController {
          } else {
              
          if(!empty($this->data)){   
-
+           
            $paciente_id = explode("-",$this->data['Protocolo']['paciente_id']);
            $medico_id   = explode("-",$this->data['Protocolo']['medico_id']);
            
+           if (
+               ($this->data['Protocolo']['paciente_edad'] <> NULL) or 
+               (!empty($this->data['Protocolo']['paciente_edad']))     
+              )
+             {
+               $this->request->data['Paciente']['id']     = $paciente_id[0] ;
+               $this->request->data['Paciente']['edad']   = $this->data['Protocolo']['paciente_edad'];
+             }
+
+          // pr($this->request->data);
+          // die();
+
            $this->request->data['Protocolo']['paciente_id'] = $paciente_id[0];
            $this->request->data['Protocolo']['diagnostico'] = '';
            $this->request->data['Protocolo']['medico_id']   = $medico_id[0];
@@ -238,7 +261,10 @@ class ProtocolosController extends AppController {
 
  
             if ($this->Protocolo->save($this->data)) {
-               
+                
+                // Grabo edad del paciente
+                $this->Paciente->save($this->data['Paciente']);
+                
                 if($this->request->data['Protocolo']['checkadd_vista_logo'] == 1)
                 {
                  $this->redirect(array('action' => 'vista_preliminar' , 
