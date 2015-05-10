@@ -1,6 +1,11 @@
 <?php
 App::uses('CakeTime', 'Utility');
 
+App::import('Vendor', 'EnviaMail', array('file'=>'EnviaMail'.DS.'class.phpmailer.php')  );
+App::import('Vendor', 'fpdf', array('file'=>'fpdf'.DS.'fpdf.php')  );
+App::import('Vendor', 'PDF_AutoPrint', array('file'=>'fpdf'.DS.'PDF_AutoPrint.php')  );
+App::import('Vendor', 'pdf_header', array('file'=>'fpdf'.DS.'pdf_header.php')  );
+
 class ReportesController extends AppController{
     
     public $name = 'Reportes';
@@ -170,6 +175,141 @@ class ReportesController extends AppController{
         return $this->render('rendicion','ajax');
 
       }   
+      
+    public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2) {
+                
+                 $id=  990050382;
+
+                 ob_end_clean(); # Importante para limpiar el buffer
+                                 # Para error: "FPDF error: Some data has already been output, can't send PDF file"
+                 $this->Protocolo->id = $id;           
+                 $protocolo = $this->Protocolo->read();
+                
+                 /* Datos para el comprobante */
+                 $Comp_ProtocoloNro = $protocolo['Protocolo']['id'];
+                 $Comp_Paciente     = $protocolo['Paciente']['razon_social'];
+                 $Comp_Medico       = $protocolo['Medico']['razon_social'];
+                 $Comp_Organo       = $protocolo['Organo']['descripcion'];
+                 $Comp_Macroscopia  = $protocolo['Protocolo']['macroscopia'];
+                 $Comp_Microscopia  = $protocolo['Protocolo']['microscopia'];
+                 $Comp_Diagnostico  = $protocolo['Protocolo']['diagnostico'];
+                 $Comp_Material     = $protocolo['Protocolo']['material'];
+                 $Comp_Edad         = $protocolo['Paciente']['edad'];
+                 $Comp_Fecha        = $protocolo['Protocolo']['fecha'];
+                 
+                 if ((trim ($protocolo['Paciente']['apellido']) <> null) ||
+                     (trim ($protocolo['Paciente']['apellido']) <> '') )
+                 { 
+                     $Comp_Apellido     = trim ($protocolo['Paciente']['apellido']);
+                 }else 
+                 {
+                     $Comp_Apellido     = 'SinApellido'; 
+                 }
+                 
+                 if ($modo == 0)
+                 {     
+                     $pdf = new pdf_header();
+                     $pdf->put_header(
+                                        $logo,$Comp_ProtocoloNro,$Comp_Fecha,
+                                        $Comp_Paciente,$Comp_Edad,$Comp_Medico,
+                                        $Comp_Organo
+                                     );
+                     
+                 } else if ($modo == 1)
+                 {
+                     $pdf = new PDF_AutoPrint();
+                     $pdf->put_header(
+                                        $logo,$Comp_ProtocoloNro,$Comp_Fecha,
+                                        $Comp_Paciente,$Comp_Edad,$Comp_Medico,
+                                        $Comp_Organo
+                                     );
+                 }
+                 
+                 $pdf->FPDF('P','cm','A4');
+
+
+                 $pdf->AddPage();
+                 $pdf->AliasNbPages();
+                 $pdf->SetAutoPageBreak(true,0.2);
+                 $pdf->SetMargins(0,0,0);
+                 $pdf->SetTopMargin(11);
+                             
+                 /* Datos de Macroscopia */
+                 if (($Comp_Macroscopia != null) or (trim($Comp_Macroscopia) != ''))
+                 {
+                    $pdf->SetFont('Arial','B',8);
+                    $pdf->SetXY(0.20,$pdf->GetY()+0.3);
+                    $pdf->Cell(3.5,0.22,'Macroscopia:');   
+
+                    $pdf->SetFont('Arial','',7);
+                    $pdf->SetXY(0.90,$pdf->GetY()+0.3);
+                    $pdf->MultiCell(0,0.4,utf8_decode($Comp_Macroscopia));
+                 }
+                 
+                 /* Datos de Microscopia */
+                 if (($Comp_Microscopia != null) or (trim($Comp_Microscopia) != ''))
+                 {
+                    $pdf->SetFont('Arial','B',8);
+                    $pdf->SetXY(0.20,$pdf->GetY()+1);
+                    $pdf->Cell(3.5,0.22,'Microscopia:');   
+
+                    $pdf->SetFont('Arial','',7);
+                    $pdf->SetXY(0.90,$pdf->GetY()+0.6);
+                    $pdf->MultiCell(0,0.4,utf8_decode($Comp_Microscopia));
+                 }
+
+                 if (($Comp_Material != null) or (trim($Comp_Material) != ''))
+                 {
+                    $pdf->SetFont('Arial','B',8);
+                    $pdf->SetXY(0.20,$pdf->GetY()+1);
+                    $pdf->Cell(3.5,0.22,'Meterial Remitido:');   
+
+                    $pdf->SetFont('Arial','',7);
+                    $pdf->SetXY(0.90,$pdf->GetY()+0.6);
+                    $pdf->MultiCell(0,0.4,utf8_decode($Comp_Material));
+                 }
+                 
+                 /* Datos de Diagnostico */               
+                 $pdf->SetFont('Arial','B',8);
+                 $pdf->SetXY(0.20,$pdf->GetY()+0.4);
+                 $pdf->Cell(3.5,0.22,'Diagnostico:');   
+
+                 $pdf->SetFont('Arial','',7);
+                 $pdf->SetXY(0.90,$pdf->GetY()+0.3);
+                 $pdf->MultiCell(0,0.4,utf8_decode($Comp_Diagnostico));
+                
+                 
+                 /* Firma */
+                 //$ordenada_x = $pdf->GetY();
+                 //$pdf->Image(IMAGES . 'firma_pdf.png',15.94,$ordenada_x+3);
+
+                 $pdf->SetFont('Arial','B',9);
+                 $pdf->SetXY(16,$pdf->GetY()+2.5);
+                 $pdf->Cell(3.5,0.22,'Dra. Silvia I. Viale'); 
+                 
+                 $pdf->SetFont('Arial','B',6);
+                 $pdf->SetXY(16.35,$pdf->GetY()+0.30);
+                 $pdf->Cell(3.5,0.22,'Medica Patologa');                   
+                 
+                 $pdf->SetFont('Arial','B',6);
+                 $pdf->SetXY(16.80,$pdf->GetY()+0.30);
+                 $pdf->Cell(3.5,0.22,'M.P 6939');    
+
+                 $pdf->Output();
+
+                 
+                 /*
+                 if ($modo == 0)
+                 {   
+                    $data = $pdf->Output(null , 'S');
+                    $this->set('id', $Comp_ProtocoloNro);
+                    $this->set('pdf_comprobantes', $data);
+                    $this->render('reporte_facturacioniosper', 'ajax');
+                    
+                 }
+                 */
+
+    }          
         
 }
 ?>
