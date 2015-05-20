@@ -69,16 +69,28 @@ class Reporte extends AppModel{
         Base para armar cupon para presentar en IOSPER
     */
 
-    public function query_reporte_3(){ 
+    public function query_reporte_3($fecha, $id){ 
        
          return $this->query(
                              "
                               select * 
-                              from vw_base_cupones_iosper where  periodo = '201503' AND Protocolo_id = 654663
+                              from vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
                              "
                             );       
          
         }
+
+    public function query_reporte_4() {
+
+        return $this->query(
+                            "
+                             select * 
+                             from protocolos 
+                             where date_format(`fecha`,'%Y%m') = '201503' and obrasocial_id = 108 and internacion = 1
+                             and id in (65379,65408); 
+                            "      
+            );
+    }   
         
 }
 ?>

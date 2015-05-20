@@ -176,24 +176,36 @@ class ReportesController extends AppController{
 
       }   
       
-    public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2) {
+    public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2 , $fecha_periodo = '201503') {
                 
-                 //$id=  65271;
-                 $id=  65466;
-                // $id=  65170;
+                # Base inicial para armar los cupones
+                # cursor que va protocolo por protocolo
+                
+                $base_inicial  = $this->Reporte->query_reporte_4();
+                 
+                 $pdf = new pdf_header();
+                 $pdf->FPDF('P','cm','A4');
+                 //$pdf->AddPage();
+                 $pdf->AliasNbPages();
+                 $pdf->SetAutoPageBreak(true,0.2);
+                 $pdf->SetMargins(0,0,0);
+                 $pdf->SetTopMargin(11);
+
+                foreach ($base_inicial as $b)
+                {    
+
+                 $id=  $b['protocolos']['id'];
+
                  /* Matriz para armar el cupon */
 
-                 $data = $this->Reporte->query_reporte_3();
+                 $data = $this->Reporte->query_reporte_3($fecha_periodo , $id);
 
-                 ob_end_clean(); # Importante para limpiar el buffer
+                 //ob_end_clean(); # Importante para limpiar el buffer
                                  # Para error: "FPDF error: Some data has already been output, can't send PDF file"
 
                  $this->Protocolo->id = $id;           
                  $protocolo = $this->Protocolo->read();
-
-                 
                             
-
                  /* Datos para el comprobante */
                  $Comp_ProtocoloNro = $protocolo['Protocolo']['id'];
                  $Comp_Paciente     = $protocolo['Paciente']['razon_social'];
@@ -226,35 +238,15 @@ class ReportesController extends AppController{
                  {
                      $Comp_Apellido     = 'SinApellido'; 
                  }
+                
                  
-                 if ($modo == 0)
-                 {     
-                     $pdf = new pdf_header();
-                     $pdf->put_header(
-                                        $logo,$Comp_ProtocoloNro,$Comp_Fecha,
-                                        $Comp_Paciente,$Comp_Edad,$Comp_Medico,
-                                        $Comp_Organo
-                                     );
+                 $pdf->put_header(
+                                    $logo,$Comp_ProtocoloNro,$Comp_Fecha,
+                                    $Comp_Paciente,$Comp_Edad,$Comp_Medico,
+                                    $Comp_Organo
+                                 );
                      
-                 } else if ($modo == 1)
-                 {
-                     $pdf = new PDF_AutoPrint();
-                     $pdf->put_header(
-                                        $logo,$Comp_ProtocoloNro,$Comp_Fecha,
-                                        $Comp_Paciente,$Comp_Edad,$Comp_Medico,
-                                        $Comp_Organo
-                                     );
-                 }
-                 
-                 $pdf->FPDF('P','cm','A4');
-
-
-                 $pdf->AddPage();
-                 $pdf->AliasNbPages();
-                 $pdf->SetAutoPageBreak(true,0.2);
-                 $pdf->SetMargins(0,0,0);
-                 $pdf->SetTopMargin(11);
-                             
+                 $pdf->AddPage();            
                  /* Datos de Macroscopia */
                  if (($Comp_Macroscopia != null) or (trim($Comp_Macroscopia) != ''))
                  {
@@ -421,11 +413,6 @@ class ReportesController extends AppController{
                   $pdf->SetX(17.3);
                   $pdf->Cell(3.5,0.22,'Matricula');
 
-//                  $pdf->SetXY(14,$pdf->GetY()+1.2);
-//                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
-//                 $pdf->SetXY(2.1,$pdf->GetY()+0.8);
-//                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio');                   
-
                   /* Contenido de las practicas */
                    
                    foreach ($data as $d)
@@ -471,21 +458,16 @@ class ReportesController extends AppController{
                                   $pdf->SetXY(2.1,$pdf->GetY()+0.8);
                                   $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio'); 
                              break;
-                     }    
+                     }  
 
-                 $pdf->Output();
-
-                 
-                 /*
-                 if ($modo == 0)
-                 {   
-                    $data = $pdf->Output(null , 'S');
-                    $this->set('id', $Comp_ProtocoloNro);
-                    $this->set('pdf_comprobantes', $data);
-                    $this->render('reporte_facturacioniosper', 'ajax');
-                    
+                      //$pdf->AddPage();  
                  }
-                 */
+
+                    $data_ = $pdf->Output(null , 'S');
+                    $this->set('id', 'FacturacionIOSPER'.$fecha_periodo);
+                    $this->set('pdf_comprobantes', $data_);
+                    $this->render('reporte_facturacioniosper', 'ajax');
+            
 
     }          
         
