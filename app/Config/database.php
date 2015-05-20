@@ -67,7 +67,7 @@ class DATABASE_CONFIG {
 		'login' => 'root',
 		'password' => '',
 		'database' => 'ges_lab',
-		//'database' => 'ges_lab_prod',
+		'database' => 'ges_lab_prod',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

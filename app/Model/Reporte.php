@@ -65,7 +65,20 @@ class Reporte extends AppModel{
                             );       
          
         }        
+    /*
+        Base para armar cupon para presentar en IOSPER
+    */
 
+    public function query_reporte_3(){ 
+       
+         return $this->query(
+                             "
+                              select * 
+                              from vw_base_cupones_iosper where  periodo = '201503' AND Protocolo_id = 654663
+                             "
+                            );       
+         
+        }
         
 }
 ?>

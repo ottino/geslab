@@ -178,13 +178,22 @@ class ReportesController extends AppController{
       
     public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2) {
                 
-                 $id=  990050382;
+                 //$id=  65271;
+                 $id=  65466;
+                // $id=  65170;
+                 /* Matriz para armar el cupon */
+
+                 $data = $this->Reporte->query_reporte_3();
 
                  ob_end_clean(); # Importante para limpiar el buffer
                                  # Para error: "FPDF error: Some data has already been output, can't send PDF file"
+
                  $this->Protocolo->id = $id;           
                  $protocolo = $this->Protocolo->read();
-                
+
+                 
+                            
+
                  /* Datos para el comprobante */
                  $Comp_ProtocoloNro = $protocolo['Protocolo']['id'];
                  $Comp_Paciente     = $protocolo['Paciente']['razon_social'];
@@ -196,6 +205,18 @@ class ReportesController extends AppController{
                  $Comp_Material     = $protocolo['Protocolo']['material'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  $Comp_Fecha        = $protocolo['Protocolo']['fecha'];
+
+                 # Datos para el cupon de IOSPER
+                 $cup_iosper_sanatorio  = $protocolo['Sanatorio']['descripcion'];
+                 $cup_iosper_paciente   = $protocolo['Paciente']['razon_social'];
+                 
+                 if ($protocolo['Paciente']['dni'] <> '0')
+                    $cup_iosper_dni        = $protocolo['Paciente']['dni'];
+                 else $cup_iosper_dni   = '-';
+
+                 $cup_iosper_fingreso   = $protocolo['Protocolo']['fecha'];
+                 $cup_iosper_codinter   = $protocolo['Protocolo']['NUC'];
+                 $cup_iosper_fegreso    = date("Y-m-d");
                  
                  if ((trim ($protocolo['Paciente']['apellido']) <> null) ||
                      (trim ($protocolo['Paciente']['apellido']) <> '') )
@@ -294,6 +315,163 @@ class ReportesController extends AppController{
                  $pdf->SetFont('Arial','B',6);
                  $pdf->SetXY(16.80,$pdf->GetY()+0.30);
                  $pdf->Cell(3.5,0.22,'M.P 6939');    
+
+
+                 // Cupon para IOSPER *****
+
+                  /* Primer linea */
+                  $pdf->Line(2, $pdf->GetY()+0.90 , 19, $pdf->GetY()+0.90);
+                  $pdf->Line(2, $pdf->GetY()+0.91 , 19, $pdf->GetY()+0.91);
+                  $pdf->Line(2, $pdf->GetY()+0.92 , 19, $pdf->GetY()+0.92);
+                  $pdf->Line(2, $pdf->GetY()+0.93 , 19, $pdf->GetY()+0.93);
+                  $pdf->Line(2, $pdf->GetY()+0.94 , 19, $pdf->GetY()+0.94);
+
+                  $pdf->SetY($pdf->GetY()+0.94); # Seteo la coordenada Y
+
+                  # Titulo del cupon
+                  $pdf->SetFont('Arial','B',11);
+                  $pdf->Line(2 , $pdf->GetY() , 2, $pdf->GetY()+8.9);       # Linea vertical larga renglon izquierdo
+                 
+                  $pdf->Line(19 , $pdf->GetY() , 19, $pdf->GetY()+8.9);     # Linea vertical larga renglon derecho
+                  
+                  $pdf->SetXY(8,$pdf->GetY()+0.2);
+                  $pdf->Cell(3.5,0.22,'Planilla Honorarios Medicos'); 
+
+
+                  $pdf->Line(2, $pdf->GetY()+0.40 , 19, $pdf->GetY()+0.40);
+                  $pdf->Line(2, $pdf->GetY()+0.41 , 19, $pdf->GetY()+0.41);
+                  $pdf->Line(2, $pdf->GetY()+0.42 , 19, $pdf->GetY()+0.42);
+                  $pdf->Line(2, $pdf->GetY()+0.43 , 19, $pdf->GetY()+0.43);
+                  $pdf->Line(2, $pdf->GetY()+0.44 , 19, $pdf->GetY()+0.44);
+
+                  $pdf->SetY($pdf->GetY()+0.45); # Seteo la coordenada Y
+
+                  /* Segundo titulo */
+                  $pdf->SetFont('Arial','B',11);
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.2);
+                  $pdf->Cell(3.5,0.22,'Exclusivo Anatomia Patologica'); 
+
+                  $pdf->Line(2, $pdf->GetY()+0.40 , 19, $pdf->GetY()+0.40);
+                  $pdf->Line(2, $pdf->GetY()+0.41 , 19, $pdf->GetY()+0.41);
+                  $pdf->Line(2, $pdf->GetY()+0.42 , 19, $pdf->GetY()+0.42);
+                  $pdf->Line(2, $pdf->GetY()+0.43 , 19, $pdf->GetY()+0.43);
+                  $pdf->Line(2, $pdf->GetY()+0.44 , 19, $pdf->GetY()+0.44);
+
+                  $pdf->Line(10.3, $pdf->GetY()+0.44 , 10.3, $pdf->GetY()+3.0); # Linea vertical de Sanatorio, paciente, etc...
+                  $pdf->Line(10.3, $pdf->GetY()+1 , 19, $pdf->GetY()+1);        # Linea horizontal
+                  $pdf->Line(10.3, $pdf->GetY()+1.6 , 19, $pdf->GetY()+1.6);    # Linea horizontal
+                  $pdf->Line(10.3, $pdf->GetY()+2.2 , 14, $pdf->GetY()+2.2);    # Linea horizontal cortita
+                  $pdf->Line(14  , $pdf->GetY()+1.6 , 14, $pdf->GetY()+3);      # Linea vertical cortita
+                  $pdf->Line(7.8 , $pdf->GetY()+3.0 , 19, $pdf->GetY()+3.0);    # Linea horizontal
+                  $pdf->Line(7.8 , $pdf->GetY()+3.0 , 7.8, $pdf->GetY()+3.6);   # Linea vertical cortita
+                  $pdf->Line(2 , $pdf->GetY()+3.6 , 19, $pdf->GetY()+3.6);    # Linea horizontal  arriba de "codigo internacion"                
+                  $pdf->Line(4 , $pdf->GetY()+4.2 , 19, $pdf->GetY()+4.2);    # Linea horizontal  debajo de "codigo internacion"
+
+                  $pdf->Line(4 , $pdf->GetY()+3.6 , 4, $pdf->GetY()+6.9);      # Linea vertical cortita Donde dice Fecha
+                                                                              # debajo del logo  continua hacia abajo
+
+                  $pdf->Line(14  , $pdf->GetY()+3.6, 14, $pdf->GetY()+6.9);    # Linea vertical cortida que divide prestaciones 
+                                                                              # y profesional. Continua hasta abajo  
+
+                  $pdf->Line(2 , $pdf->GetY()+4.8 , 19, $pdf->GetY()+4.8);    # Linea horizontal  de los titulos: fecha codgo descripcion firma sello matricula
+                  
+                  $pdf->Line(17.3  , $pdf->GetY()+4.2, 17.3, $pdf->GetY()+6.9); # Linea vertical cortida que divide prestaciones 
+                                                                               # y profesional. Continua hasta abajo
+
+                  $pdf->Line(7.8  , $pdf->GetY()+4.2, 7.8, $pdf->GetY()+6.9);   # Linea vertical que divide codigo 
+                                                                               # y descripcion. Continua hasta abajo  
+
+                  $pdf->Line(2 , $pdf->GetY()+5.5 , 19, $pdf->GetY()+5.5);     # Linea horizontal renglon -1 
+                  $pdf->Line(2 , $pdf->GetY()+6.2 , 19, $pdf->GetY()+6.2);     # Linea horizontal renglon -2 
+                  $pdf->Line(2 , $pdf->GetY()+6.9 , 19, $pdf->GetY()+6.9);     # Linea horizontal renglon -3 
+
+                  $pdf->Line(10.3, $pdf->GetY()+6.9, 10.3, $pdf->GetY()+8.1);   # Linea vertical del footer
+                  $pdf->Line(2 , $pdf->GetY()+8.1 , 19, $pdf->GetY()+8.1);      # Linea horizontal final
+                  
+
+
+                  # Titulos de cada renglon
+                  $pdf->SetFont('Arial','B',9);
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Sanatorio:           ' . $cup_iosper_sanatorio);
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Paciente:            ' . $cup_iosper_paciente); 
+                  $pdf->SetX(3.5);
+                  $pdf->Cell(3.5,0.22,'I . O . S . P . E . R');                  
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Fecha Ingreso:  ' . $cup_iosper_fingreso);
+                  $pdf->SetX(14);
+                  $pdf->Cell(3.5,0.22,'DNI ' . $cup_iosper_dni);                                   
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Fecha Egreso:   ' . $cup_iosper_fegreso); 
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Codigo Internacion:  ' . $cup_iosper_codinter); 
+                  $pdf->SetXY(7.8,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Prestaciones'); 
+                  $pdf->SetX(16);
+                  $pdf->Cell(3.5,0.22,'Profesional'); 
+                  $pdf->SetXY(2.1,$pdf->GetY()+0.65);
+                  $pdf->Cell(3.5,0.22,'Fecha');
+                  $pdf->SetX(4);
+                  $pdf->Cell(3.5,0.22,'Codigo'); 
+                  $pdf->SetX(7.9);
+                  $pdf->Cell(3.5,0.22,'Descripcion'); 
+                  $pdf->SetX(14.5);
+                  $pdf->Cell(3.5,0.22,'Firma - Sello'); 
+                  $pdf->SetX(17.3);
+                  $pdf->Cell(3.5,0.22,'Matricula');
+
+//                  $pdf->SetXY(14,$pdf->GetY()+1.2);
+//                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
+//                 $pdf->SetXY(2.1,$pdf->GetY()+0.8);
+//                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio');                   
+
+                  /* Contenido de las practicas */
+                   
+                   foreach ($data as $d)
+                     {   
+                      $pdf->SetXY(2.1,$pdf->GetY()+0.65);
+                      $pdf->Cell(3.5,0.22,date('Y-m-d'));
+                      $pdf->SetX(4);
+                      $pdf->Cell(3.5,0.22,$d['vw_base_cupones_iosper']['Practica']);
+                      $pdf->SetX(7.9);
+                      $pdf->Cell(3.5,0.22,'x' . $d['vw_base_cupones_iosper']['Cantidad_practica']);
+                      $pdf->SetX(14.5);
+                      $pdf->Cell(3.5,0.22,'Viale Silvia');
+                      $pdf->SetX(17.3);
+                      $pdf->Cell(3.5,0.22,'6939');
+                     }       
+
+                 switch (count($data)) {
+                         case 3:
+                                  $pdf->SetXY(14,$pdf->GetY()+0.55);
+                                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
+                                  $pdf->SetXY(2.1,$pdf->GetY()+0.8);
+                                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio');                                         
+
+                             break;
+
+                         case 2:
+                                  $pdf->SetXY(14,$pdf->GetY()+1.2);
+                                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
+                                  $pdf->SetXY(2.1,$pdf->GetY()+0.8);
+                                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio'); 
+                             break;
+
+                          case 1:
+                                  $pdf->SetXY(14,$pdf->GetY()+1.75);
+                                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
+                                  $pdf->SetXY(2.1,$pdf->GetY()+0.8);
+                                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio'); 
+                             break;
+
+                         default:
+                                  $pdf->SetXY(14,$pdf->GetY()+2.45);
+                                  $pdf->Cell(3.5,0.22,'Para Entidad Medica');                    
+                                  $pdf->SetXY(2.1,$pdf->GetY()+0.8);
+                                  $pdf->Cell(3.5,0.22,'Firma Administrador del Sanatorio'); 
+                             break;
+                     }    
 
                  $pdf->Output();
 
