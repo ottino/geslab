@@ -176,16 +176,15 @@ class ReportesController extends AppController{
 
       }   
       
-    public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2 , $fecha_periodo = '201503') {
+    public function reporteFacturacioniosper ($id = null , $modo = 0 , $logo = 2 , $fecha_periodo = '201504') {
                 
                 # Base inicial para armar los cupones
                 # cursor que va protocolo por protocolo
                 
-                $base_inicial  = $this->Reporte->query_reporte_4();
-                 
+                 $base_inicial  = $this->Reporte->query_reporte_4();
+
                  $pdf = new pdf_header();
                  $pdf->FPDF('P','cm','A4');
-                 //$pdf->AddPage();
                  $pdf->AliasNbPages();
                  $pdf->SetAutoPageBreak(true,0.2);
                  $pdf->SetMargins(0,0,0);
@@ -217,6 +216,7 @@ class ReportesController extends AppController{
                  $Comp_Material     = $protocolo['Protocolo']['material'];
                  $Comp_Edad         = $protocolo['Paciente']['edad'];
                  $Comp_Fecha        = $protocolo['Protocolo']['fecha'];
+                 $Comp_nuc          = $protocolo['Protocolo']['NUC'];
 
                  # Datos para el cupon de IOSPER
                  $cup_iosper_sanatorio  = $protocolo['Sanatorio']['descripcion'];
@@ -243,7 +243,7 @@ class ReportesController extends AppController{
                  $pdf->put_header(
                                     $logo,$Comp_ProtocoloNro,$Comp_Fecha,
                                     $Comp_Paciente,$Comp_Edad,$Comp_Medico,
-                                    $Comp_Organo
+                                    $Comp_Organo,$Comp_nuc
                                  );
                      
                  $pdf->AddPage();            
@@ -293,8 +293,8 @@ class ReportesController extends AppController{
                 
                  
                  /* Firma */
-                 //$ordenada_x = $pdf->GetY();
-                 //$pdf->Image(IMAGES . 'firma_pdf.png',15.94,$ordenada_x+3);
+                 $ordenada_x = $pdf->GetY();
+                 $pdf->Image(IMAGES . 'firma_pdf.png',15.98,$ordenada_x+1,2,1.5);
 
                  $pdf->SetFont('Arial','B',9);
                  $pdf->SetXY(16,$pdf->GetY()+2.5);
@@ -389,7 +389,8 @@ class ReportesController extends AppController{
                   $pdf->SetXY(7.8,$pdf->GetY()+0.65);
                   $pdf->Cell(3.5,0.22,'Paciente:            ' . $cup_iosper_paciente); 
                   $pdf->SetX(3.5);
-                  $pdf->Cell(3.5,0.22,'I . O . S . P . E . R');                  
+                  //$pdf->Cell(3.5,0.22,'I . O . S . P . E . R');    
+                  $pdf->Image(IMAGES . 'logo_iosper.jpg',$pdf->GetX(),$pdf->GetY()-0.5,3,2.5);              
                   $pdf->SetXY(7.8,$pdf->GetY()+0.65);
                   $pdf->Cell(3.5,0.22,'Fecha Ingreso:  ' . $cup_iosper_fingreso);
                   $pdf->SetX(14);
@@ -420,9 +421,9 @@ class ReportesController extends AppController{
                       $pdf->SetXY(2.1,$pdf->GetY()+0.65);
                       $pdf->Cell(3.5,0.22,date('Y-m-d'));
                       $pdf->SetX(4);
-                      $pdf->Cell(3.5,0.22,$d['vw_base_cupones_iosper']['Practica']);
+                      $pdf->Cell(3.5,0.22,$d['vw_base_cupones_iosper']['Practica'] . ' x' . $d['vw_base_cupones_iosper']['Cantidad_practica']);
                       $pdf->SetX(7.9);
-                      $pdf->Cell(3.5,0.22,'x' . $d['vw_base_cupones_iosper']['Cantidad_practica']);
+                      $pdf->Cell(3.5,0.22,'');
                       $pdf->SetX(14.5);
                       $pdf->Cell(3.5,0.22,'Viale Silvia');
                       $pdf->SetX(17.3);
@@ -460,14 +461,15 @@ class ReportesController extends AppController{
                              break;
                      }  
 
-                      //$pdf->AddPage();  
+                     
                  }
-
+                 
                     $data_ = $pdf->Output(null , 'S');
                     $this->set('id', 'FacturacionIOSPER'.$fecha_periodo);
                     $this->set('pdf_comprobantes', $data_);
                     $this->render('reporte_facturacioniosper', 'ajax');
-            
+                 
+
 
     }          
         

@@ -12,7 +12,7 @@ class PDF_header extends FPDF {
     var $Comp_Organo;
     
     function put_header($p_logo , $p_Comp_ProtocoloNro ,$p_Comp_Fecha ,$p_Comp_Paciente,
-                        $p_Comp_Edad ,$p_Comp_Medico, $p_Comp_Organo)
+                        $p_Comp_Edad ,$p_Comp_Medico, $p_Comp_Organo, $p_Comp_nuc = null)
     {
          $this->logo              = $p_logo;
          $this->Comp_ProtocoloNro = $p_Comp_ProtocoloNro;
@@ -20,7 +20,8 @@ class PDF_header extends FPDF {
          $this->Comp_Paciente     = $p_Comp_Paciente ;
          $this->Comp_Edad         = $p_Comp_Edad;
          $this->Comp_Medico       = $p_Comp_Medico;
-         $this->Comp_Organo       = $p_Comp_Organo;               
+         $this->Comp_Organo       = $p_Comp_Organo; 
+         $this->Comp_nuc          = $p_Comp_nuc;             
     }
     
     function Header()
@@ -178,6 +179,10 @@ class PDF_header extends FPDF {
               $this->SetFont('Arial','B',8);
               $this->SetXY(0.20,4);
               $this->Cell(2,0.22,'Medico:    ' . utf8_decode($this->Comp_Medico) );
+
+              $this->SetFont('Arial','B',8);
+              $this->SetXY(16,4);
+              $this->Cell(2,0.22,'NUC:    ' . $this->Comp_nuc );              
 
               $this->SetFont('Arial','B',8);
               $this->SetXY(0.20,4.5);

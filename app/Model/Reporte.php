@@ -74,7 +74,7 @@ class Reporte extends AppModel{
          return $this->query(
                              "
                               select * 
-                              from vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
+                              from vw_base_cupones_iosper_2 as vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
                              "
                             );       
          
@@ -84,10 +84,9 @@ class Reporte extends AppModel{
 
         return $this->query(
                             "
-                             select * 
+                             select id 
                              from protocolos 
-                             where date_format(`fecha`,'%Y%m') = '201503' and obrasocial_id = 108 and internacion = 1
-                             and id in (65379,65408); 
+                             where date_format(`fecha`,'%Y%m') = '201504' and obrasocial_id = 108 and internacion = 1;
                             "      
             );
     }   

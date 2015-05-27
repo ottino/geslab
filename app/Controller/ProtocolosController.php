@@ -533,6 +533,7 @@ class ProtocolosController extends AppController {
 
     public function vista_preliminar ($id = null , $modo = 0 , $logo = 1) {
 
+                 set_time_limit();
                  ob_end_clean(); # Importante para limpiar el buffer
                                  # Para error: "FPDF error: Some data has already been output, can't send PDF file"
                  $this->Protocolo->id = $id;           
