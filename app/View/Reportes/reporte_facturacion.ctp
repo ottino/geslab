@@ -4,7 +4,12 @@
 
         <div class="columns">
             <?php
-            
+
+            echo $this->Form->input('periodo', array(
+                'label'=>'Periodo',
+                'placeholder'=> 'AAAAMM'));  
+
+            /*
             echo $this->Form->input(
                     'obrasocial_id',
                      array(
@@ -46,7 +51,8 @@
                          'label' => 'Ambulatorio'
                         )
                   ); 
-            
+             */
+
              echo $this->Form->submit('Buscar', array(
                 'div' => 'actions'
              ));
