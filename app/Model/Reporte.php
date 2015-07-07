@@ -100,7 +100,7 @@ class Reporte extends AppModel{
          return $this->query(
                              "
                               select * 
-                              from vw_base_cupones_iosper_2 as vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
+                              from vw_base_cupones_iosper_3 as vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
                              "
                             );       
          
