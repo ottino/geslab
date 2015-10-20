@@ -106,15 +106,28 @@ class Reporte extends AppModel{
          
         }
 
-    public function query_reporte_4($filtro) {
+    public function query_reporte_4($fecha_ini , $fecha_fin, $nro_protocolo = null) {
 
-        return $this->query(
-                            "
-                             select id 
-                             from protocolos 
-                             where date_format(`fecha`,'%Y%m') = '".$filtro."' and obrasocial_id = 108 and internacion = 1;
-                            "      
-            );
+        if ($nro_protocolo <> '') # Ingresa si el usuario quiere imprimir un solo cupon buscando por nro.protocolo
+        {
+          return $this->query(
+                              "
+                               select id , date_format(`fecha`,'%Y%m') AS periodo
+                               from protocolos 
+                               where id = 
+                               '".$nro_protocolo."' and obrasocial_id = 108 and internacion = 1;
+                              "      
+              );
+        } else {
+                    return $this->query(
+                                        "
+                                         select id , date_format(`fecha`,'%Y%m') AS periodo
+                                         from protocolos 
+                                         where date_format(`fecha`,'%Y%m%d') between 
+                                         '".$fecha_ini."' and '".$fecha_fin."'  and obrasocial_id = 108 and internacion = 1;
+                                        "      
+                        );          
+        }
     }  
 
     // Excel de rendicion

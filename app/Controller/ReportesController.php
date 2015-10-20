@@ -88,10 +88,13 @@ class ReportesController extends AppController{
                 
                 # Base inicial para armar los cupones
                 # cursor que va protocolo por protocolo
-                 $fecha_periodo = $this->request->data['Reporte']['periodo'];
+                 // $fecha_periodo     = $this->request->data['Reporte']['periodo']; // comentar, version vieja
+                 $fecha_periodo_ini = $this->request->data['Reporte']['periodo_ini'];
+                 $fecha_periodo_fin = $this->request->data['Reporte']['periodo_fin'];
+                 $nro_protocolo     = $this->request->data['Reporte']['protocolo_nro'];
 
-                 $base_inicial  = $this->Reporte->query_reporte_4($fecha_periodo);
-
+                 $base_inicial  = $this->Reporte->query_reporte_4($fecha_periodo_ini , $fecha_periodo_fin, $nro_protocolo);
+                 
                  $pdf = new pdf_header();
                  $pdf->FPDF('P','cm','A4');
                  $pdf->AliasNbPages();
@@ -101,8 +104,9 @@ class ReportesController extends AppController{
 
                 foreach ($base_inicial as $b)
                 {    
-
-                 $id=  $b['protocolos']['id'];
+   
+                 $id            =  $b['protocolos']['id'];
+                 $fecha_periodo =  $b['0']['periodo'];
 
                  /* Matriz para armar el cupon */
 
@@ -372,9 +376,11 @@ class ReportesController extends AppController{
 
                      
                  }
-                 
+                    
+                    $numero_listado = date("Y-m-d") . '-' . rand(); // Numero unico para el listado
+
                     $data_ = $pdf->Output(null , 'S');
-                    $this->set('id', 'FacturacionIOSPER'.$fecha_periodo);
+                    $this->set('id', 'FacturacionIOSPER'.$numero_listado);
                     $this->set('pdf_comprobantes', $data_);
                     $this->render('reporte_facturacioniosper', 'ajax');
                  
