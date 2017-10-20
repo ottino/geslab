@@ -14,8 +14,7 @@ header("Expires: 0");
     <table cellpadding="0" cellspacing="0">
     <tr>
             <th>Fecha</th>            
-            <th>Sanatorio</th>            
-            <th>Obra Social</th>            
+            <th>Sanatorio</th>                
             <th>Paciente</th>            
             <th>Dni Paciente</th>
             <th>Nro. Protocolo</th>

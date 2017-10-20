@@ -5,10 +5,13 @@
         <div class="columns">
             <?php
 
-            echo $this->Form->input('periodo', array(
-                'label'=>'Periodo',
-                'placeholder'=> 'AAAAMM'));  
+            echo $this->Form->input('fecha_ini', array(
+                'label'=>'Fecha Inicio',
+                'placeholder'=> 'AAAAMMDD'));  
 
+            echo $this->Form->input('fecha_fin', array(
+                'label'=>'Fecha Fin',
+                'placeholder'=> 'AAAAMMDD'));  
             /*
             echo $this->Form->input(
                     'obrasocial_id',

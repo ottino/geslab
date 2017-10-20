@@ -38,7 +38,8 @@ class Reporte extends AppModel{
                                 on (a.paciente_id  = b.id and a.sanatorio_id = d.id)
             where a.obrasocial_id = 108
             and  a.internacion = 1  
-            and  date_format(a.fecha,'%Y%m') = '".$filtro."'          
+            and  date_format(a.fecha,'%Y%m') = '".$filtro."'  
+            order by a.NUC        
           ");  
 
         }
@@ -131,7 +132,7 @@ class Reporte extends AppModel{
     }  
 
     // Excel de rendicion
-    public function query_reporte_5($filtro){ 
+    public function query_reporte_5($fecha_ini , $fecha_fin ){ 
 
         return $this->query(
         "  
@@ -173,12 +174,66 @@ class Reporte extends AppModel{
                             on (a.paciente_id  = b.id and a.sanatorio_id = d.id)
         where a.obrasocial_id = 108
         and  a.internacion = 1  
-        and  date_format(a.fecha,'%Y%m') = '".$filtro."'
+        and  date_format(`fecha`,'%Y%m%d') between '".$fecha_ini."' and '".$fecha_fin."'
         GROUP BY b.razon_social , a.NUC , a.id
+
+        UNION 
+        
+        SELECT '' , '' , 'Total' , 
+              sum(
+                (ifnull(a.practica150101,0) * ifnull(a.precio150101,0)) +
+                (ifnull(a.practica150102,0) * ifnull(a.precio150102,0)) +
+                (ifnull(a.practica150103,0) * ifnull(a.precio150103,0)) +
+                (ifnull(a.practica150104,0) * ifnull(a.precio150104,0)) +
+                (ifnull(a.practica150105,0) * ifnull(a.precio150105,0)) +
+                (ifnull(a.practica150106,0) * ifnull(a.precio150106,0)) +
+                (ifnull(a.practica150108,0) * ifnull(a.precio150108,0)) +
+                (ifnull(a.practica150109,0) * ifnull(a.precio150109,0)) +
+                (ifnull(a.practica150110,0) * ifnull(a.precio150110,0)) +
+                (ifnull(a.practica150111,0) * ifnull(a.precio150111,0)) +
+                (ifnull(a.practica150120,0) * ifnull(a.precio150120,0)) +
+                (ifnull(a.practica150121,0) * ifnull(a.precio150121,0)) +
+                (ifnull(a.practica144790,0) * ifnull(a.precio144790,0)) 
+               )  AS Total , ''
+        from 
+           protocolos a inner join (pacientes b , sanatorios d)
+                            on (a.paciente_id  = b.id and a.sanatorio_id = d.id)               
+        where a.obrasocial_id = 108
+        and  a.internacion = 1  
+        and   date_format(a.fecha,'%Y%m%d')  between '".$fecha_ini."' and '".$fecha_fin."'
+
         ORDER BY NUC asc;
        ");
 
     } 
+
+
+    public function query_reporte_6($fecha_ini , $fecha_fin, $nro_protocolo = null , $listadosos) {
+
+
+                    return $this->query(
+                                        "
+                                         select id , date_format(`fecha`,'%Y%m') AS periodo
+                                         from protocolos 
+                                         where date_format(`fecha`,'%Y%m%d') between 
+                                         '".$fecha_ini."' and '".$fecha_fin."'  and obrasocial_id in (".$listadosos.") 
+                                         and internacion = 1;
+                                        "      
+                        );          
+    
+    }  
+
+
+    public function query_reporte_7($fecha, $id){ 
+       
+         return $this->query(
+                             "
+                              select * 
+                              from vw_base_cupones_femer as vw_base_cupones_iosper where  periodo = ".$fecha." AND Protocolo_id = ".$id."
+                             "
+                            );       
+         
+        }
         
 }
 ?>

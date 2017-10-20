@@ -13,6 +13,7 @@ header("Expires: 0");
     
     <table cellpadding="0" cellspacing="0">
     <tr>           
+            <th>Protocolo</th>            
             <th>Paciente</th>            
             <th>NUC</th>
             <th>Codigo</th>
@@ -24,8 +25,9 @@ header("Expires: 0");
     foreach ($data as $d):
              
                echo "<tr>";
-                echo "<td>" . utf8_decode($d['b']['Paciente']) . "</td>";
-                echo "<td>" . $d['a']['NUC'] . "</td>";
+                echo "<td>" . $d['0']['protocolos'] . "</td>";
+                echo "<td>" . utf8_decode($d['0']['Paciente']) . "</td>";
+                echo "<td>" . $d['0']['NUC'] . "</td>";
                 echo "<td>" . $d['0']['codigo'] . "</td>";
                 echo "<td>" . $d['0']['precio'] . "</td>";
                echo "</tr>";     

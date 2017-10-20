@@ -274,6 +274,14 @@ $("#asmSelect0").change(function() {
                                   );      
 
                             echo $this->Form->input(
+                                  'fecha',
+                                   array(
+                                      'value' => $this->data['Protocolo']['fecha'], 
+                                      'label' => 'Fecha del Protocolo'                                  
+                                       )
+                                  );      
+
+                            echo $this->Form->input(
                                   'medico_id',
                                    array(
                                       'label' => 'Medico',
